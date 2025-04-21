@@ -22,7 +22,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Ashraful Pathan",
+  title: "Kuripaga",
   description: "Ashraful Pathan portfolio",
 };
 
