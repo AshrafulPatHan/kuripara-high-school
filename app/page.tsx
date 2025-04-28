@@ -8,7 +8,7 @@ export default function Home(){
           Everyone has the right to rest and leisure, including reasonable limitation of working hours and periodic holidays.
         </p>
       </div>
-      <div style={{fontFamily: 'Satisfy-Regular'}}>
+      <div style={{fontFamily: 'inter'}}>
         <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, recusandae.</h4>
       </div>
     </div>
