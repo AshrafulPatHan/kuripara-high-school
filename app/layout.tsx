@@ -8,8 +8,8 @@ import { Toaster } from "react-hot-toast";
 
 
 export const metadata: Metadata = {
-  title: "Kuripaga High school",
-  description: "Ashraful Pathan portfolio",
+  title: "Kuripara High School",
+  description: "Kuripara High School",
 };
 
 export default function RootLayout({
