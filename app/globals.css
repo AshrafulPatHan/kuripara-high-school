@@ -1,2 +1,11 @@
 @import "tailwindcss";
 
+
+@font-face{
+   font-family: 'Satisfy-Regular';
+   src: url('../assets/fonts/Satisfy/Satisfy-Regular.ttf') format('truetype'); 
+}
+
+.fontSatisfy{
+   font-family: 'Satisfy-Regular';
+}
