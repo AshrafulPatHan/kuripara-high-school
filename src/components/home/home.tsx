@@ -19,7 +19,7 @@ export default function Clint() {
             <History/>
             <Number/>
             <Teacher/>
-            <News/>
+            {/* <News/> */}
             <Notices/>
             <Events/>
             <Footer/>
