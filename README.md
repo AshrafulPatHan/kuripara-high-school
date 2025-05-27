@@ -49,4 +49,4 @@ cd Ashraful
 npm install
 
 # Run the development server
-npm run dev
+npm run dev -- --hostname localhost
