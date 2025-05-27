@@ -6,7 +6,7 @@ import { FaFacebook } from "react-icons/fa";
 
 export default function Footer() {
    return(
-      <div className="flex justify-center bg-amber-200 pt-10 pb-4">
+      <div className="flex justify-center bg-amber-200 mt-20 pt-10 pb-4">
          <div className="flex flex-col gap-5">
             <div className="flex items-center gap-[30vw] ">
                <div className="flex items-center gap-2">

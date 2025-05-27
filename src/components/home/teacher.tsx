@@ -8,7 +8,7 @@ import Saied from "@/assets/image/school/Sahid_sir.jpg";
 export default function Teacher() {
    return(
       <div className="flex justify-center mt-20">
-         <div className="flex flex-col gap-5">
+         <div className="flex flex-col items-center gap-5">
             <div className="flex gap-5">
                <div className="bg-amber-100 w-[277px] h-[300px] flex items-center justify-center ">
                   <div>
