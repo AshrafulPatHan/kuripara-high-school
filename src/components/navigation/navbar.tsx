@@ -4,20 +4,20 @@ import Logo from "@/assets/image/gov.png";
 
 export default function Navbar() {
    return(
-   <div>
-      <div className="bg-[#fff] shadow-2xl py-4 sticky top-0 z-50 hidden md:flex">
-         <div className="flex flex-row items-center justify-center gap-[200px] ">
+   <div className=" sticky top-0 z-50">
+      <div className="bg-[#fff] shadow-2xl py-4 hidden md:flex md:flex-col  ">
+         <div className="flex items-center justify-center gap-[200px] ">
             <div  className="flex flex-row items-center gap-3">
                <Image src={Logo} alt="Logo" width={30} />
                <p className="text-xl font-bold  ">Kuripara High School</p>
                {/* <p>কুড়িপাড়া উচ্চ বিদ্যালয়</p> */}
             </div>
             <div  className="flex flex-row items-center gap-4">
-               <p className="text-xl font-bold  ">ABOUT</p>
-               <p className="text-xl font-bold  ">NOTICES</p>
-               <p className="text-xl font-bold  ">EVENTS</p>
-               <p className="text-xl font-bold  ">NEWS</p>
-               <p className="text-xl font-bold  ">LINKS</p>
+               <p className="text-xl font-bold ">ABOUT</p>
+               <p className="text-xl font-bold ">NOTICES</p>
+               <p className="text-xl font-bold ">EVENTS</p>
+               <p className="text-xl font-bold ">NEWS</p>
+               <p className="text-xl font-bold ">LINKS</p>
             </div>
          </div>
       </div>
