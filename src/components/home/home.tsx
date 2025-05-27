@@ -7,6 +7,7 @@ import Number from "@/components/home/number";
 import Teacher from "@/components/home/teacher";
 import Footer from "@/components/navigation/footer";
 import Navbar from "@/components/navigation/navbar";
+import About from "./about";
 
 
 export default function Clint() {
@@ -14,6 +15,7 @@ export default function Clint() {
         <div>
             <Navbar/>
             <Hero/>
+            <About/>
             <History/>
             <Number/>
             <Teacher/>
