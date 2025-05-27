@@ -1,46 +1,52 @@
 import Image from "next/image";
+import Gov from "@/assets/image/gov.png";
+import Ashraful from "@/assets/image/ashraful.png";
+import { FaFacebook } from "react-icons/fa";
+
 
 export default function Footer() {
    return(
-      <div>
-         <div>
-            <div>
-               <div>
-                  <Image src="" alt="" />
+      <div className="flex justify-center bg-amber-200 pt-10 pb-4">
+         <div className="flex flex-col gap-5">
+            <div className="flex items-center gap-[30vw] ">
+               <div className="flex items-center gap-2">
+                  <Image src={Gov} alt="gov" width={30} />
                   <h4>Kuripara High School</h4>
                </div>
-               <div>
+               <div className="flex items-center gap-3">
                   <a href="">
-                     <Image src="" alt="" />
+                     <FaFacebook/>
                   </a>
                   <a href="">
-                     <Image src="" alt="" />
+                     <FaFacebook/>
                   </a>
                   <a href="">
-                     <Image src="" alt="" />
+                     <FaFacebook/>
                   </a>
                </div>
             </div>
-            <div>
-               <div>
+            <hr />
+            <div className="flex gap-[30vw] ">
+               <div className="flex flex-row gap-3 ">
                   <div>
-                     <Image src="" alt="" />
+                     <Image src={Ashraful} alt="ashraful" width={90} className="bg-blue-200" />
                   </div>
                   <div>
-                     <h2></h2>
-                     <p></p>
+                  <p>Created By</p>
+                     <h2>Ashraful Pathan</h2>
+                     <p>Junior Frontend Developer</p>
                   </div>
                </div>
-               <div>
+               <div className="flex gap-12">
                   <div>
-                     <h3></h3>
-                     <p></p>
-                     <p></p>
+                     <h3>lorem</h3>
+                     <p>lorem</p>
+                     <p>lorem</p>
                   </div>
                   <div>
-                  <h3></h3>
-                  <p></p>
-                  <p></p>
+                  <h3>lorem</h3>
+                  <p>lorem</p>
+                  <p>lorem</p>
                   </div>
                </div>
             </div>
