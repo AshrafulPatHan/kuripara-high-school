@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Student from '@/assets/image/school/student.webp'
 
 
 export default function Events() {
@@ -12,14 +13,14 @@ export default function Events() {
                </nav>
                <div>
                   <div>
-                     <Image src="" alt="" />
+                     <Image src={Student} alt="events" />
                      <div>
                         <p></p>
                         <button></button>
                      </div>
                   </div>
                   <div>
-                     <Image src="" alt="" />
+                     <Image src={Student} alt="" />
                      <div>
                         <p></p>
                         <button></button>
