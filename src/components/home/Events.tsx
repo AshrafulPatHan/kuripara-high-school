@@ -10,19 +10,19 @@ import Events5 from '@/assets/image/school/minar.jpg'
 export default function Events() {
    return(
       <div className="flex justify-center mt-20">
-         <div className="flex gap-5 ">
+         <div className="flex flex-col lg:flex-row gap-5 ">
             <div>
-               <nav className="flex flex-row items-center justify-between mb-4 bg-[#f8f4f4] rounded-[8px] p-3 w-[821px] ">
+               <nav className="flex flex-row items-center justify-between mb-4 bg-[#f8f4f4] rounded-[8px] p-3 w-[92vw] lg:w-[80vw] xl:w-[821px] ">
                   <h4>Latest Event</h4>
                   <button className="bg-amber-600 p-2 rounded-xl">
                      View All Event
                   </button>
                </nav>
-               <div className="flex gap-5">
-                  <div className="flex flex-col bg-[#f8f4f4] w-[400px] p-6 rounded-2xl items-center  ">
+               <div className="flex flex-col lg:flex-row gap-5">
+                  <div className="flex flex-col bg-[#f8f4f4] w-[97vw] md:w-[400px] p-6 rounded-2xl items-center  ">
                      <div>
                         <div>
-                           <Image src={Events1} alt="events" className="w-[350px] " />
+                           <Image src={Events1} alt="events" className="w-[99vw]  xl:w-[350px] " />
                         </div>
                         <div>
                            <p>lorem</p>
@@ -30,10 +30,10 @@ export default function Events() {
                         </div>
                      </div>
                   </div>
-                  <div className="flex flex-col bg-[#f8f4f4] w-[400px] p-6 rounded-2xl items-center  ">
+                  <div className="flex flex-col bg-[#f8f4f4] w-[97vw] md:w-[400px] p-6 rounded-2xl items-center  ">
                      <div>
                         <div>
-                           <Image src={Events2} alt="events" className="w-[350px] " />
+                           <Image src={Events2} alt="events" className="w-[99vw]  xl:w-[350px] " />
                         </div>
                         <div>
                            <p>lorem</p>
@@ -44,7 +44,7 @@ export default function Events() {
                </div>
             </div>
             <div>
-               <div className="flex flex-col bg-[#f8f4f4] rounded-2xl w-[375px] ">
+               <div className="flex flex-col bg-[#f8f4f4] rounded-2xl w-[97vw] md:w-[375px] ">
                   <div className="bg-amber-200 rounded-t-2xl text-center py-2 text-2xl font-semibold ">
                      Events
                   </div>

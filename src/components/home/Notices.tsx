@@ -5,13 +5,13 @@ import Student from '@/assets/image/school/student.webp'
 export default function Notices() {
    return(
       <div className="flex justify-center mt-20">
-         <div className="flex gap-5 ">
+         <div className="flex flex-col lg:flex-row gap-5 ">
             <div>
                <div className="flex gap-5">
-                  <div className="flex flex-col bg-[#f8f4f4] w-[821px] p-6 rounded-2xl items-center  ">
+                  <div className="flex flex-col bg-[#f8f4f4] w-[99vw] lg:w-[70vw] xl:w-[821px] p-6 rounded-2xl items-center  ">
                      <div>
                         <div>
-                           <Image src={Student} alt="events" className="w-[800px] " />
+                           <Image src={Student} alt="events" className="w-[98vw]  xl:w-[800px] " />
                         </div>
                         <div>
                            <p>lorem</p>
@@ -22,7 +22,7 @@ export default function Notices() {
                </div>
             </div>
             <div>
-               <div className="flex flex-col bg-[#f8f4f4] rounded-2xl w-[375px] ">
+               <div className="flex flex-col bg-[#f8f4f4] rounded-2xl w-[97vw] md:w-[375px] ">
                   <div className="bg-amber-200 text-center rounded-t-2xl py-2 text-2xl font-semibold ">
                      All Notice
                   </div>

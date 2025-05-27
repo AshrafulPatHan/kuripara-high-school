@@ -9,7 +9,7 @@ export default function Teacher() {
    return(
       <div className="flex justify-center mt-20">
          <div className="flex flex-col items-center gap-12 ">
-            <div className="flex gap-8">
+            <div className="flex flex-col lg:flex-row gap-8">
                <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[277px] h-[300px] flex items-center justify-center ">
                   <div className="flex flex-col items-center">
                      <p className="text-center">
@@ -29,7 +29,7 @@ export default function Teacher() {
                   </button>
                </div>
             </div>
-            <div className="flex flex-row items-center gap-10">
+            <div className="flex flex-col md:flex-row items-center  gap-3 lg:gap-7 xl:gap-10">
                <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[277px] h-[300px] flex items-center justify-center ">
                   <div>
                      <p className="text-center">
@@ -38,7 +38,6 @@ export default function Teacher() {
                      <h3 className="text-center text-xl">Rubany</h3>
                      <p></p>
                   </div>
-                  
                </div>
                <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[277px] h-[300px] flex items-center justify-center ">
                   <div>

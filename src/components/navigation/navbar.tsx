@@ -4,7 +4,8 @@ import Logo from "@/assets/image/gov.png";
 
 export default function Navbar() {
    return(
-      <div className="bg-[#fff] shadow-2xl py-4 sticky top-0 z-50">
+   <div>
+      <div className="bg-[#fff] shadow-2xl py-4 sticky top-0 z-50 hidden md:flex">
          <div className="flex flex-row items-center justify-center gap-[200px] ">
             <div  className="flex flex-row items-center gap-3">
                <Image src={Logo} alt="Logo" width={30} />
@@ -20,5 +21,6 @@ export default function Navbar() {
             </div>
          </div>
       </div>
+   </div>
    )
 }
