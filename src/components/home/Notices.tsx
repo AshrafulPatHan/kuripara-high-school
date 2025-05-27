@@ -8,10 +8,10 @@ export default function Notices() {
          <div className="flex gap-5 ">
             <div>
                <div className="flex gap-5">
-                  <div className="flex flex-col bg-amber-200 w-[500px] p-6 rounded-2xl items-center  ">
+                  <div className="flex flex-col bg-amber-200 w-[650px] p-6 rounded-2xl items-center  ">
                      <div>
                         <div>
-                           <Image src={Student} alt="events" className="w-[450px] " />
+                           <Image src={Student} alt="events" className="w-[600] " />
                         </div>
                         <div>
                            <p>lorem</p>

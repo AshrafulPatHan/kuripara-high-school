@@ -1,5 +1,10 @@
 import Image from "next/image";
 import Student from '@/assets/image/school/student.webp'
+import Events1 from '@/assets/image/school/full.jpg'
+import Events2 from '@/assets/image/school/Br_M.jpg'
+import Events3 from '@/assets/image/school/Ssc.jpg'
+import Events4 from '@/assets/image/school/21_A_F_misel.jpg'
+import Events5 from '@/assets/image/school/minar.jpg'
 
 
 export default function Events() {
@@ -17,7 +22,7 @@ export default function Events() {
                   <div className="flex flex-col bg-amber-200 w-[300px] p-6 rounded-2xl items-center  ">
                      <div>
                         <div>
-                           <Image src={Student} alt="events" className="w-[250px] " />
+                           <Image src={Events1} alt="events" className="w-[250px] " />
                         </div>
                         <div>
                            <p>lorem</p>
@@ -28,7 +33,7 @@ export default function Events() {
                   <div className="flex flex-col bg-amber-200 w-[300px] p-6 rounded-2xl items-center  ">
                      <div>
                         <div>
-                           <Image src={Student} alt="events" className="w-[250px] " />
+                           <Image src={Events2} alt="events" className="w-[250px] " />
                         </div>
                         <div>
                            <p>lorem</p>
@@ -46,7 +51,7 @@ export default function Events() {
                   <div className="flex flex-col items-center p-6 ">
                      <div className="flex gap-4 ">
                         <div>
-                           <Image src={Student} alt="event" className="w-[100px] h-[100px] object-cover rounded-full  " />
+                           <Image src={Events3} alt="event" className="w-[100px] h-[100px] object-cover rounded-full  " />
                         </div>
                         <div>
                            <h3>name</h3>
@@ -56,7 +61,7 @@ export default function Events() {
                      </div>
                      <hr className="w-[100%] mt-6 mb-6 "/><div className="flex gap-4 ">
                         <div>
-                           <Image src={Student} alt="event" className="w-[100px] h-[100px] object-cover rounded-full  " />
+                           <Image src={Events4} alt="event" className="w-[100px] h-[100px] object-cover rounded-full  " />
                         </div>
                         <div>
                            <h3>name</h3>
@@ -66,7 +71,7 @@ export default function Events() {
                      </div>
                      <hr className="w-[100%] mt-6 mb-6 "/><div className="flex gap-4 ">
                         <div>
-                           <Image src={Student} alt="event" className="w-[100px] h-[100px] object-cover rounded-full  " />
+                           <Image src={Events5} alt="event" className="w-[100px] h-[100px] object-cover rounded-full  " />
                         </div>
                         <div>
                            <h3>name</h3>
