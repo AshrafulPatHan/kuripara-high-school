@@ -49,7 +49,7 @@ export default function Teacher() {
                      <p></p>
                   </div>
                </div>
-               <div className="bg-[#f8f4f4] rounded-[8px] shadow-xl/30 w-[277px] h-[300px] flex items-center justify-center ">
+               <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[277px] h-[300px] flex items-center justify-center ">
                   <div>
                      <p className="text-center">
                         <Image src={Saied} alt="sir" className="w-[160px] h-[200px] object-cover " />

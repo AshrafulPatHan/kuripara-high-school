@@ -8,10 +8,10 @@ export default function Notices() {
          <div className="flex gap-5 ">
             <div>
                <div className="flex gap-5">
-                  <div className="flex flex-col bg-amber-200 w-[650px] p-6 rounded-2xl items-center  ">
+                  <div className="flex flex-col bg-[#f8f4f4] w-[821px] p-6 rounded-2xl items-center  ">
                      <div>
                         <div>
-                           <Image src={Student} alt="events" className="w-[600] " />
+                           <Image src={Student} alt="events" className="w-[800px] " />
                         </div>
                         <div>
                            <p>lorem</p>
@@ -22,8 +22,8 @@ export default function Notices() {
                </div>
             </div>
             <div>
-               <div className="flex flex-col bg-cyan-100 w-[375px] ">
-                  <div className="bg-amber-100 text-center py-2 text-2xl font-semibold ">
+               <div className="flex flex-col bg-[#f8f4f4] rounded-2xl w-[375px] ">
+                  <div className="bg-amber-200 text-center rounded-t-2xl py-2 text-2xl font-semibold ">
                      All Notice
                   </div>
                   <div className="flex flex-col items-center p-6 ">
