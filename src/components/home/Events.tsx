@@ -12,14 +12,14 @@ export default function Events() {
       <div className="flex justify-center mt-20">
          <div className="flex flex-col lg:flex-row gap-5 ">
             <div>
-               <nav className="flex flex-row items-center justify-between mb-4 bg-[#f8f4f4] rounded-[8px] p-3 w-[92vw] lg:w-[80vw] xl:w-[821px] ">
+               <nav className="flex flex-row items-center justify-between mb-4 bg-[#f8f4f4] rounded-[8px] p-3 w-[92vw] lg:w-[60vw] xl:w-[821px] ">
                   <h4>Latest Event</h4>
                   <button className="bg-amber-600 p-2 rounded-xl">
                      View All Event
                   </button>
                </nav>
                <div className="flex flex-col lg:flex-row gap-5">
-                  <div className="flex flex-col bg-[#f8f4f4] w-[97vw] md:w-[400px] p-6 rounded-2xl items-center  ">
+                  <div className="flex flex-col bg-[#f8f4f4] w-[97vw] lg:w-[28vw] xl:w-[400px] p-6 rounded-2xl items-center  ">
                      <div>
                         <div>
                            <Image src={Events1} alt="events" className="w-[99vw]  xl:w-[350px] " />
@@ -30,7 +30,7 @@ export default function Events() {
                         </div>
                      </div>
                   </div>
-                  <div className="flex flex-col bg-[#f8f4f4] w-[97vw] md:w-[400px] p-6 rounded-2xl items-center  ">
+                  <div className="flex flex-col bg-[#f8f4f4] w-[97vw] lg:w-[28vw] xl:w-[400px] p-6 rounded-2xl items-center  ">
                      <div>
                         <div>
                            <Image src={Events2} alt="events" className="w-[99vw]  xl:w-[350px] " />

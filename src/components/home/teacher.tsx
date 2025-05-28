@@ -9,7 +9,7 @@ export default function Teacher() {
    return(
       <div className="flex justify-center mt-20">
          <div className="flex flex-col items-center gap-12 ">
-            <div className="flex flex-col lg:flex-row gap-8">
+            <div className="flex flex-col items-center lg:items-start lg:flex-row gap-8">
                <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[277px] h-[300px] flex items-center justify-center ">
                   <div className="flex flex-col items-center">
                      <p className="text-center">
@@ -19,18 +19,18 @@ export default function Teacher() {
                      <p>Principle</p>
                   </div>
                </div>
-               <div className="w-[40vw] bg-[#f8f4f4] rounded-[8px] shadow-2xl p-2">
+               <div className=" w-[97vw] lg:w-[50vw] xl:w-[40vw] bg-[#f8f4f4] rounded-[8px] shadow-2xl p-4 ">
                   <h3>lorem hipsum</h3>
                   <p>
                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore ea, libero placeat ab facilis alias. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, odio! Doloribus, rem facere! Nostrum nemo tempore et delectus at recusandae possimus molestiae vel. Hic quisquam necessitatibus, suscipit rem amet ipsam?
                   </p>
-                  <button className="p-2 border rounded-xl">
+                  <button className="p-2 border mt-12 rounded-xl">
                      Read more..
                   </button>
                </div>
             </div>
             <div className="flex flex-col md:flex-row items-center  gap-3 lg:gap-7 xl:gap-10">
-               <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[277px] h-[300px] flex items-center justify-center ">
+               <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[200px] xl:w-[277px] h-[250px] xl:h-[300px] flex items-center justify-center ">
                   <div>
                      <p className="text-center">
                         <Image src={Rabani} alt="sir" className="w-[160px] h-[200px] object-cover " />
@@ -39,7 +39,7 @@ export default function Teacher() {
                      <p></p>
                   </div>
                </div>
-               <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[277px] h-[300px] flex items-center justify-center ">
+               <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[200px] xl:w-[277px] h-[250px] xl:h-[300px] flex items-center justify-center ">
                   <div>
                      <p className="text-center">
                         <Image src={Sahan} alt="sir" className="w-[160px] h-[200px] object-cover " />
@@ -48,7 +48,7 @@ export default function Teacher() {
                      <p></p>
                   </div>
                </div>
-               <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[277px] h-[300px] flex items-center justify-center ">
+               <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[200px] xl:w-[277px] h-[250px] xl:h-[300px] flex items-center justify-center ">
                   <div>
                      <p className="text-center">
                         <Image src={Saied} alt="sir" className="w-[160px] h-[200px] object-cover " />

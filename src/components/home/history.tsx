@@ -4,10 +4,10 @@ import Student from "@/assets/image/school/student.webp";
 
 export default function History(){
    return(
-      <div className="flex justify-center mt-20 ">
+      <div className="flex justify-center mt-20 mx-2 ">
          <div className="flex flex-col lg:flex-row-reverse items-start gap-5">
                <div>
-                  <Image src={Student} alt="school" className="w-[99vw]  xl:w-[600px] rounded-2xl " />
+                  <Image src={Student} alt="school" className="w-[99vw] lg:w-[65vw]  xl:w-[600px] rounded-2xl " />
                </div>
                <div className="w-[95vw] lg:w-[70vw] xl:w-[600px] ">
                   <h2 className="text-3xl font-medium mb-3">Welcome to Kuripara High School</h2>
