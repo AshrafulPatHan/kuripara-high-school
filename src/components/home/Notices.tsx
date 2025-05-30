@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Notice from '@/assets/image/school/notice.avif'
+import axios from 'axios'
 
 
 export default function Notices() {
+
    return(
       <div className="flex justify-center mt-20">
          <div className="flex flex-col lg:flex-row gap-5 ">
