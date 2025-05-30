@@ -79,10 +79,10 @@ export default function Events() {
                      Events
                   </div>
                   {next.map((even)=>(
-                  <div key={even.Id} className="flex flex-col items-center p-6 ">
+                  <div key={even.Id} className="flex flex-col items-center px-6 py-3 ">
                      <div className="flex gap-4 ">
                         <div>
-                           <Image src={even.Photo} alt="event" width={100} height={100} className="w-[100px] h-[100px] object-cover rounded-full " />
+                           <Image src={even.Photo} alt="event" width={300} height={300} className="w-[100px] h-[100px] object-cover rounded-full " />
                         </div>
                         <div>
                            <h3>name</h3>
@@ -90,7 +90,7 @@ export default function Events() {
                            <button>View Details</button>
                         </div>
                      </div>
-                     <hr className="w-[100%] mt-6 mb-6 "/>
+                     <hr className="w-[100%] mt-2 mb-2 "/>
                   </div>
                   ))}
                   <div className="flex flex-col items-end pb-6 px-6">
