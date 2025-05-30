@@ -52,39 +52,21 @@ type NoticeType = {
                   <div className="bg-amber-200 text-center rounded-t-2xl py-2 text-2xl font-semibold ">
                      All Notice
                   </div>
-                  <div className="flex flex-col items-center p-6 ">
-                     <div className="flex gap-4 ">
-                        <div>
-                           <Image src={Notice} alt="event" className="w-[100px] h-[100px] object-cover rounded-full  " />
+                     {rest.map((not)=>(
+                     <div key={not.Id} className="flex flex-col items-center p-6 ">
+                        <div className="flex gap-4 ">
+                           <div>
+                              <Image src={not.Photo} width={50} height={50} alt="event" className="w-[100px] h-[100px] object-cover rounded-full  " />
+                           </div>
+                           <div>
+                              <h3>name</h3>
+                              <p>date</p>
+                              <button>View Details</button>
+                           </div>
                         </div>
-                        <div>
-                           <h3>name</h3>
-                           <p>date</p>
-                           <button>View Details</button>
-                        </div>
+                        <hr className="w-[100%] mt-1 mb-1 "/>
                      </div>
-                     <hr className="w-[100%] mt-6 mb-6 "/><div className="flex gap-4 ">
-                        <div>
-                           <Image src={Notice} alt="event" className="w-[100px] h-[100px] object-cover rounded-full  " />
-                        </div>
-                        <div>
-                           <h3>name</h3>
-                           <p>date</p>
-                           <button>View Details</button>
-                        </div>
-                     </div>
-                     <hr className="w-[100%] mt-6 mb-6 "/><div className="flex gap-4 ">
-                        <div>
-                           <Image src={Notice} alt="event" className="w-[100px] h-[100px] object-cover rounded-full  " />
-                        </div>
-                        <div>
-                           <h3>name</h3>
-                           <p>date</p>
-                           <button>View Details </button>
-                        </div>
-                     </div>
-                     <hr className="w-[100%] mt-6 mb-6 "/>
-                  </div>
+                     ))}
                   <div className="flex flex-col items-end pb-6 px-6">
                      <button className="border py-3 px-6 ">
                         View All Notice
