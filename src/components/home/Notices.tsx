@@ -1,9 +1,26 @@
+"use client"
 import Image from "next/image";
-import Notice from '@/assets/image/school/notice.avif'
-import axios from 'axios'
+import Notice from '@/assets/image/school/notice.avif';
+import Notices_data from '@/api/json/Notice.json';
+import axios from 'axios';
+import { useEffect, useState } from "react";
 
 
 export default function Notices() {
+   const [notice,setNotice] = useState([])
+
+   useEffect(()=>{
+      fetch(Notices_data)
+      .then(res => res.json())
+      .then(data => setNotice(data))
+      .catch(err => console.error("error in fetching data error =>",err))
+   },[]);
+
+   if (notice.length == 0) {
+      return <p>Loading ....</p>
+   };
+
+   const [first, ...rest] = notice;
 
    return(
       <div className="flex justify-center mt-20">
