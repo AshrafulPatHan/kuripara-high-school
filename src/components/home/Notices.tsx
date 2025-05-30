@@ -7,13 +7,19 @@ import { useEffect, useState } from "react";
 
 
 export default function Notices() {
-   const [notice,setNotice] = useState([])
-
+   const [notice,setNotice] = useState<NoticeType[]>([])
+// type declaration for use notice data
+type NoticeType = {
+   Id: number;
+   Short_description: string;
+   Long_description: string;
+   End: string;
+   Photo: string;
+   Date: string;
+};
+// fetch data
    useEffect(()=>{
-      fetch(Notices_data)
-      .then(res => res.json())
-      .then(data => setNotice(data))
-      .catch(err => console.error("error in fetching data error =>",err))
+      setNotice(Notices_data);
    },[]);
 
    if (notice.length == 0) {
@@ -30,7 +36,8 @@ export default function Notices() {
                   <div className="flex flex-col bg-[#f8f4f4] w-[99vw] lg:w-[60vw] xl:w-[821px] p-6 rounded-2xl items-center  ">
                      <div>
                         <div>
-                           <Image src={Notice} alt="events" className="w-[98vw] lg:w-[55vw] xl:w-[800px] object-cover rounded-2xl " />
+                           <Image src={first.Photo} alt="Notice"  width={800} height={400}
+                           className="w-[98vw] lg:w-[55vw] xl:w-[800px] object-cover rounded-2xl " />
                         </div>
                         <div>
                            <p>lorem</p>
