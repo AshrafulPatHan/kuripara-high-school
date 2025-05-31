@@ -84,9 +84,12 @@ export default function Events() {
                         <div>
                            <Image src={even.Photo} alt="event" width={300} height={300} className="w-[100px] h-[100px] object-cover rounded-full " />
                         </div>
-                        <div>
-                           <h3>name</h3>
-                           <p>date</p>
+                        <div className="w-[60%]">
+                           <h3>
+                              {even.Short_description.split(" ").slice(0, 10).join(" ")}
+                              {even.Short_description.split(" ").length > 10 ? "..." : ""}
+                           </h3>
+                           <p>{even.Date}</p>
                            <button>View Details</button>
                         </div>
                      </div>

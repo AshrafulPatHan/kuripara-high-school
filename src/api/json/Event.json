@@ -1,33 +1,33 @@
 [
     {
         "Id":1,
-        "Short_description":"",
+        "Short_description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. quibusdam quod illo veniam mollitia vero recusandae,",
         "Long_description":"",
         "Photo":"https://i.ibb.co/Z6MtRWF0/full.jpg",
-        "Date":""
+        "Date":"1.1.2025"
     },{
         "Id":2,
-        "Short_description":"",
+        "Short_description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. quibusdam quod illo veniam mollitia vero recusandae,",
         "Long_description":"",
         "Photo":"https://i.ibb.co/N22XY0SZ/Br-M.jpg",
-        "Date":""
+        "Date":"1.1.2025"
     },{
         "Id":3,
-        "Short_description":"",
+        "Short_description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. quibusdam quod illo veniam mollitia vero recusandae,",
         "Long_description":"",
         "Photo":"https://i.ibb.co/jvDzk6V7/Ssc.jpg",
-        "Date":""
+        "Date":"1.1.2025"
     },{
         "Id":4,
-        "Short_description":"",
+        "Short_description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. quibusdam quod illo veniam mollitia vero recusandae,",
         "Long_description":"",
         "Photo":"https://i.ibb.co/wN6zPrK6/21-A-F-misel.jpg",
-        "Date":""
+        "Date":"1.1.2025"
     },{
         "Id":5,
-        "Short_description":"",
+        "Short_description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. quibusdam quod illo veniam mollitia vero recusandae,",
         "Long_description":"",
         "Photo":"https://i.ibb.co/mFRv78V9/21F.jpg",
-        "Date":""
+        "Date":"1.1.2025"
     }
 ]
