@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Logo from "@/assets/image/gov.png";
 import Dropdown_Nav from "../ui/Dropdown";
+import Link from "next/link";
 
 
 export default function Navbar() {
@@ -15,11 +16,11 @@ export default function Navbar() {
                {/* <p>কুড়িপাড়া উচ্চ বিদ্যালয়</p> */}
             </div>
             <div  className="flex flex-row items-center gap-4">
-               <p className="text-xl font-bold ">ABOUT</p>
-               <p className="text-xl font-bold ">NOTICES</p>
-               <p className="text-xl font-bold ">EVENTS</p>
-               <p className="text-xl font-bold ">NEWS</p>
-               <p className="text-xl font-bold ">LINKS</p>
+               <Link href='/about' className="text-xl font-bold ">ABOUT</Link>
+               <Link href='/notice' className="text-xl font-bold ">NOTICES</Link>
+               <Link href='/events' className="text-xl font-bold ">EVENTS</Link>
+               <Link href='/' className="text-xl font-bold ">NEWS</Link>
+               <Link href='/link' className="text-xl font-bold ">LINKS</Link>
             </div>
          </div>
       </div>
