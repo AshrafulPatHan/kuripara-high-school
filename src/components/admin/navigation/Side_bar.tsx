@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 
 export default function Side_bar(){
@@ -5,7 +6,21 @@ export default function Side_bar(){
         <div className="sticky top-4 z-50 bg-gradient-to-t from-[#202020] to-[#3E3D45]  w-[250px]  h-[97vh] rounded-[12px]
         ml-2 p-4 text-white ">
             <div >
-                k
+                <div>
+                    <Link href='/'>Add Notice</Link>
+                </div>
+                <div>
+                     <Link href='/'>Post Event</Link>
+                </div>
+                <div>
+                     <Link href='/'>All Notice</Link>
+                </div>
+                <div>
+                     <Link href='/'>All Events</Link>
+                </div>
+                <div>
+                    <Link href='/'>Chang Password</Link>
+                </div>
             </div>
         </div>
     )
