@@ -16,7 +16,7 @@ export default function AdminAuth() {
                <div className=" flex flex-col items-center h-screen md:h-auto">
                   <div className='text-center flex flex-col gap-[10px] mb-[60px] '>
                      <h3 className='text-4xl font-bold'>Login As Admin</h3>
-                     <p className='text-[#777272e3] font-bold'>Enter Admin Name and create a strong password</p>
+                     <p className='text-[#777272e3] font-bold'>Enter Admin Name and the a strong password</p>
                   </div>
                   <form className="flex flex-col gap-[14px] ">
                      {/* input name */}
