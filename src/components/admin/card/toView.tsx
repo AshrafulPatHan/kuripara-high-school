@@ -6,12 +6,8 @@ import { FaUserCircle } from "react-icons/fa";
 export default function TotalView(){
     return(
         <div>
-            <div className="relative h-[155px] ">
-                <div className="w-[64px] h-[64px] bg-gradient-to-b from-[#3E3D45] to-[#202020] rounded-[12px] 
-                 flex flex-col justify-center items-center absolute  ">
-                    <FaUserCircle className="text-2xl text-white "/>
-                </div>
-                <div className="w-[302px] h-[134px] bg-[#ffff] shadow-xl rounded-[12px] ">
+            <div className="relative h-[155px] pt-6 ">
+                <div className="w-[302px] h-[134px] bg-[#ffff] shadow-xl rounded-[12px]  ">
                     <div className="flex flex-col items-end pt-3 pr-6 ">
                         <p className="text-[#7B809A] text-[14px]  ">Total website visits</p>
                         <p className="text-2xl font-bold">10</p>
@@ -22,6 +18,10 @@ export default function TotalView(){
                         <p className="text-[#4CAF50] text-[16px]  ">1.1.2025</p>
                         <p className=" text-[#7B809A] text-[16px] ">Last Updated</p>
                     </div>
+                </div>
+                <div className="w-[64px] h-[64px] bg-gradient-to-b from-[#3E3D45] to-[#202020] rounded-[12px] 
+                 flex flex-col justify-center items-center absolute top-1 left-4  ">
+                    <FaUserCircle className="text-2xl text-white "/>
                 </div>
             </div>
         </div>
