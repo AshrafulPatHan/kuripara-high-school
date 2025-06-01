@@ -38,7 +38,7 @@ export default function RootLayout({
       >
       <Providers>
         <Theme>
-          <div className="flex flex-row gap-8  " >
+          <div className="flex flex-row gap-8 bg-[#E5E5E5] " >
             <div className="">
                 <Side_bar/>
             </div>
