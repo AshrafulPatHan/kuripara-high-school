@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 import Providers from "@/redux/Provider";
+import Side_bar from "@/components/admin/navigation/Side_bar";
+import Admin_nav from "@/components/admin/navigation/Admin_nav";
+import Admin_Footer from "@/components/admin/navigation/Admin_Footer";
 
 
 const geistSans = Geist({
@@ -32,7 +35,18 @@ export default function RootLayout({
       >
       <Providers>
         <Theme>
-          {children}
+          <div className="flex flex-row gap-8">
+            <div>
+                <Side_bar/>
+            </div>
+            <div>
+                <Admin_nav/>
+                <div>
+                  {children}
+                </div>
+                <Admin_Footer/>
+            </div>
+          </div>
         </Theme>
       </Providers>
         
