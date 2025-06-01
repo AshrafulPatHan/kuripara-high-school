@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "./app.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
@@ -11,11 +12,13 @@ import Admin_Footer from "@/components/admin/navigation/Admin_Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+   display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+   display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -31,11 +34,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
+        style={{ backgroundColor: "rgb(0, 0, 255)" }}
       >
       <Providers>
         <Theme>
-          <div className="flex flex-row gap-8 bg-[#E5E5E5] ">
+          <div className="flex flex-row gap-8  ">
             <div className="">
                 <Side_bar/>
             </div>
