@@ -7,19 +7,19 @@ export default function Side_bar(){
         ml-2 p-4 text-white ">
             <div >
                 <div>
-                    <Link href='/'>Add Notice</Link>
+                    <Link href='/admin/page/add-notice'>Add Notice</Link>
                 </div>
                 <div>
-                     <Link href='/'>Post Event</Link>
+                     <Link href='/admin/page/add-events'>Post Event</Link>
                 </div>
                 <div>
-                     <Link href='/'>All Notice</Link>
+                     <Link href='/admin/page/notice'>All Notice</Link>
                 </div>
                 <div>
-                     <Link href='/'>All Events</Link>
+                     <Link href='/admin/page/event'>All Events</Link>
                 </div>
                 <div>
-                    <Link href='/'>Chang Password</Link>
+                    <Link href='/admin/page/chang-password'>Chang Password</Link>
                 </div>
             </div>
         </div>
