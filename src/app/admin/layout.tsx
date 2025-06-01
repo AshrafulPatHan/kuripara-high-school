@@ -35,13 +35,13 @@ export default function RootLayout({
       >
       <Providers>
         <Theme>
-          <div className="flex flex-row gap-8">
+          <div className="flex flex-row gap-8 bg-[#E5E5E5] ">
             <div className="">
                 <Side_bar/>
             </div>
-            <div className="flex flex-col ">
+            <div className="flex flex-col min-h-screen ">
                 <Admin_nav/>
-                <div className="mt-12 ">
+                <div className=" flex-grow mt-12 ">
                   {children}
                 </div>
                 <Admin_Footer/>
