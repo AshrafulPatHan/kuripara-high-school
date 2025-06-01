@@ -34,12 +34,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
-        style={{ backgroundColor: "rgb(0, 0, 255)" }}
+        // className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
       <Providers>
         <Theme>
-          <div className="flex flex-row gap-8  ">
+          <div className="flex flex-row gap-8  " >
             <div className="">
                 <Side_bar/>
             </div>
