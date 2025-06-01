@@ -6,7 +6,7 @@ import Side_bar from "@/components/admin/navigation/Side_bar";
 
 export default function Admin(){
    return(
-      <div className=" ">
+      <div>
          <Total/>
       </div>
    )
