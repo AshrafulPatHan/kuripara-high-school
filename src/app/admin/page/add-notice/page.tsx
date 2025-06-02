@@ -3,17 +3,43 @@ import Image from "next/image";
 import Background from "@/assets/image/university-418219_1920.jpg";
 import CustomFileInput from "@/components/admin/ui/input/CustomInput";
 import toast from "react-hot-toast";
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import axios from "axios";
 
 
 
 export default function AddNotice(){
+    const [Photo, setPhoto] = useState("");
+
     // mange file submit
-    const handleFileSelect = (file: File) => {
-    console.log("Chose Your Image:", file.name);
+    const handleFileSelect = async (file: File) => {
+        const formData = new FormData();
+        formData.append("image", file);
+
+        try {
+            const response = await fetch(
+                `https://api.imgbb.com/1/upload?expiration=600&key=${process.env.NEXT_PUBLIC_IMAGEBB_API_KEY}`,
+                {
+                    method: "POST",
+                    body: formData
+                }
+            );
+            const data = await response.json();
+            if (data.success) {
+                const imageUrl = data.data.url;
+                setPhoto(imageUrl); 
+                toast.success("Image uploaded successfully!");
+            } else {
+                toast.error("Failed to upload image");
+            }
+        } catch (error) {
+            console.error("Image upload error:", error);
+            toast.error("Image upload error");
+        }
     };
-    // 
+
+
+    // On from submit
     const handelAddNotice = async (event: FormEvent<HTMLFormElement>) =>{
 
         event.preventDefault();
@@ -24,7 +50,7 @@ export default function AddNotice(){
         const ShortDescription = (form.elements.namedItem("ShortDescription") as HTMLInputElement).value;
         const LongDescription = (form.elements.namedItem("LongDescription") as HTMLInputElement).value;
         // get image from imageBB
-        let Photo = 'https://i.ibb.co/vvgVSz2b/notice.jpg';
+        // let Photo = 'https://i.ibb.co/vvgVSz2b/notice.jpg';
         // current date add
         const Data = new Date().toLocaleDateString("bn-BD", {
             year: "numeric",
@@ -32,32 +58,33 @@ export default function AddNotice(){
             day: "numeric"
         });
 
-        // cake data
-        if (!Title || !ShortDescription || !LongDescription || !Photo) {
-            toast.error("All fields are required")
-        };
-
         // Mack all data into object
         const AllFormData = {Title,ShortDescription,LongDescription,Photo,Data}
 
         // Api url
         const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
-        
-        // post data using Axios
-        try {
-            const res = await axios.post(`${ApiUrl}/post-notice`, AllFormData);
 
-            if (res.status === 200 || res.status === 201) {
-                toast.success("Notice is add successful!");
-                form.reset(); // form reset
-                // imageBB = ""; // clear selected image
-            } else {
-                toast.error("Fail to send data!");
+        // cake data
+        if (!Title || !ShortDescription || !LongDescription || !Photo) {
+            toast.error("All fields are required")
+        }else{
+            // post data using Axios
+            try {
+                const res = await axios.post(`${ApiUrl}/post-notice`, AllFormData);
+
+                if (res.status === 200 || res.status === 201) {
+                    toast.success("Notice is add successful!");
+                    form.reset(); 
+                    setPhoto('');
+                } else {
+                    toast.error("Fail to send data!");
+                }
+            } catch (err) {
+                console.error("POST error:", err);
+                toast.error("Server error!");
             }
-        } catch (err) {
-            console.error("POST error:", err);
-            toast.error("Server error!");
-        }
+        };
+
         
     }
     return(
@@ -102,7 +129,7 @@ export default function AddNotice(){
                 </div>
                 <button type="submit" className=" w-[90%] sm:w-[300px] lg:w-[350px] h-[40px] text-white 
                  bg-gradient-to-t from-[#E93B77] to-[#da6d93] rounded-[8px] ">
-                    Login
+                    Add Notice
                 </button>
             </form>
         </div>
