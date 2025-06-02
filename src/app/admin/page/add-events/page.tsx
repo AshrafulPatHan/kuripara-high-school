@@ -11,11 +11,14 @@ export default function AddEvents(){
   };
     return(
         <div className="w-[100%] h-[99%] flex flex-col items-center justify-center bg-cover bg-center rounded-xl " 
-                    style={{
-                backgroundImage: `url(${Background.src})`,
-            }}
+                style={{
+            backgroundImage: `url(${Background.src})`,
+        }}
         >
             <form className="flex flex-col gap-5 bg-[#ffffff] rounded-xl p-6 ">
+                <div>
+                  <h3 className="text-center font-bold text-2xl">Add Events</h3>
+                </div>
                 <div className="flex flex-col">
                     <label htmlFor="Title" className="block text-sm font-medium text-zinc-700">
                        Add A Title

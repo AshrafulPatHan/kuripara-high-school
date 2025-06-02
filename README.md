@@ -1,10 +1,10 @@
-# Ashraful's Developer Portfolio 🌐🚀
+# Kuripara High School 🌐🚀
 
-Hi, I'm **Ashraful**, a 17-year-old passionate **React.js Developer**.  
-This is my personal portfolio website built using modern frontend technologies to showcase my projects, skills, and passion for web development.
+Hi, I'm **Ashraful**, a professional **mern stack Developer**.  
+This is my personal Project I mack A website for my School  name kuripara high school.
 
-🔗 **Live Website:** [ashraful-pathan.web.app](https://ashraful-pathan.vercel.app/)  
-📁 **GitHub Repo:** [github.com/AshrafulPatHan/Ashraful](https://github.com/AshrafulPatHan/Ashraful.git)
+🔗 **Live Website:** [kuripara-high-school.vercel.app](kuripara-high-school.vercel.app)  
+📁 **GitHub Repo:** [https://github.com/AshrafulPatHan/kuripara-high-school](https://github.com/AshrafulPatHan/kuripara-high-school)
 
 ---
 
@@ -40,7 +40,7 @@ To run this project locally:
 
 ```bash
 # Clone the repo
-git clone https://github.com/AshrafulPatHan/Ashraful.git
+git clone https://github.com/AshrafulPatHan/kuripara-high-school
 
 # Navigate to the project directory
 cd Ashraful
