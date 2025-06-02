@@ -43,7 +43,7 @@ To run this project locally:
 git clone https://github.com/AshrafulPatHan/kuripara-high-school
 
 # Navigate to the project directory
-cd Ashraful
+cd kuripara-high-school
 
 # Install dependencies
 npm install
