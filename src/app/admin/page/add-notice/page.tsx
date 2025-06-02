@@ -37,9 +37,16 @@ export default function AddNotice(){
                 </div>
                 <div className="flex flex-col">
                     <label htmlFor="Description" className="block text-sm font-medium text-zinc-700">
-                        Add Description
+                        Short Description
                     </label>
-                    <input type="text" name="description" id="" placeholder="Add Description"
+                    <input type="text" name="ShortDescription" id="" placeholder="Short Description"
+                    className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4  " />
+                </div>
+                <div className="flex flex-col">
+                    <label htmlFor="Description" className="block text-sm font-medium text-zinc-700">
+                        Long Description
+                    </label>
+                    <input type="text" name="LongDescription" id="" placeholder="Long Description"
                     className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4  " />
                 </div>
                 <button className=" w-[90%] sm:w-[300px] lg:w-[350px] h-[40px] text-white 
