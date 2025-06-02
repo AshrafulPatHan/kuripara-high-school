@@ -7,6 +7,9 @@ export default function Side_bar(){
         ml-2 p-4 text-white ">
             <div >
                 <div>
+                    <Link href='/admin'>Home</Link>
+                </div>
+                <div>
                     <Link href='/admin/page/add-notice'>Add Notice</Link>
                 </div>
                 <div>
