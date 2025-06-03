@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Kuripara from "@/assets/image/school/Kuripaka_c.webp";
+import Kuripara from "@/assets/image/school/Kuripara.jpg";
 
 
 export default function About(){
@@ -10,7 +10,8 @@ export default function About(){
                     <Image src={Kuripara} alt="school" className="w-[99vw] lg:w-[65vw] xl:w-[600px] rounded-2xl " />
                 </div>
                 <div className="w-[95vw] lg:w-[70vw] xl:w-[600px]  ">
-                    <h2 className="text-3xl font-medium">Welcome to Kuripara High School</h2>
+                    {/* <h2 className="text-3xl font-medium">Welcome to Kuripara High School</h2> */}
+                    <h2 className="text-3xl font-medium"> কুড়িপাড়া উচ্চ বিদ্যালয়ে আপনাকে স্বাগতম!</h2>
                     <p className="mt-2">
                         কুড়িপাড়া উচ্চ বিদ্যালয় নারায়ণগঞ্জ জেলার বন্দর উপজেলার মদনপুর এলাকায়, কুড়িপাড়া গ্রামে অবস্থিত একটি খ্যাতনামা শিক্ষা প্রতিষ্ঠান। এটি একটি আধা-সরকারি বিদ্যালয় যা শীতলক্ষ্যা নদীর নিকটবর্তী অবস্থানে অবস্থিত, প্রকৃতির সান্নিধ্যে নির্মিত এই বিদ্যালয়টি শিক্ষার আদর্শ কেন্দ্র হিসেবে পরিচিত।
                         <br/>
