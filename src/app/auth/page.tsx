@@ -13,21 +13,19 @@ export default function AdminAuth() {
       event.preventDefault();
       const name:string = event.target.name.value;
       const password:string = event.target.password.value;
-      // console.log({email,password});
-      //  dispatch(setEmail(email));
 
       // Get Api
       const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
 
       try {
          const response = await fetch(`${ApiUrl}/auth`, {
-         method: 'POST',
-         headers: { 'Content-Type': 'application/json' },
-         body: JSON.stringify({ name, password })
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, password })
          });
          const data = await response.json();
-         toast.success("Admin login is successful")
-         router.push("/admin");
+            toast.success("Admin login is successful")
+            router.push("/admin");
       } catch (error) {
          toast.error("Account does not match")
       }
