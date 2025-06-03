@@ -5,11 +5,14 @@ import CustomFileInput from "@/components/admin/ui/input/CustomInput";
 import toast from "react-hot-toast";
 import { FormEvent, useState } from "react";
 import axios from "axios";
+import RichTextEditor from "@/components/admin/editor/RichTextEditor";
 
 
 
 export default function AddNotice(){
     const [Photo, setPhoto] = useState("");
+    const [content, setContent] = useState('');
+
 
     // mange file submit
     const handleFileSelect = async (file: File) => {
@@ -110,7 +113,7 @@ export default function AddNotice(){
                     </label>
                     {/* <input type="file" name="photo" id="" 
                     className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4  " /> */}
-                    {/* custom input filde */}
+                    {/* custom input filed */}
                     <CustomFileInput onFileSelect={handleFileSelect}  />
                 </div>
                 <div className="flex flex-col">
@@ -124,8 +127,9 @@ export default function AddNotice(){
                     <label htmlFor="Description" className="block text-sm font-medium text-zinc-700">
                         Long Description
                     </label>
-                    <input type="text" name="LongDescription" id="" placeholder="Long Description" required
-                    className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4  " />
+                    {/* <input type="text" name="LongDescription" id="" placeholder="Long Description" required
+                    className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4  " /> */}
+                    <RichTextEditor />
                 </div>
                 <button type="submit" className=" w-[90%] sm:w-[300px] lg:w-[350px] h-[40px] text-white 
                  bg-gradient-to-t from-[#E93B77] to-[#da6d93] rounded-[8px] ">
