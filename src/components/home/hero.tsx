@@ -10,8 +10,8 @@ export default function Hero() {
                <Image src={Hero_img} alt="Logo" className="w-[100vw] h-[49vw] object-cover " />
             </div>
             <div className="absolute top-[4%] left-[4%] ">
-               <h1 className="text-lg lg:text-4xl xl:text-6xl font-bold">Kuripara High School</h1>
-               <p className=" hidden sm:flex text-sm md:text-md lg:text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, blanditiis.</p>
+               <h1 className="text-lg lg:text-4xl xl:text-6xl font-bold">কুড়িপাড়া উচ্চ বিদ্যালয় </h1>
+               <p className=" hidden sm:flex text-sm md:text-md lg:text-lg">প্রতিষ্ঠাতা:- আল হাজ এম এ. রফিক চেয়ারম্যান.</p>
             </div>
          </div>
       </div>
