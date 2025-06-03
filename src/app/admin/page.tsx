@@ -1,3 +1,4 @@
+import PrivateRoute from "@/components/admin/auth/PrivateRoute";
 import Total from "@/components/admin/card/total";
 import Chart from "@/components/admin/chart/mailChart";
 import Admin_Footer from "@/components/admin/navigation/Admin_Footer";
@@ -8,10 +9,10 @@ import NoticeAdminTable from "@/components/admin/table/noticeTabil";
 
 export default function Admin(){
    return(
-      <div>
+      <PrivateRoute>
          <Total/>
          <Chart/>
          <NoticeAdminTable/>
-      </div>
+      </PrivateRoute>
    )
 };

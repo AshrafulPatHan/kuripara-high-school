@@ -23,8 +23,12 @@ export default function AdminAuth() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, password })
          });
-         const data = await response.json();
-            toast.success("Admin login is successful")
+            const data = await response.json();
+            // send token into localstorage
+            localStorage.setItem("adminToken", data.token);
+            // tost success massage
+            toast.success("Admin login is successful");
+            // go to admin page
             router.push("/admin");
       } catch (error) {
          toast.error("Account does not match")
