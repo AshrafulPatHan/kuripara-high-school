@@ -1,2 +1,9 @@
 @import "tailwindcss";
 
+
+
+.rdw-editor-main {
+  direction: ltr !important;
+  text-align: left !important;
+}
+

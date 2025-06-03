@@ -6,12 +6,28 @@ import toast from "react-hot-toast";
 import { FormEvent, useState } from "react";
 import axios from "axios";
 import RichTextEditor from "@/components/admin/editor/RichTextEditor";
+import React, { useRef, useMemo } from 'react';
+import JoditEditor from 'jodit-react';
 
 
 
-export default function AddNotice(){
+type AddNoticeProps = {
+  placeholder?: string;
+};
+
+export default function AddNotice({placeholder}: AddNoticeProps){
     const [Photo, setPhoto] = useState("");
     const [content, setContent] = useState('');
+    const editor = useRef(null);
+	
+
+    // config editor
+    	const config = useMemo(() => ({
+			readonly: false, 
+			placeholder: placeholder || 'Start typings...'
+		}),
+		[placeholder]
+	);
 
 
     // mange file submit
@@ -51,9 +67,8 @@ export default function AddNotice(){
         // form values
         const Title = (form.elements.namedItem("title") as HTMLInputElement).value;
         const ShortDescription = (form.elements.namedItem("ShortDescription") as HTMLInputElement).value;
-        const LongDescription = (form.elements.namedItem("LongDescription") as HTMLInputElement).value;
-        // get image from imageBB
-        // let Photo = 'https://i.ibb.co/vvgVSz2b/notice.jpg';
+        const LongDescription = content;
+        
         // current date add
         const Data = new Date().toLocaleDateString("bn-BD", {
             year: "numeric",
@@ -69,7 +84,7 @@ export default function AddNotice(){
 
         // cake data
         if (!Title || !ShortDescription || !LongDescription || !Photo) {
-            toast.error("All fields are required")
+            toast.error("All fields are required");
         }else{
             // post data using Axios
             try {
@@ -79,17 +94,18 @@ export default function AddNotice(){
                     toast.success("Notice is add successful!");
                     form.reset(); 
                     setPhoto('');
+                    setContent('');
                 } else {
                     toast.error("Fail to send data!");
-                }
+                };
             } catch (err) {
                 console.error("POST error:", err);
                 toast.error("Server error!");
-            }
+            };
         };
 
         
-    }
+    };
     return(
         <div className="w-[100%] h-[99%] flex flex-col items-center justify-center bg-cover bg-center rounded-xl " 
                 style={{
@@ -129,7 +145,15 @@ export default function AddNotice(){
                     </label>
                     {/* <input type="text" name="LongDescription" id="" placeholder="Long Description" required
                     className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4  " /> */}
-                    <RichTextEditor />
+                    {/* <RichTextEditor value={content} onChange={setContent} /> */}
+                	<JoditEditor
+                        ref={editor}
+                        value={content}
+                        config={config}
+                        tabIndex={1} // tabIndex of textarea
+                        onBlur={newContent => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
+                        onChange={newContent => {}}
+                    />
                 </div>
                 <button type="submit" className=" w-[90%] sm:w-[300px] lg:w-[350px] h-[40px] text-white 
                  bg-gradient-to-t from-[#E93B77] to-[#da6d93] rounded-[8px] ">

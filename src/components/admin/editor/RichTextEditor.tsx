@@ -1,10 +1,10 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import { EditorState, convertToRaw } from 'draft-js';
-import { useState } from 'react';
+import { EditorState, convertToRaw, ContentState } from 'draft-js';
+import { useEffect, useState } from 'react';
 import draftToHtml from 'draftjs-to-html';
-import axios from 'axios';
+import htmlToDraft from 'html-to-draftjs';
 
 const Editor = dynamic(() => import('react-draft-wysiwyg').then(mod => mod.Editor), {
   ssr: false,
@@ -12,31 +12,46 @@ const Editor = dynamic(() => import('react-draft-wysiwyg').then(mod => mod.Edito
 
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
-export default function RichTextEditor() {
+type RichTextEditorProps = {
+  value: string;
+  onChange: (value: string) => void;
+};
+
+export default function RichTextEditor({ value, onChange }: RichTextEditorProps) {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
 
-  const handleSubmit = async () => {
-    const rawContent = convertToRaw(editorState.getCurrentContent());
-    const htmlContent = draftToHtml(rawContent);
-
-    try {
-      await axios.post('http://localhost:5000/api/posts', { content: htmlContent });
-      alert('Content saved successfully!');
-    } catch (error) {
-      console.error('Error saving content:', error);
+  // যদি বাইরের value পরিবর্তন হয়, তাহলে editorState সেট করো
+  useEffect(() => {
+    if (value) {
+      const blocksFromHtml = htmlToDraft(value);
+      const contentState = ContentState.createFromBlockArray(
+        blocksFromHtml.contentBlocks,
+        blocksFromHtml.entityMap
+      );
+      setEditorState(EditorState.createWithContent(contentState));
     }
+  }, [value]);
+
+  // ------ documantation
+  const handleEditorChange = (state: EditorState) => {
+    setEditorState(state);
+    const rawContent = convertToRaw(state.getCurrentContent());
+    const html = draftToHtml(rawContent);
+    onChange(html);
   };
+  
+
 
   return (
-    <div>
+    <div  
+    >
       <Editor
         editorState={editorState}
-        onEditorStateChange={setEditorState}
+        onEditorStateChange={handleEditorChange}
         toolbar={{
           options: ['inline', 'blockType', 'list', 'textAlign', 'link', 'history'],
         }}
       />
-      <button onClick={handleSubmit}>Save</button>
     </div>
   );
 }
