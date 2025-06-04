@@ -5,13 +5,20 @@ import CustomFileInput from "@/components/admin/ui/input/CustomInput";
 import toast from "react-hot-toast";
 import { FormEvent, useState, useRef, useMemo } from "react";
 import axios from "axios";
-import JoditEditor from "jodit-react";
+// import JoditEditor from "jodit-react";
+import dynamic from "next/dynamic";
+
+
 
 export default function AddNotice() {
     const [Photo, setPhoto] = useState("");
     const [content, setContent] = useState('');
     const editor = useRef(null);
 
+    // Dynamic import of the client-side-only component
+    const JoditEditor = dynamic(() => import("@/components/admin/editor/JoditEditor"), {
+    ssr: false
+    });
     // config editor
     const config = useMemo(() => ({
         readonly: false, 
@@ -132,14 +139,15 @@ export default function AddNotice() {
                     <label htmlFor="LongDescription" className="block text-sm font-medium text-zinc-700">
                         Long Description
                     </label>
-                    <JoditEditor
+                    {/* <JoditEditor
                         ref={editor}
                         value={content}
                         config={config}
                         tabIndex={1}
                         onBlur={newContent => setContent(newContent)}
                         onChange={() => {}}
-                    />
+                    /> */}
+                    <JoditEditor value={content} onChange={setContent} />
                 </div>
 
                 <button
