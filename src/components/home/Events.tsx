@@ -8,6 +8,8 @@ import Events4 from '@/assets/image/school/21_A_F_misel.jpg'
 import Events5 from '@/assets/image/school/minar.jpg'
 import Event_data from '@/api/json/Event.json'
 import { useEffect, useState } from "react";
+import Link from "next/link";
+
 
 
 export default function Events() {
@@ -101,9 +103,9 @@ export default function Events() {
                </div>
                ))}
                <div className="flex flex-col items-end pb-6 px-6">
-                  <button className="bg-amber-200 p-3 text-sm font-bold hover:underline cursor-pointer rounded-lg">
+                  <Link href='/album' className="bg-amber-200 p-3 text-sm font-bold hover:underline cursor-pointer rounded-lg">
                      View All Event
-                  </button>
+                  </Link >
                </div>
             </div>
          </div>

@@ -24,7 +24,7 @@ export default function About(){
                         <p className="text-blue-500">Bandor , Narayanganj</p>
                     </div><div className=" flex items-center gap-1">
                         <p className="text-lg font-medium">Phone :</p>
-                        <p className="text-blue-500">01816-181541</p>
+                        <p className="text-blue-500">016727-27490</p>
                     </div>
                     <div className=" flex items-center gap-1">
                         <p className="text-lg font-medium">Email :</p>
