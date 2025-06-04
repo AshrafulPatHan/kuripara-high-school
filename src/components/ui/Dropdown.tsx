@@ -47,10 +47,10 @@
             >
             <div className="py-1" role="none">
                 <div className="flex flex-col gap-2 items-start pl-3 ">
+                <Link href='/' className="text-lg  ">HOME</Link>
                 <Link href='/about' className="text-lg  ">ABOUT</Link>
                 <Link href='/notice' className="text-lg  ">NOTICES</Link>
                 <Link href='/album' className="text-lg  ">EVENTS</Link>
-                <Link href='/' className="text-lg  ">NEWS</Link>
                 <Link href='/link' className="text-lg  ">LINKS</Link>
                </div>
             </div>

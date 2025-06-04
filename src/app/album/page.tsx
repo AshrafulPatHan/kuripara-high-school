@@ -51,7 +51,7 @@ export default function Album() {
             <div  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-center mt-10 md:mt-20">
                 {event.map((even)=>(
                 <div key={even._id} >
-                    <div className="w-[98vw] sm:w-[350px] h-[600px] bg-[#b6adad] p-4 ">
+                    <div className="w-[98vw] sm:w-[350px] h-auto lg:h-[600px] bg-[#b6adad] p-4 ">
                         <div className="flex flex-col items-center justify-center">
                             <Image src={even.Photo} width={500} height={500}  alt="events photo" className="w-[300px] h-[300px] object-cover " />
                         </div>
