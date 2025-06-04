@@ -8,7 +8,7 @@ import { FaHome } from "react-icons/fa";
 export default function Number() {
    return(
       <div className="flex justify-center mt-20 ">
-         <div className="flex flex-row items-center gap-[15px] md:gap-[7vw] xl:gap-[10vw] bg-[#f8f4f4] shadow-2xl rounded-[8px] py-8 px-[6vw] sm:px-[8.3vw] ">
+         <div className="flex flex-row items-center gap-[4.4vw] md:gap-[7vw] xl:gap-[10vw] bg-[#f8f4f4] shadow-2xl rounded-[8px] py-8 px-[6vw] sm:px-[8.3vw] ">
             <div className="flex flex-col items-center gap-1">
                <div className="p-1 xl:p-7 rounded-full bg-[#6d676796] ">
                   <FaHome className="text-2xl  "/>
