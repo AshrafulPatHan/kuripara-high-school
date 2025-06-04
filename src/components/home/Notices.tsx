@@ -8,20 +8,36 @@ import { useEffect, useState } from "react";
 
 export default function Notices() {
    const [notice,setNotice] = useState<NoticeType[]>([])
+
 // type declaration for use notice data
 type NoticeType = {
-   Id: number;
-   Short_description: string;
-   Long_description: string;
+   _id: number;
+   ShortDescription: string;
+   LongDescription: string;
    End: string;
    Photo: string;
    Date: string;
 };
-// fetch data
-   useEffect(()=>{
-      setNotice(Notices_data);
-   },[]);
 
+// get url
+const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+
+// fetch data
+    useEffect(() => {
+        fetch(`${ApiUrl}/latest-notice`)
+        .then((res) => res.json())
+        .then((data) => {
+            setNotice(data);
+            // setLoading(false);
+        })
+        .catch((error) => {
+            console.error("Error fetching data:", error);
+            // setLoading(false);
+        });
+    }, []);
+
+   // chak noice is comming
    if (notice.length == 0) {
       return <p>Loading ....</p>
    };
@@ -40,8 +56,8 @@ type NoticeType = {
                            className="w-[98vw] lg:w-[55vw] xl:w-[800px] object-cover rounded-2xl " />
                         </div>
                         <div>
-                           <p>lorem</p>
-                           <button>lorem</button>
+                           <p className="text-lg font-semibold mb-2 mt-1">{first.ShortDescription}</p>
+                           <button className="border p-3 rounded-lg mt-2">View Details</button>
                         </div>
                      </div>
                   </div>
@@ -53,15 +69,15 @@ type NoticeType = {
                      All Notice
                   </div>
                      {rest.map((not)=>(
-                     <div key={not.Id} className="flex flex-col items-center px-6 py-3 ">
+                     <div key={not._id} className="flex flex-col items-center px-6 py-3 ">
                         <div className="flex gap-4 ">
                            <div>
                               <Image src={not.Photo} width={300} height={300} alt="event" className="w-[100px] h-[100px] object-cover rounded-full  " />
                            </div>
                            <div className="w-[60%] ">
                               <h3>
-                                 {not.Short_description.split(" ").slice(0, 10).join(" ")}
-                                 {not.Short_description.split(" ").length > 10 ? "..." : ""}
+                                 {not.ShortDescription.split(" ").slice(0, 10).join(" ")}
+                                 {not.ShortDescription.split(" ").length > 10 ? "..." : ""}
                               </h3>
                               <p>{not.Date}</p>
                               <button>View Details</button>

@@ -15,18 +15,27 @@ export default function Events() {
 
    // set event type
    type EventType = {
-   Id: number;
-   Short_description: string;
-   Long_description: string;
+   _id: number;
+   Title: string;
+   Description: string;
    Photo: string;
-   Date: string;
+   Data: string;
    };
 
-   // fetch Event data
-   useEffect(()=>{
-      // set the json file
-      setEvent(Event_data)
-   },[]);
+   const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
+ // fetch data
+    useEffect(() => {
+        fetch(`${ApiUrl}/latest-album`)
+        .then((res) => res.json())
+        .then((data) => {
+            setEvent(data);
+            // setLoading(false);
+        })
+        .catch((error) => {
+            console.error("Error fetching data:", error);
+            // setLoading(false);
+        });
+    }, []);
 
    // set loading
    if (event.length === 0) {
@@ -43,8 +52,8 @@ export default function Events() {
          <div className="flex flex-col lg:flex-row gap-5 ">
             <div>
                <nav className="flex flex-row items-center justify-between mb-4 bg-[#f8f4f4] rounded-[8px] p-3 w-[92vw] lg:w-[60vw] xl:w-[821px] ">
-                  <h4>Latest Event</h4>
-                  <button className="bg-amber-600 p-2 rounded-xl">
+                  <h4 className="font-semibold text-xl">Latest Event</h4>
+                  <button className="bg-amber-200 p-3 text-sm font-bold hover:underline cursor-pointer rounded-lg">
                      View All Event
                   </button>
                </nav>
@@ -52,22 +61,22 @@ export default function Events() {
                   <div className="flex flex-col bg-[#f8f4f4] w-[97vw] lg:w-[28vw] xl:w-[400px] p-6 rounded-2xl items-center  ">
                      <div>
                         <div>
-                           <Image src={first.Photo} alt="events" width={350} height={350} className="w-[99vw]  xl:w-[350px] " />
+                           <Image src={first.Photo} alt="events" width={350} height={350} className="w-[99vw] rounded-lg xl:w-[350px] " />
                         </div>
                         <div>
-                           <p>lorem</p>
-                           <button>lorem</button>
+                           <p className="text-lg font-bold mb-2 mt-1">{first.Title}</p>
+                           <p>{first.Description}</p>
                         </div>
                      </div>
                   </div>
                   <div className="flex flex-col bg-[#f8f4f4] w-[97vw] lg:w-[28vw] xl:w-[400px] p-6 rounded-2xl items-center  ">
                      <div>
                         <div>
-                           <Image src={second.Photo} alt="events" width={350} height={350} className="w-[99vw]  xl:w-[350px] " />
+                           <Image src={second.Photo} alt="events" width={350} height={350} className="w-[99vw] rounded-lg xl:w-[350px] " />
                         </div>
                         <div>
-                           <p>lorem</p>
-                           <button>lorem</button>
+                           <p className="text-lg font-bold mb-2 mt-1">{second.Title}</p>
+                           <p>{second.Description}</p>
                         </div>
                      </div>
                   </div>
@@ -79,18 +88,18 @@ export default function Events() {
                      Events
                   </div>
                   {next.map((even)=>(
-                  <div key={even.Id} className="flex flex-col items-center px-6 py-3 ">
+                  <div key={even._id} className="flex flex-col items-center px-6 py-3 ">
                      <div className="flex gap-4 ">
                         <div>
                            <Image src={even.Photo} alt="event" width={300} height={300} className="w-[100px] h-[100px] object-cover rounded-full " />
                         </div>
-                        <div className="w-[60%]">
+                        <div className="w-[60%] ">
                            <h3>
-                              {even.Short_description.split(" ").slice(0, 10).join(" ")}
-                              {even.Short_description.split(" ").length > 10 ? "..." : ""}
+                              {even.Title.split(" ").slice(0, 10).join(" ")}
+                              {even.Title.split(" ").length > 10 ? "..." : ""}
                            </h3>
-                           <p>{even.Date}</p>
-                           <button>View Details</button>
+                           <p className="mb-1 text-[#000000b7] ">{even.Data}</p>
+                           <button className="border p-2 rounded-lg text-md">View Details</button>
                         </div>
                      </div>
                      <hr className="w-[100%] mt-2 mb-2 "/>
