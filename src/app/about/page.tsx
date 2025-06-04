@@ -1,7 +1,7 @@
 import Footer from "@/components/navigation/footer";
 import Navbar from "@/components/navigation/navbar";
 import Image from "next/image";
-import Kuripara from "@/assets/image/school/Kuripaka_c.webp";
+import Kuripara from "@/assets/image/school/Kuripara.jpg";
 
 
 export default function About_Page(){
