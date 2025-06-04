@@ -4,7 +4,7 @@ import Kuripara from "@/assets/image/school/Kuripara.jpg";
 
 export default function About(){
     return(
-        <div className="flex justify-center mt-20 mx-2 ">
+        <div className="flex justify-center mt-7 sm:mt-20 mx-2 ">
             <div className="flex flex-col lg:flex-row items-start gap-5">
                 <div>
                     <Image src={Kuripara} alt="school" className="w-[99vw] lg:w-[65vw] xl:w-[600px] rounded-2xl " />

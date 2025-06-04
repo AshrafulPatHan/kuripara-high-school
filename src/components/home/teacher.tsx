@@ -11,7 +11,7 @@ export default function Teacher() {
       <div className="flex justify-center mt-20">
          <div className="flex flex-col items-center gap-12 ">
             <div className="flex flex-col items-center lg:items-start lg:flex-row gap-8">
-               <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[277px] h-[300px] flex items-center justify-center ">
+               <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[97vw] sm:w-[277px] h-[300px] flex items-center justify-center ">
                   <div className="flex flex-col items-center">
                      <p className="text-center">
                         <Image src={HeadMaster} alt="sir" className="w-[160px] h-[200px] object-cover " />
@@ -34,22 +34,22 @@ export default function Teacher() {
                         সকল শিক্ষকই আন্তরিকতা, নিষ্ঠা ও কঠোর পরিশ্রমের মাধ্যমে শিক্ষার্থীদের সঠিক পথে পরিচালিত করতে নিরলস কাজ করে যাচ্ছেন। তাঁদের অবদানেই কুড়িপাড়া উচ্চ বিদ্যালয় আজ একটি আদর্শ শিক্ষাপ্রতিষ্ঠান হিসেবে সুনাম অর্জন করতে সক্ষম হয়েছে।
                      </p>
                   </div>
-                  <button className="p-2 border mt-12 rounded-lg">
+                  <button className="bg-amber-200 p-3 text-sm font-bold hover:underline cursor-pointer mt-[55px] rounded-lg">
                      See more Teacher ...
-                  </button> 
+                  </button>
                </div>
             </div>
-            <div className="flex flex-col md:flex-row items-center  gap-3 lg:gap-7 xl:gap-[37px] ">
-               <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[200px] xl:w-[277px] h-[250px] xl:h-[300px] flex items-center justify-center ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 items-center  gap-3 lg:gap-7 xl:gap-[37px] " id="teacher-grid">
+               <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[97vw] sm:w-[200px] xl:w-[277px] py-6 flex items-center justify-center ">
                   <div className="flex flex-col items-center">
                      <p className="text-center">
-                        <Image src={Sahan} alt="sir" className="w-[160px] h-[200px] object-cover " />
+                        <Image src={Sahan} alt="sir" className=" w-[160px] h-[200px] object-cover " />
                      </p>
                      <h3 className="text-center text-xl">সাহান স্যার </h3>
                      <p>সহকারী প্রধান শিক্ষক</p>
                   </div>
                </div>
-               <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[200px] xl:w-[277px] h-[250px] xl:h-[300px] flex items-center justify-center ">
+               <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[97vw] sm:w-[200px] xl:w-[277px] py-6  flex items-center justify-center ">
                   <div className="flex flex-col items-center">
                      <p className="text-center">
                         <Image src={Rabani} alt="sir" className="w-[160px] h-[200px] object-cover " />
@@ -58,7 +58,7 @@ export default function Teacher() {
                      <p>রসায়ন শিক্ষক</p>
                   </div>
                </div>
-               <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[200px] xl:w-[277px] h-[250px] xl:h-[300px] flex items-center justify-center ">
+               <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[97vw] sm:w-[200px] xl:w-[277px] py-6  flex items-center justify-center ">
                   <div className="flex flex-col items-center">
                      <p className="text-center">
                         <Image src={Saied} alt="sir" className="w-[160px] h-[200px] object-cover " />
@@ -67,7 +67,7 @@ export default function Teacher() {
                      <p>পদার্থবিজ্ঞান শিক্ষক</p>
                   </div>
                </div>
-               <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[200px] xl:w-[277px] h-[250px] xl:h-[300px] flex items-center justify-center ">
+               <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[97vw] sm:w-[200px] xl:w-[277px] py-6  flex items-center justify-center ">
                   <div className="flex flex-col items-center">
                      <p className="text-center">
                         <Image src={Babul} alt="sir" className="w-[160px] h-[200px] object-cover " />

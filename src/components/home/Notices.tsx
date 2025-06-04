@@ -16,7 +16,7 @@ type NoticeType = {
    LongDescription: string;
    End: string;
    Photo: string;
-   Date: string;
+   Data: string;
 };
 
 // get url
@@ -46,10 +46,10 @@ const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
 
    return(
       <div className="flex justify-center mt-20">
-         <div className="flex flex-col lg:flex-row gap-5 ">
+         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-5 ">
             <div>
                <div className="flex gap-5">
-                  <div className="flex flex-col bg-[#f8f4f4] w-[99vw] lg:w-[60vw] xl:w-[821px] p-6 rounded-2xl items-center  ">
+                  <div className="flex flex-col bg-[#f8f4f4] w-[97vw] lg:w-[60vw] xl:w-[821px] p-6 rounded-2xl items-center  ">
                      <div>
                         <div>
                            <Image src={first.Photo} alt="Notice"  width={800} height={400}
@@ -57,14 +57,16 @@ const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
                         </div>
                         <div>
                            <p className="text-lg font-semibold mb-2 mt-1">{first.ShortDescription}</p>
-                           <button className="border p-3 rounded-lg mt-2">View Details</button>
+                           <button className="bg-amber-200 p-3 text-sm font-bold hover:underline cursor-pointer rounded-lg">
+                              View Details
+                           </button>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
             <div>
-               <div className="flex flex-col bg-[#f8f4f4] rounded-2xl w-[97vw] md:w-[365px] xl:w-[375px] ">
+               <div className="flex flex-col bg-[#f8f4f4] rounded-2xl w-[97vw] md:w-[365px] xl:w-[375px]  ">
                   <div className="bg-amber-200 text-center rounded-t-2xl py-2 text-2xl font-semibold ">
                      All Notice
                   </div>
@@ -79,16 +81,16 @@ const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
                                  {not.ShortDescription.split(" ").slice(0, 10).join(" ")}
                                  {not.ShortDescription.split(" ").length > 10 ? "..." : ""}
                               </h3>
-                              <p>{not.Date}</p>
-                              <button>View Details</button>
+                              <p className="mb-1 text-[#000000b7] ">{not.Data}</p>
+                              <button className="border p-2 rounded-lg text-sm">View Details</button>
                            </div>
                         </div>
                         <hr className="w-[100%] mt-2 mb-2 "/>
                      </div>
                      ))}
                   <div className="flex flex-col items-end pb-6 px-6">
-                     <button className="border py-3 px-6 ">
-                        View All Notice
+                     <button className="bg-amber-200 p-3 text-sm font-bold hover:underline cursor-pointer rounded-lg">
+                     View All Notice
                      </button>
                   </div>
                </div>
