@@ -21,7 +21,7 @@ export default function Teacher() {
                      <p>প্রধান শিক্ষক</p>
                   </div>
                </div>
-               <div className=" w-[97vw] lg:w-[50vw] xl:w-[47.4vw] h-[300px] bg-[#f8f4f4] rounded-[8px] shadow-2xl p-4 ">
+               <div className=" w-[97vw] lg:w-[50vw] xl:w-[47.4vw] bg-[#f8f4f4] rounded-[8px] shadow-2xl p-4 ">
                   <h3>আমাদের শিক্ষকবৃন্দ</h3>
                   <div>
                      <p>

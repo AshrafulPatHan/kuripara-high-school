@@ -1,6 +1,7 @@
     "use client"
 
     import { useState } from "react";
+    import Link from "next/link";
 
     export default function Dropdown_Nav() {
     const [isOpen, setIsOpen] = useState(false);
@@ -45,44 +46,13 @@
             tabIndex={-1}
             >
             <div className="py-1" role="none">
-                <a
-                href="#"
-                className="block px-4 py-2 text-sm text-gray-700"
-                role="menuitem"
-                tabIndex={-1}
-                id="menu-item-0"
-                >
-                Account settings
-                </a>
-                <a
-                href="#"
-                className="block px-4 py-2 text-sm text-gray-700"
-                role="menuitem"
-                tabIndex={-1}
-                id="menu-item-1"
-                >
-                Support
-                </a>
-                <a
-                href="#"
-                className="block px-4 py-2 text-sm text-gray-700"
-                role="menuitem"
-                tabIndex={-1}
-                id="menu-item-2"
-                >
-                License
-                </a>
-                <form method="POST" action="#" role="none">
-                <button
-                    type="submit"
-                    className="block w-full px-4 py-2 text-left text-sm text-gray-700"
-                    role="menuitem"
-                    tabIndex={-1}
-                    id="menu-item-3"
-                >
-                    Sign out
-                </button>
-                </form>
+                <div className="flex flex-col gap-2 items-start pl-3 ">
+                <Link href='/about' className="text-lg  ">ABOUT</Link>
+                <Link href='/notice' className="text-lg  ">NOTICES</Link>
+                <Link href='/album' className="text-lg  ">EVENTS</Link>
+                <Link href='/' className="text-lg  ">NEWS</Link>
+                <Link href='/link' className="text-lg  ">LINKS</Link>
+               </div>
             </div>
             </div>
         )}
