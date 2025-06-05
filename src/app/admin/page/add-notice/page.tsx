@@ -25,14 +25,14 @@ export default function AddNotice() {
         placeholder: "Start typings..."
     }), []);
 
-    // handle file upload to imgbb
+    // handle file upload to imageBB
     const handleFileSelect = async (file: File) => {
         const formData = new FormData();
         formData.append("image", file);
 
         try {
             const response = await fetch(
-                `https://api.imgbb.com/1/upload?expiration=600&key=${process.env.NEXT_PUBLIC_IMAGEBB_API_KEY}`,
+                `https://api.imgbb.com/1/upload?key=${process.env.NEXT_PUBLIC_IMAGEBB_API_KEY}`,
                 {
                     method: "POST",
                     body: formData
