@@ -32,7 +32,7 @@ export default function Events() {
             console.error("Error fetching data:", error);
             // setLoading(false);
         });
-    }, []);
+    }, [ApiUrl]);
 
    // set loading
    if (event.length === 0) {

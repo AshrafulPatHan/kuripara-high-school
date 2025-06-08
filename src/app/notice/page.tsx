@@ -35,7 +35,7 @@ export default function Notices_Page() {
             console.error("Error fetching data:", error);
             // setLoading(false);
         });
-    }, []);
+    }, [ApiUrl]);
 
    // set loading
    if (event.length === 0) {
