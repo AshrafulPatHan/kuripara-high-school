@@ -1,17 +1,29 @@
+"use client"
+
+import { motion, useInView } from "motion/react"
 import Image from "next/image";
 import Kuripara from "@/assets/image/school/Kuripara.jpg";
+import { useRef } from "react";
+
 
 
 export default function About(){
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: false });
     return(
-        <div className="flex justify-center mt-7 sm:mt-20 mx-2 ">
+        <div className="flex justify-center mt-7 sm:mt-20 mx-2 max-w-screen overflow-hidden ">
             <div className="flex flex-col lg:flex-row items-start gap-5 ">
-                <div>
+                <motion.div 
+                ref={ref}
+                initial={{ rotate: "0deg", opacity: 0, x: -55, y: 55 }}
+                    animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
+                    transition={{ duration: 0.5, ease: "linear" }}
+                >
                     <Image src={Kuripara} alt="school" className="w-[97vw] lg:w-[65vw] xl:w-[600px] rounded-2xl " />
-                </div>
+                </motion.div>
                 <div className="w-[95vw] lg:w-[70vw] xl:w-[600px]  ">
                     {/* <h2 className="text-3xl font-medium">Welcome to Kuripara High School</h2> */}
-                    <h2 className="text-3xl font-medium"> কুড়িপাড়া উচ্চ বিদ্যালয়ে আপনাকে স্বাগতম!</h2>
+                    <h2 className="text-lg lg:text-3xl font-bold lg:font-medium"> কুড়িপাড়া উচ্চ বিদ্যালয়ে আপনাকে স্বাগতম!</h2>
                     <p className="mt-2">
                         কুড়িপাড়া উচ্চ বিদ্যালয় নারায়ণগঞ্জ জেলার বন্দর উপজেলার মদনপুর এলাকায়, কুড়িপাড়া গ্রামে অবস্থিত একটি খ্যাতনামা শিক্ষা প্রতিষ্ঠান। এটি একটি আধা-সরকারি বিদ্যালয় যা শীতলক্ষ্যা নদীর নিকটবর্তী অবস্থানে অবস্থিত, প্রকৃতির সান্নিধ্যে নির্মিত এই বিদ্যালয়টি শিক্ষার আদর্শ কেন্দ্র হিসেবে পরিচিত।
                         <br/>
@@ -24,11 +36,12 @@ export default function About(){
                         <p className="text-blue-500">Bandor , Narayanganj</p>
                     </div><div className=" flex items-center gap-1">
                         <p className="text-lg font-medium">Phone :</p>
-                        <p className="text-blue-500">016727-27490</p>
+                        {/* <p className="text-blue-500">016727-27490</p> */}
+                        <p className="text-blue-500">+8801614871378</p>
                     </div>
-                    <div className=" flex items-center gap-1">
-                        <p className="text-lg font-medium">Email :</p>
-                        <p className="text-blue-500">ashrafulpathan3927@gmail.com</p>
+                    <div className=" flex items-center gap-1 ">
+                        <p className="text-lg font-medium">Email:</p>
+                        <p className="text-blue-500 text-sm lg:text-lg">ashrafulpathan3927@gmail.com</p>
                     </div>
                 </div>
             </div>

@@ -1,56 +1,54 @@
-"use client"
+"use client";
+
+import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import CountUp from 'react-countup';
-import { FaHome } from "react-icons/fa";
-import Student from "@/assets/image/ssc_student.webp";
-// import Student from "@/assets/image/school/ssc_student.webp";
+import { FaHome, FaStar, FaUsers } from "react-icons/fa";
 import { PiStudentFill } from "react-icons/pi";
-import { FaStar } from "react-icons/fa";
-import { FaUsers } from "react-icons/fa";
-
-
+import Student from "@/assets/image/ssc_student.webp";
 
 export default function Number() {
-   return(
+   const { ref, inView } = useInView({
+      triggerOnce: true,
+      threshold: 0.3,
+   });
+
+   return (
       <div className="flex justify-center mt-20 ">
          <div 
+            ref={ref}
             style={{
                backgroundImage: `url(${Student.src})`,
                backgroundAttachment: "fixed",
                backgroundSize: "cover",
                backgroundPosition: "center",
             }}
-            className="flex flex-row items-center justify-between w-[100vw] py-32 px-[6vw] sm:px-[8.3vw] text-white  ">
-            <div className="flex flex-col items-center gap-1 ">
-               <div className="p-1 xl:p-7 rounded-full bg-[#6d676796] ">
-                  <FaHome className="text-2xl  "/>
-               </div>
-               <p className="text-xl font-bold"><CountUp end={1968} duration={3} /></p>
-               <h3 className="text-md xl:text-xl font-bold">Founded</h3>
-            </div>
-            <div className="flex flex-col items-center gap-1">
-               <div className="p-1 xl:p-7 rounded-full bg-[#6d676796] ">
-                  <FaUsers className=" text-2xl  "/>
-               </div>
-               <p className="text-xl font-bold"><CountUp end={15} duration={3} /></p>
-               <h3 className="text-md xl:text-xl font-bold">Teacher</h3>
-            </div>
-            <div className="flex flex-col items-center gap-1">
-               <div className="p-1 xl:p-7 rounded-full bg-[#6d676796] ">
-                  <PiStudentFill className=" text-2xl  "/>
-               </div>
-               <p className="text-xl font-bold"><CountUp end={1200} duration={3} /></p>
-               <h3 className="text-md xl:text-xl font-bold">Student</h3>
-            </div>
-            <div className="flex flex-col items-center gap-1">
-               <div className="p-1 xl:p-7 rounded-full bg-[#6d676796] ">
-                  <FaStar className=" text-2xl  "/>
-               </div>
-               <p className="text-xl font-bold"><CountUp end={5} duration={3} /></p>
-               <h3 className="text-md xl:text-xl font-bold">Retting</h3>
-            </div>
+            className="flex flex-row items-center justify-between w-[100vw] py-32 px-[6vw] sm:px-[8.3vw] text-white  "
+         >
+            <NumberBox icon={<FaHome />} number={1968} title="Founded" inView={inView} />
+            <NumberBox icon={<FaUsers />} number={15} title="Teacher" inView={inView} />
+            <NumberBox icon={<PiStudentFill />} number={1200} title="Student" inView={inView} />
+            <NumberBox icon={<FaStar />} number={5} title="Rating" inView={inView} />
          </div>
-         {/* Teacher Student Retting */}
       </div>
-   )
+   );
+}
+
+function NumberBox({ icon, number, title, inView }: {
+   icon: React.ReactNode,
+   number: number,
+   title: string,
+   inView: boolean
+}) {
+   return (
+      <div className="flex flex-col items-center gap-1">
+         <div className="p-1 xl:p-7 rounded-full bg-[#6d676796] ">
+            {icon}
+         </div>
+         <p className="text-xl font-bold">
+            {inView ? <CountUp end={number} duration={3} /> : 0}
+         </p>
+         <h3 className="text-md xl:text-xl font-bold">{title}</h3>
+      </div>
+   );
 }

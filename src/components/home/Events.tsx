@@ -1,4 +1,6 @@
 "use client"
+
+import { motion, useInView } from "motion/react"
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -7,6 +9,8 @@ import { useRouter } from "next/navigation";
 
 
 export default function Events() {
+
+   // other
    const [event,setEvent] = useState<EventType[]>([])
    const router = useRouter();
 

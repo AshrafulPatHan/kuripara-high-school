@@ -1,3 +1,7 @@
+"use client"
+
+import { motion, useInView } from "motion/react"
+import { useRef } from "react";
 import Image from "next/image";
 import HeadMaster from "@/assets/image/school/Kamal_sir.jpg";
 import Rabani from "@/assets/image/school/Rabani.jpg";
@@ -7,21 +11,38 @@ import Babul from "@/assets/image/school/babul_sir.jpg";
 
 
 export default function Teacher() {
+const ref = useRef(null);
+const ref1 = useRef(null);
+const ref2 = useRef(null);
+const isInView = useInView(ref, { once: false });
+const isInView1 = useInView(ref1, { once: false });
+const isInView2 = useInView(ref2, { once: false });
+
    return(
-      <div className="flex justify-center mt-20">
+      <div className="flex justify-center mt-20 max-w-screen overflow-hidden ">
          <div className="flex flex-col items-center gap-12 ">
             <div className="flex flex-col items-center lg:items-start lg:flex-row gap-8">
-               <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[97vw] sm:w-[277px] h-[300px] flex items-center justify-center ">
+               <motion.div
+               ref={ref1}
+                  initial={{ rotate: "0deg", opacity: 0, x: -55, y: 55 }}
+                  animate={isInView1 ? { opacity: 1, x: 0, y: 0 } : {}}
+                  transition={{ duration: 0.5, ease: "linear" }}
+               className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[97vw] sm:w-[277px] h-[300px] flex items-center justify-center ">
                   <div className="flex flex-col items-center">
                      <p className="text-center">
-                        <Image src={HeadMaster} alt="sir" className="w-[160px] h-[200px] object-cover " />
+                        <Image src={HeadMaster} width={300} height={200} alt="sir" className="w-[160px] h-[200px] object-cover " />
                      </p>
                      {/* <h3 className="text-center text-xl">Kamal Hosian</h3> */}
                      <h3 className="text-center text-xl">কামাল হোসেন স্যার</h3>
                      <p>প্রধান শিক্ষক</p>
                   </div>
-               </div>
-               <div className=" w-[97vw] lg:w-[50vw] xl:w-[909px] bg-[#f8f4f4] rounded-[8px] shadow-2xl p-4 ">
+               </motion.div>
+               <motion.div
+               ref={ref2}
+               initial={{ rotate: "0deg", opacity: 0, x: -55, y: 55 }}
+                  animate={isInView2 ? { opacity: 1, x: 0, y: 0 } : {}}
+                  transition={{ duration: 0.5, ease: "linear" }}
+               className=" w-[97vw] lg:w-[50vw] xl:w-[909px] bg-[#f8f4f4] rounded-[8px] shadow-2xl p-4 ">
                   <h3>আমাদের শিক্ষকবৃন্দ</h3>
                   <div>
                      <p>
@@ -37,9 +58,14 @@ export default function Teacher() {
                   <button className="bg-amber-200 p-3 text-sm font-bold hover:underline cursor-pointer mt-[55px] rounded-lg">
                      See more Teacher ...
                   </button>
-               </div>
+               </motion.div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 items-center  gap-3 lg:gap-7 xl:gap-[37px] " id="teacher-grid">
+            <motion.div
+            ref={ref}
+                  initial={{ rotate: "0deg", opacity: 0, x: 55, y: 0 }}
+                  animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
+                  transition={{ duration: 0.5, ease: "linear" }}
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 items-center  gap-3 lg:gap-7 xl:gap-[37px] " id="teacher-grid">
                <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[97vw] sm:w-[200px] xl:w-[277px] py-6 flex items-center justify-center ">
                   <div className="flex flex-col items-center">
                      <p className="text-center">
@@ -67,7 +93,9 @@ export default function Teacher() {
                      <p>পদার্থবিজ্ঞান শিক্ষক</p>
                   </div>
                </div>
-               <div className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[97vw] sm:w-[200px] xl:w-[277px] py-6  flex items-center justify-center ">
+               <div
+               
+               className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[97vw] sm:w-[200px] xl:w-[277px] py-6  flex items-center justify-center ">
                   <div className="flex flex-col items-center">
                      <p className="text-center">
                         <Image src={Babul} alt="sir" className="w-[160px] h-[200px] object-cover " />
@@ -76,7 +104,7 @@ export default function Teacher() {
                      <p>ইংরেজির শিক্ষক</p>
                   </div>
                </div>
-            </div>
+            </motion.div>
          </div>
       </div>
    )

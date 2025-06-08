@@ -1,4 +1,7 @@
 "use client"
+
+import { motion, useInView } from "motion/react"
+import { useRef } from "react";
 import Image from "next/image";
 import Notice from '@/assets/image/school/notice.avif';
 import Notices_data from '@/api/json/Notice.json';
@@ -6,12 +9,17 @@ import axios from 'axios';
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-// import { useRouter } from 'next/router';
+
 
 
 export default function Notices() {
-   const [notice,setNotice] = useState<NoticeType[]>([])
-   const router = useRouter();
+// framer motion
+const ref = useRef(null);
+const isInView = useInView(ref, { once: false });
+//other thing 
+const [notice,setNotice] = useState<NoticeType[]>([])
+const router = useRouter();
+
 
 // type declaration for use notice data
 type NoticeType = {
@@ -39,7 +47,7 @@ const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
             console.error("Error fetching data:", error);
             // setLoading(false);
         });
-    }, []);
+    }, [ApiUrl]);
 
    // chak noise is coming
    if (notice.length == 0) {
@@ -71,10 +79,11 @@ const handleViewDetailsMap = (not:any) => {
    router.push(`/notice-details?${query}`);
 };
 
+
    return(
       <div className="flex justify-center mt-20">
          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-5 ">
-            <div>
+            <div >
                <div className="flex gap-5">
                   <div className="flex flex-col bg-[#f8f4f4] w-[97vw] lg:w-[60vw] xl:w-[821px] p-6 rounded-2xl items-center  ">
                      <div>
