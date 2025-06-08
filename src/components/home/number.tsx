@@ -19,7 +19,7 @@ export default function Number() {
                backgroundSize: "cover",
                backgroundPosition: "center",
             }}
-            className="flex flex-row items-center justify-between w-[100vw] py-28 px-[6vw] sm:px-[8.3vw] text-white  ">
+            className="flex flex-row items-center justify-between w-[100vw] py-32 px-[6vw] sm:px-[8.3vw] text-white  ">
             <div className="flex flex-col items-center gap-1 ">
                <div className="p-1 xl:p-7 rounded-full bg-[#6d676796] ">
                   <FaHome className="text-2xl  "/>
