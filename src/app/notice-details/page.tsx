@@ -13,7 +13,7 @@ type Props = {
   };
 };
 
-export default function NoticeDetails({ searchParams }: Props) {
+export default function NoticeDetails({ searchParams }: any) {
   const { short, long, photo, date } = searchParams;
 
   return (
