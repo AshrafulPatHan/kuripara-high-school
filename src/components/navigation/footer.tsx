@@ -8,7 +8,7 @@ export default function Footer() {
    return(
       <div className="flex justify-center bg-[#002147] mt-20 pt-10 pb-4 text-white">
          <div className="flex flex-col items-center gap-3">
-            <div className="flex items-center gap-[7vw] md:gap-[46.1vw] ">
+            <div className="flex items-center gap-[7vw] md:gap-[46.1vw] xl:gap-[900px] ">
                <div className="flex items-center gap-2">
                   <Image src={Gov} alt="gov" width={60} />
                   <h4>Kuripara High School</h4>
@@ -26,15 +26,16 @@ export default function Footer() {
                </div>
             </div>
             <hr className="w-[100%] "/>
-            <div className="flex flex-col md:flex-row gap-[34.7vw] ">
+            <div className="flex flex-col md:flex-row gap-[34.7vw] xl:gap-[700px] ">
                <div className="flex flex-row gap-3 ">
                   <div>
                      <Image src={Ashraful} alt="ashraful" width={90} className="bg-blue-200 rounded-xl " />
                   </div>
                   <div>
-                  <p>Created By</p>
-                     <h2>Ashraful Pathan</h2>
-                     <p>Junior Frontend Developer</p>
+                     <p className="text-xs text-[#ffffffb2] ">Created By</p>
+                     <h2 className="text-lg font-bold  ">Ashraful Pathan</h2>
+                     <p className="text-xs text-[#000000b2] bg-amber-300 px-1 py-0 text-center rounded-2xl mt-[4px] ">Frontend Developer</p>
+                     <p className="text-xs text-[#000000b2] bg-blue-300 px-1 py-0 text-center rounded-2xl mt-[6px] ">ashraful.top</p>
                   </div>
                </div>
                <div className="flex gap-12">
