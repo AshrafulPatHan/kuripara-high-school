@@ -1,19 +1,14 @@
 "use client"
 import Image from "next/image";
-import Student from '@/assets/image/school/student.webp'
-import Events1 from '@/assets/image/school/full.jpg'
-import Events2 from '@/assets/image/school/Br_M.jpg'
-import Events3 from '@/assets/image/school/Ssc.jpg'
-import Events4 from '@/assets/image/school/21_A_F_misel.jpg'
-import Events5 from '@/assets/image/school/minar.jpg'
-import Event_data from '@/api/json/Event.json'
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 
 
 export default function Events() {
    const [event,setEvent] = useState<EventType[]>([])
+   const router = useRouter();
 
    // set event type
    type EventType = {
@@ -48,6 +43,19 @@ export default function Events() {
    const [first , ...rest] = event;
    // divide into 2 section
    const [second, ...next] = rest;
+
+const handleViewDetailsMap = (even:any) => {
+   const query = new URLSearchParams({
+   id: String(even._id),
+   Title: even.Title,
+   Description: even.Description,
+   Photo: even.Photo,
+   Data: even.Data,
+   }).toString();
+
+   router.push(`/event-details?${query}`);
+};
+
 
    return(
       <div className="flex justify-center mt-20">
@@ -96,7 +104,11 @@ export default function Events() {
                            {even.Title.split(" ").length > 10 ? "..." : ""}
                         </h3>
                         <p className="mb-1 text-[#000000b7] ">{even.Data}</p>
-                        <button className="border p-2 rounded-lg text-sm">View Details</button>
+                        <button className="border p-2 rounded-lg text-sm"
+                        onClick={()=>{handleViewDetailsMap(even)}}
+                        >
+                           View Details
+                        </button>
                      </div>
                   </div>
                   <hr className="w-[100%] mt-2 mb-2 "/>

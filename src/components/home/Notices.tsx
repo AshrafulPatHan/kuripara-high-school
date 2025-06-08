@@ -4,10 +4,14 @@ import Notice from '@/assets/image/school/notice.avif';
 import Notices_data from '@/api/json/Notice.json';
 import axios from 'axios';
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+// import { useRouter } from 'next/router';
 
 
 export default function Notices() {
    const [notice,setNotice] = useState<NoticeType[]>([])
+   const router = useRouter();
 
 // type declaration for use notice data
 type NoticeType = {
@@ -37,12 +41,35 @@ const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
         });
     }, []);
 
-   // chak noice is comming
+   // chak noise is coming
    if (notice.length == 0) {
       return <p>Loading ....</p>
    };
 
    const [first, ...rest] = notice;
+
+const handleViewDetails = () => {
+   const query = new URLSearchParams({
+   id: String(first._id),
+   short: first.ShortDescription,
+   long: first.LongDescription,
+   photo: first.Photo,
+   date: first.Data,
+   }).toString();
+
+   router.push(`/notice-details?${query}`);
+};
+const handleViewDetailsMap = (not:any) => {
+   const query = new URLSearchParams({
+   id: String(not._id),
+   short: not.ShortDescription,
+   long: not.LongDescription,
+   photo: not.Photo,
+   date: not.Data,
+   }).toString();
+
+   router.push(`/notice-details?${query}`);
+};
 
    return(
       <div className="flex justify-center mt-20">
@@ -57,7 +84,9 @@ const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
                         </div>
                         <div>
                            <p className="text-lg font-semibold mb-2 mt-1">{first.ShortDescription}</p>
-                           <button className="bg-amber-200 p-3 text-sm font-bold hover:underline cursor-pointer rounded-lg">
+                           <button 
+                           onClick={handleViewDetails}
+                           className="bg-amber-200 p-3 text-sm font-bold hover:underline cursor-pointer rounded-lg">
                               View Details
                            </button>
                         </div>
@@ -82,16 +111,20 @@ const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
                                  {not.ShortDescription.split(" ").length > 10 ? "..." : ""}
                               </h3>
                               <p className="mb-1 text-[#000000b7] ">{not.Data}</p>
-                              <button className="border p-2 rounded-lg text-sm">View Details</button>
+                              <button 
+                              onClick={()=> {handleViewDetailsMap(not)}}
+                              className="border p-2 rounded-lg text-sm" >
+                                 View Details
+                              </button>
                            </div>
                         </div>
                         <hr className="w-[100%] mt-2 mb-2 "/>
                      </div>
                      ))}
                   <div className="flex flex-col items-end pb-6 px-6">
-                     <button className="bg-amber-200 p-3 text-sm font-bold hover:underline cursor-pointer rounded-lg">
+                     <Link href='/notice' className="bg-amber-200 p-3 text-sm font-bold hover:underline cursor-pointer rounded-lg">
                      View All Notice
-                     </button>
+                     </Link>
                   </div>
                </div>
             </div>
