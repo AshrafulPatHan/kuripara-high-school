@@ -11,15 +11,7 @@ import Image from "next/image";
 //   };
 // };
 
-export default function EventDetails({ searchParams }: {
-  searchParams: {
-    _id: string;
-    Title: string;
-    Description: string;
-    Photo: string;
-    Data: string;
-  };
-}) {
+export default function EventDetails({ searchParams }: any) {
   const { Title, Description, Photo, Data } = searchParams;
 
   return (
