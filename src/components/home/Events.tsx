@@ -104,7 +104,7 @@ const handleViewDetailsMap = (even:any) => {
                            {even.Title.split(" ").length > 10 ? "..." : ""}
                         </h3>
                         <p className="mb-1 text-[#000000b7] ">{even.Data}</p>
-                        <button className="border p-2 rounded-lg text-sm"
+                        <button className="border p-2 rounded-lg text-sm cursor-pointer"
                         onClick={()=>{handleViewDetailsMap(even)}}
                         >
                            View Details

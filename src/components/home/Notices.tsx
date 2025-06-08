@@ -113,7 +113,7 @@ const handleViewDetailsMap = (not:any) => {
                               <p className="mb-1 text-[#000000b7] ">{not.Data}</p>
                               <button 
                                onClick={()=> {handleViewDetailsMap(not)}}
-                               className="border p-2 rounded-lg text-sm" >
+                               className="border p-2 rounded-lg text-sm cursor-pointer " >
                                  View Details
                               </button>
                            </div>
