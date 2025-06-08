@@ -2,7 +2,8 @@
 import Image from "next/image";
 import CountUp from 'react-countup';
 import { FaHome } from "react-icons/fa";
-import Student from "@/assets/image/school/ssc_student.webp";
+import Student from "@/assets/image/ssc_student.webp";
+// import Student from "@/assets/image/school/ssc_student.webp";
 import { PiStudentFill } from "react-icons/pi";
 import { FaStar } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";
