@@ -5,10 +5,12 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Navbar from "@/components/navigation/navbar";
 import Footer from "@/components/navigation/footer";
+import { useRouter } from "next/navigation";
 
 
 export default function Notices_Page() {
    const [event,setEvent] = useState<EventType[]>([])
+   const router = useRouter();
 
    // set event type
    type EventType = {
@@ -40,10 +42,17 @@ export default function Notices_Page() {
       return <p>Loading ...</p>
    };
 
-   // divide into 2 section
-   const [first , ...rest] = event;
-   // divide into 2 section
-   const [second, ...next] = rest;
+const handleViewDetailsMap = (not:any) => {
+   const query = new URLSearchParams({
+   id: String(not._id),
+   short: not.ShortDescription,
+   long: not.LongDescription,
+   photo: not.Photo,
+   date: not.Data,
+   }).toString();
+
+   router.push(`/notice-details?${query}`);
+};
 
    return(
       <div>
@@ -60,6 +69,11 @@ export default function Notices_Page() {
                             <h3 className="text-lg font-semibold">{even.Title}</h3>
                             <p>{even.ShortDescription}</p>
                             <p className="mt-1 text-[#000000b7] ">{even.Data}</p>
+                            <button 
+                             onClick={()=> {handleViewDetailsMap(even)}}
+                             className="border p-2 rounded-lg text-sm" >
+                                View Details
+                            </button>
                         </div>
                     </div>
                 </div>

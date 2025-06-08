@@ -11,7 +11,7 @@ type Props = {
   };
 };
 
-export default function NoticeDetails({ searchParams }: Props) {
+export default function EventDetails({ searchParams }: Props) {
   const { Title, Description, Photo, Data } = searchParams;
 
   return (
