@@ -3,15 +3,7 @@ import Footer from "@/components/navigation/footer";
 import Navbar from "@/components/navigation/navbar";
 import Image from "next/image";
 
-type Props = {
-  searchParams: {
-    id: string;
-    short: string;
-    long: string;
-    photo: string;
-    date: string;
-  };
-};
+
 
 export default function NoticeDetails({ searchParams }: any) {
   const { short, long, photo, date } = searchParams;
