@@ -1,17 +1,17 @@
 // app/details/page.tsx
 import Image from "next/image";
 
-type Props = {
-  searchParams: {
-    _id: number;
-   Title: string;
-   Description: string;
-   Photo: string;
-   Data: string;
-  };
-};
+// type Props = {
+//   searchParams: {
+//     _id: number;
+//    Title: string;
+//    Description: string;
+//    Photo: string;
+//    Data: string;
+//   };
+// };
 
-export default function EventDetails({ searchParams }: Props) {
+export default function EventDetails({ searchParams }: any) {
   const { Title, Description, Photo, Data } = searchParams;
 
   return (
