@@ -25,7 +25,7 @@ export default function Navbar() {
          </div>
       </div>
       {/* mobile */}
-      <div className="bg-[#fff] shadow-2xl py-2 flex md:hidden justify-between">
+      <div className="bg-[#fff] shadow-2xl py-2 px-1 flex md:hidden justify-between">
          <div  className="flex flex-row items-center gap-3">
             <Image src={Logo} alt="Logo" width={30} />
             {/* <p className="text-xl font-bold  ">Kuripara High School</p> */}

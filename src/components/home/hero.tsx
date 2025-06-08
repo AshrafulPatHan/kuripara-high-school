@@ -11,7 +11,7 @@ export default function Hero() {
             </div>
             <div className="absolute top-[2%] sm:top-[4%] left-[11%] sm:left-[4%]  ">
                <h1 className="text-[24px] lg:text-4xl xl:text-6xl font-bold">কুড়িপাড়া উচ্চ বিদ্যালয় </h1>
-               <p className=" hidden sm:flex text-sm md:text-md lg:text-lg mt-4">প্রতিষ্ঠাতা:- আল হাজ এম এ. রফিক চেয়ারম্যান.</p>
+               <p className=" hidden sm:flex text-sm md:text-md lg:text-lg mt-[0.7vw] ml-12">প্রতিষ্ঠাতা:- আল হাজ এম এ. রফিক চেয়ারম্যান.</p>
             </div>
          </div>
       </div>
