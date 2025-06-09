@@ -1,0 +1,474 @@
+/* Original idea and inspiration for the Book Cover Effect by https://codepen.io/realvjy */
+
+:root {
+  /* Light mode variables */
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --title-color: #000000;
+  --overlay-text-color: rgba(0, 0, 0, 0.05);
+  --shelf-bg: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+  --shelf-edge-top: rgba(255, 255, 255, 0.01);
+  --shelf-edge-bottom: rgba(0, 0, 0, 0.1);
+  --book-back-cover: #111111;
+  --book-page: #ffffff;
+  --book-page-border: rgba(0, 0, 0, 0.2);
+  --book-shadow: rgba(0, 0, 0, 0.15);
+  --book-shadow-strong: rgba(0, 0, 0, 0.35);
+  --side-book-bg: linear-gradient(to right, #444 0%, #666 50%, #444 100%);
+  --side-book-text: #f0f0f0;
+  --side-book-decoration: rgba(255, 255, 255, 0.3);
+  --toggle-dot: #333333;
+}
+
+.dark-mode {
+  /* Dark mode variables */
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --title-color: #ffffff;
+  --overlay-text-color: rgba(255, 255, 255, 0.05);
+  --shelf-bg: linear-gradient(to bottom, #2a2a2a, #1a1a1a);
+  --shelf-edge-top: rgba(255, 255, 255, 0.03); /* Lighter in dark mode */
+  --shelf-edge-bottom: rgba(0, 0, 0, 0.3);
+  --book-back-cover: #ffffff; /* Changed to white in dark mode */
+  --book-page: #ffffff; /* Changed to white in dark mode */
+  --book-page-border: rgba(0, 0, 0, 0.2);
+  --book-shadow: rgba(0, 0, 0, 0.3);
+  --book-shadow-strong: rgba(0, 0, 0, 0.5);
+  --side-book-bg: linear-gradient(to right, #222 0%, #444 50%, #222 100%);
+  --side-book-text: #ffffff;
+  --side-book-decoration: rgba(255, 255, 255, 0.2);
+  --toggle-dot: #ffffff;
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Cabinet Grotesk"),
+    url("https://fonts.cdnfonts.com/s/85514/CabinetGrotesk-Extrabold.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Cabinet Grotesk"),
+    url("https://fonts.cdnfonts.com/s/85514/CabinetGrotesk-Medium.woff")
+      format("woff");
+}
+
+body {
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Cabinet Grotesk", sans-serif;
+  letter-spacing: -0.02em;
+  color: var(--text-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Theme toggle dot */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--toggle-dot);
+  cursor: pointer;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+}
+
+/* Big centered text that appears on hover */
+.book-title-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  opacity: 1; /* Visible by default */
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.book-title-text {
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 800;
+  font-size: 20rem;
+  color: var(--overlay-text-color);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  max-width: 90vw;
+  transition: color 0.5s ease;
+}
+
+/* Shelf container to manage stacking context */
+.shelf-container {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Increased height to accommodate descriptions */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  /* Above the text overlay */
+}
+
+.shelf {
+  display: block;
+  position: absolute;
+  bottom: 270px; /* Adjusted to make room for descriptions */
+  width: 100%;
+  max-width: 800px;
+  height: 15px;
+  background: var(--shelf-bg);
+  border-radius: 1px;
+  z-index: 20;
+  box-shadow:
+        /* Subtle top highlight */ 0px -1px 1px rgba(255, 255, 255, 0.15),
+    /* Close shadow */ 0px 2px 3px rgba(0, 0, 0, 0.12),
+    /* Medium shadow */ 0px 5px 10px rgba(0, 0, 0, 0.08),
+    /* Larger shadow */ 0px 15px 20px rgba(0, 0, 0, 0.06),
+    /* Very large diffused shadow */ 0px 25px 30px rgba(0, 0, 0, 0.04),
+    /* Extra large ambient shadow */ 0px 40px 60px rgba(0, 0, 0, 0.2),
+    /* Massive soft shadow for dramatic effect */ 0px 60px 80px
+      rgba(0, 0, 0, 0.12);
+  transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Add a subtle edge to the shelf */
+.shelf:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--shelf-edge-bottom);
+  transition: background-color 0.5s ease;
+}
+
+.shelf:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--shelf-edge-top);
+  transition: background-color 0.5s ease;
+}
+
+/* Books wrapper */
+.books-wrapper {
+  position: absolute;
+  bottom: 287px; /* Adjusted to match new shelf position */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+  z-index: 10;
+  /* Below the shelf */
+}
+
+/* Book Item Styles */
+.books__item {
+  text-align: center;
+  cursor: default;
+  height: 220px;
+}
+
+.books__container {
+  position: relative;
+  width: 160px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.books__cover {
+  position: relative;
+  will-change: transform;
+  height: 100%;
+}
+
+.books__hitbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* Back Cover: 96% with 2% margin */
+.books__back-cover {
+  position: absolute;
+  width: 96%;
+  height: 96%;
+  top: 2%;
+  left: 2%;
+  background: var(--book-back-cover);
+  border-radius: 0 6px 6px 0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+  z-index: -10;
+  transition: background 0.5s ease;
+}
+
+/* Paper Container: 90% with equal top/bottom margin */
+.books__inside {
+  position: absolute;
+  width: 90%;
+  height: 94%;
+  top: 3%;
+  left: 5%;
+  z-index: 0;
+}
+
+/* Paper Pages: height is 100% */
+.books__page {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 98%;
+  height: 100%;
+  background: var(--book-page);
+  border: 1px solid var(--book-page-border);
+  border-radius: 0 6px 6px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  transform-origin: right center;
+  z-index: -5;
+  transition: background 0.5s ease, border-color 0.5s ease;
+}
+
+/* Front Cover Image */
+.books__image {
+  line-height: 0;
+  position: relative;
+  border-radius: 2px 6px 6px 2px;
+  height: 100%;
+  box-shadow: var(--book-shadow) 10px -5px 20px,
+    var(--book-shadow) 20px 0px 30px;
+  transform-origin: left center;
+  cursor: pointer;
+  will-change: transform, box-shadow;
+  z-index: 10;
+  transition: box-shadow 0.5s ease;
+}
+
+.books__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px 6px 6px 2px;
+}
+
+.books__effect {
+  position: absolute;
+  width: 24px;
+  height: 100%;
+  margin-left: 12px;
+  top: 0;
+  border-left: 2px solid rgba(0, 0, 0, 0.08);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform-origin: left center;
+  z-index: 5;
+  pointer-events: none;
+  will-change: margin-left;
+}
+
+.books__light {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 2px 6px 6px 2px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.15;
+  transform-origin: left center;
+  z-index: 4;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  will-change: opacity;
+}
+
+/* Side view book styles */
+.side-book {
+  height: 220px;
+  width: 30px;
+  /* Thin width for side view */
+  position: relative;
+  cursor: pointer;
+  background: var(--side-book-bg);
+  border-radius: 2px;
+  box-shadow: var(--book-shadow) 5px -3px 10px, var(--book-shadow) 10px 0px 15px;
+  transform-origin: bottom center;
+  will-change: transform, box-shadow;
+  transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+.side-book__title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  color: var(--side-book-text);
+  font-size: 12px;
+  padding: 5px 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.5s ease;
+}
+
+.side-book__decoration {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background-color: var(--side-book-decoration);
+  transition: background-color 0.5s ease;
+}
+
+.side-book__decoration:nth-child(2) {
+  top: auto;
+  bottom: 20px;
+}
+
+/* Contact shadow where book meets shelf */
+.book-shadow {
+  position: absolute;
+  bottom: 285px; /* Adjusted to match new shelf position */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+  z-index: 15;
+  /* Between books and shelf */
+}
+
+.book-shadow__item {
+  width: 120px;
+  height: 2px;
+  background: radial-gradient(
+    ellipse at center,
+    var(--book-shadow) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  border-radius: 50%;
+  will-change: width, opacity;
+  transition: background 0.5s ease;
+}
+
+.book-shadow__item.side {
+  width: 25px;
+}
+
+/* Book descriptions */
+.book-descriptions {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 640px;
+  z-index: 5;
+  height: 200px; /* Fixed height for descriptions */
+}
+
+.book-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  transition: opacity 0.3s ease, visibility 0.3s ease, color 0.5s ease;
+}
+
+.book-description.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.book-description h3 {
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--title-color);
+  transition: color 0.5s ease;
+}
+
+.book-description .author {
+  font-style: italic;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.book-description p {
+  margin-bottom: 0.75rem;
+}
+
+/* Split Type styles */
+.lines-animation {
+  overflow: hidden;
+}
+
+/* Critical fix: Ensure each line has overflow hidden */
+.line {
+  overflow: hidden !important;
+  display: block;
+}
+
+/* Ensure the line inner content has proper transform properties */
+.line .line-inner {
+  display: block;
+  transform: translateY(
+    0
+  ); /* Changed from 100% to make text visible by default */
+  opacity: 1; /* Changed from 0 to make text visible by default */
+}
+
+

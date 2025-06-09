@@ -8,6 +8,7 @@ import Rabani from "@/assets/image/school/Rabani.jpg";
 import Sahan from "@/assets/image/school/Sahan_sir.jpg";
 import Saied from "@/assets/image/school/Sahid_sir.jpg"; 
 import Babul from "@/assets/image/school/babul_sir.jpg"; 
+import Link from "next/link";
 
 
 export default function Teacher() {
@@ -55,9 +56,9 @@ const isInView2 = useInView(ref2, { once: false });
                         সকল শিক্ষকই আন্তরিকতা, নিষ্ঠা ও কঠোর পরিশ্রমের মাধ্যমে শিক্ষার্থীদের সঠিক পথে পরিচালিত করতে নিরলস কাজ করে যাচ্ছেন। তাঁদের অবদানেই কুড়িপাড়া উচ্চ বিদ্যালয় আজ একটি আদর্শ শিক্ষাপ্রতিষ্ঠান হিসেবে সুনাম অর্জন করতে সক্ষম হয়েছে।
                      </p>
                   </div>
-                  <button className="bg-amber-200 p-3 text-sm font-bold hover:underline cursor-pointer mt-[55px] rounded-lg">
+                  <Link href='/teacher' className="bg-amber-200 p-3 text-sm font-bold hover:underline cursor-pointer mt-[55px] rounded-lg">
                      See more Teacher ...
-                  </button>
+                  </Link>
                </motion.div>
             </div>
             <motion.div
