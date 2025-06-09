@@ -33,11 +33,11 @@ export default function About(){
                     </p>
                     <div className=" flex items-center gap-1 mt-3">
                         <p className="text-lg font-medium">Location :</p>
-                        <p className="text-blue-500">Bandor , Narayanganj</p>
+                        <p className="text-blue-500 text-sm lg:text-lg">Bandor , Narayanganj</p>
                     </div><div className=" flex items-center gap-1">
                         <p className="text-lg font-medium">Phone :</p>
                         {/* <p className="text-blue-500">016727-27490</p> */}
-                        <p className="text-blue-500">+8801614871378</p>
+                        <p className="text-blue-500 text-sm lg:text-lg">+8801614871378</p>
                     </div>
                     <div className=" flex items-center gap-1 ">
                         <p className="text-lg font-medium">Email:</p>

@@ -43,9 +43,9 @@ const isInView2 = useInView(ref2, { once: false });
                initial={{ rotate: "0deg", opacity: 0, x: -55, y: 55 }}
                   animate={isInView2 ? { opacity: 1, x: 0, y: 0 } : {}}
                   transition={{ duration: 0.5, ease: "linear" }}
-               className=" w-[97vw] lg:w-[50vw] xl:w-[909px] bg-[#f8f4f4] rounded-[8px] shadow-2xl p-4  ">
-                  <h3>আমাদের শিক্ষকবৃন্দ</h3>
+                  className=" w-[97vw] lg:w-[50vw] xl:w-[909px] h-auto xl:h-[300px] bg-[#f8f4f4] rounded-[8px] shadow-2xl p-4 flex flex-col gap-2  ">
                   <div>
+                  <h3>আমাদের শিক্ষকবৃন্দ</h3>
                      <p>
                         কুড়িপাড়া উচ্চ বিদ্যালয়ে বর্তমানে মোট ১৮ জন অভিজ্ঞ ও দক্ষ শিক্ষক কর্মরত রয়েছেন। প্রত্যেক শিক্ষকই তাঁর নিজ নিজ বিষয়ে বিশেষ দক্ষতা ও অভিজ্ঞতার অধিকারী। তাঁরা শিক্ষার্থীদের প্রতি অত্যন্ত যত্নবান এবং পেশাদারভাবে শ্রেণি পরিচালনা করে থাকেন।
                      </p>
@@ -56,7 +56,7 @@ const isInView2 = useInView(ref2, { once: false });
                         সকল শিক্ষকই আন্তরিকতা, নিষ্ঠা ও কঠোর পরিশ্রমের মাধ্যমে শিক্ষার্থীদের সঠিক পথে পরিচালিত করতে নিরলস কাজ করে যাচ্ছেন। তাঁদের অবদানেই কুড়িপাড়া উচ্চ বিদ্যালয় আজ একটি আদর্শ শিক্ষাপ্রতিষ্ঠান হিসেবে সুনাম অর্জন করতে সক্ষম হয়েছে।
                      </p>
                   </div>
-                  <Link href='/teacher' className="bg-amber-200 p-3 text-sm font-bold hover:underline cursor-pointer mt-[55px] rounded-lg">
+                  <Link href='/teacher' className="bg-amber-200 p-3 text-sm font-bold hover:underline cursor-pointer mt-[55px] w-[170px] rounded-lg">
                      See more Teacher ...
                   </Link>
                </motion.div>

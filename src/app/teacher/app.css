@@ -1,0 +1,266 @@
+@import url("https://fonts.cdnfonts.com/css/thegoodmonolith");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-text: #fff;
+  --color-bg: #000;
+  --thumb-width: 120px;
+  --line-spacing: 10px;
+  /* Controls spacing between lines */
+  --line-base-height: 15px;
+  --line-max-height: 50px;
+}
+
+.body-teacher {
+  margin: 0;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-family: "TheGoodMonolith", sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.slides {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 100%;
+  place-items: center;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  grid-area: 1 / 1 / -1 / -1;
+  pointer-events: none;
+  opacity: 0;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  place-items: center;
+  will-change: transform, opacity;
+}
+
+.slide--current {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.slide__img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform, opacity, filter;
+}
+
+.scroll-hint {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  color: #fff;
+  z-index: 100;
+  font-size: 1rem;
+}
+
+/* Bottom UI container */
+.bottom-ui-container {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 720px;
+  max-width: 100%;
+  z-index: 100;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide-section {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  opacity: 0.9;
+  letter-spacing: 1px;
+  margin-bottom: 36px;
+}
+
+.slide-counter {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 0.825rem;
+  margin-bottom: 24px;
+}
+
+.counter-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.counter-nav {
+  width: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.counter-nav:hover {
+  opacity: 1;
+}
+
+.counter-divider {
+  opacity: 0.6;
+  font-size: 0.8rem;
+}
+
+.slide-title-container {
+  width: 100%;
+  text-align: center;
+  height: 30px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.slide-title {
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  left: 0;
+}
+
+.slide-title.exit-up {
+  transform: translateY(-30px);
+  opacity: 0;
+}
+
+.slide-title.enter-up {
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+/* Updated drag indicator styles */
+.drag-indicator {
+  width: 100%;
+  height: 50px;
+  pointer-events: none;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.lines-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.drag-line {
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: var(--line-base-height);
+  transform-origin: bottom center;
+  transition: height 0.6s cubic-bezier(0.25, 0.1, 0.25, 1),
+    background-color 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.thumbs-container {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* .slide-thumbs {
+  display: flex;
+  position: relative;
+  background: transparent;
+  padding: 0;
+  z-index: 11;
+  gap: 0;
+} */
+
+.slide-thumbs {
+  display: flex;
+  position: relative;
+  background: transparent;
+  padding: 0;
+  z-index: 11;
+  gap: 10px;
+  overflow-x: auto; 
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; 
+}
+
+
+.frost-bg {
+  display: none;
+}
+
+/* .slide-thumb {
+  width: var(--thumb-width);
+  height: 80px;
+  background-size: cover;
+  background-position: left center;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin: 0;
+  position: relative;
+  z-index: 12;
+} */
+
+.slide-thumb {
+  flex: 0 0 auto; 
+  width: var(--thumb-width);
+  height: 80px;
+  background-size: cover;
+  background-position: left center;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin: 0;
+  position: relative;
+  z-index: 12;
+}
+
+
+.slide-thumb:hover {
+  opacity: 0.8;
+}
+
+.slide-thumb.active {
+  opacity: 1;
+  transform: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+
