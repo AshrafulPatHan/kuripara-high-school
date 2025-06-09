@@ -15,9 +15,23 @@ import "./app.css";
 
 gsap.registerPlugin(Observer);
 
-const slideImages = new Array(12).fill(
-  'https://i.ibb.co/Lds65XjH/Kamal-sir.jpg'
-);
+// const slideImages = new Array(12).fill(
+//   'https://i.ibb.co/Lds65XjH/Kamal-sir.jpg'
+// );
+
+const slideImages =[
+    'https://i.ibb.co/Lds65XjH/Kamal-sir.jpg',
+    'https://i.ibb.co/FbcWyYy7/Sahan-sir.jpg',
+    'https://i.ibb.co/PJgWhgH/Sahid-sir.jpg',
+    'https://i.ibb.co/R4gLTB6w/rosion-sir.jpg',
+    'https://i.ibb.co/BKGDTXwc/babul-sir.jpg',
+    'https://i.ibb.co/0yX2KFbf/Hojur-sir.jpg',
+    'https://i.ibb.co/xS25FRmJ/mosad-sir.jpg',
+    'https://i.ibb.co/tPC5WRyZ/sikel-sir.jpg',
+    'https://i.ibb.co/0R6X2DGJ/lockdounsir.jpg',
+    'https://i.ibb.co/hJ7gJSS3/madum2.jpg',
+    'https://i.ibb.co/1t8h2f3S/madum.jpg'
+]
 
 const slideTitles = [
   'Cosmic Harmony',
@@ -245,9 +259,9 @@ export default function Teacher() {
     <div>
       <Navbar />
       <div className='body-teacher'>
-        <div className="scroll-hint">scroll or drag</div>
+        <div className="scroll-hint">Scroll or Drag</div>
         <div className="bottom-ui-container">
-          <div className="slide-section">COSMIC SERIES</div>
+          <div className="slide-section">Teacher</div>
           <div className="slide-counter">
             <div className="counter-nav prev-slide" onClick={() => navigate(PREV)}>⟪</div>
             <div className="counter-display">
