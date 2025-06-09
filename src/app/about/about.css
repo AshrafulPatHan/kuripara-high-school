@@ -66,7 +66,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: "Cabinet Grotesk", sans-serif;
   letter-spacing: -0.02em;
   color: var(--text-color);
@@ -453,7 +453,7 @@
 
 /* Split Type styles */
 .lines-animation {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* Critical fix: Ensure each line has overflow hidden */

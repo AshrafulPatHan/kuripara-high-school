@@ -29,7 +29,7 @@ export default function Footer() {
             <div className="flex flex-col md:flex-row gap-[34.7vw] xl:gap-[700px] ">
                <div className="flex flex-row gap-3 ">
                   <div>
-                     <Image src={Ashraful} alt="ashraful" width={90} className="bg-blue-200 rounded-xl " />
+                     <Image src={Ashraful} alt="ashraful" width={150} className="bg-blue-200 rounded-xl w-[90px] " />
                   </div>
                   <div>
                      <p className="text-xs text-[#ffffffb2] ">Created By</p>

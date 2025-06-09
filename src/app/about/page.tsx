@@ -265,7 +265,7 @@ export default function About_Page(){
                 </svg>
 
                 <div className="book-title-overlay">
-                    <div className="book-title-text">Ten Principles for Good Design</div>
+                    <div className="book-title-text">Kuripara High School</div>
                 </div>
 
                 <div className="shelf-container">
@@ -299,7 +299,7 @@ export default function About_Page(){
                     </div>
 
                     <div className="side-book" data-book-index="side" data-book-title="Design Systems">
-                        <div className="side-book__title">Design Systems</div>
+                        <div className="side-book__title">Kuripara High School</div>
                         <div className="side-book__decoration"></div>
                         <div className="side-book__decoration"></div>
                     </div>
@@ -345,34 +345,50 @@ export default function About_Page(){
 
                 <div className="book-descriptions">
                     <div className="book-description" data-book-index="0">
-                        <h3>Dieter Rams: The Complete Works</h3>
-                        <div className="author">by Klaus Klemp</div>
+                        <h3>Welcome to Kuripara High School!</h3>
+                        <div className="author">Ashraful Pathan</div>
                         <div className="lines-animation">
-                            <p>From legendary music producer Rick Rubin comes a profound guide to the powerful source of creative inspiration. The Creative Act is a beautiful and generous course of study that illuminates the path of the artist as a road we all can follow.</p>
+                            <p>
+                                Kuripara High School is a renowned educational institution located in the village of Kuripara, in the Madanpur area of Bandar Upazila, Narayanganj District. It is a semi-government school situated near the Shitalakshya River, surrounded by nature, and is known as a model center for education.
+                                The school offers education from class 6 to class 10. Experienced and dedicated teachers provide instruction here, ensuring students receive the highest quality education. The school's academic performance is outstanding — with a 100% pass rate every year and numerous students achieving GPA-5 (A+).
+                                Kuripara High School is not just an educational institution; it is a noble center for spreading the light of knowledge.
+                            </p>
                         </div>
                     </div>
 
                     <div className="book-description" data-book-index="side">
-                        <h3>Design Systems</h3>
-                        <div className="author">A Practical Guide</div>
+                        <h3>কুড়িপাড়া উচ্চ বিদ্যালয়ে আপনাকে স্বাগতম!</h3>
+                        <div className="author">Ashraful Pathan</div>
                         <div className="lines-animation">
-                            <p>A comprehensive guide to creating, documenting, and maintaining design systems. This book covers the essential elements of design systems, from typography and color to components and patterns, helping teams build cohesive and scalable product experiences.</p>
+                            <p>
+                                কুড়িপাড়া উচ্চ বিদ্যালয় নারায়ণগঞ্জ জেলার বন্দর উপজেলার মদনপুর এলাকায়, কুড়িপাড়া গ্রামে অবস্থিত একটি খ্যাতনামা শিক্ষা প্রতিষ্ঠান। এটি একটি আধা-সরকারি বিদ্যালয় যা শীতলক্ষ্যা নদীর নিকটবর্তী অবস্থানে অবস্থিত, প্রকৃতির সান্নিধ্যে নির্মিত এই বিদ্যালয়টি শিক্ষার আদর্শ কেন্দ্র হিসেবে পরিচিত।
+                                বিদ্যালয়টিতে ৬ষ্ঠ শ্রেণি থেকে ১০ম শ্রেণি পর্যন্ত পাঠদান করা হয়। এখানে অভিজ্ঞ ও নিবেদিতপ্রাণ শিক্ষকবৃন্দ পাঠদান করেন, যারা শিক্ষার্থীদের সর্বোচ্চ মানের শিক্ষা প্রদান করে থাকেন। বিদ্যালয়ের ফলাফল অত্যন্ত চমৎকার — প্রতি বছর ১০০% পাশের হার এবং অসংখ্য শিক্ষার্থী জিপিএ-৫ (A+) অর্জন করে থাকে।
+                                কুড়িপাড়া উচ্চ বিদ্যালয় কেবলমাত্র একটি শিক্ষাপ্রতিষ্ঠান নয়, এটি শিক্ষার আলো ছড়ানোর একটি মহৎ কেন্দ্র।
+                            </p>
                         </div>
                     </div>
 
                     <div className="book-description" data-book-index="1">
-                        <h3>Zen: The Art of Simple Living</h3>
-                        <div className="author">by Shunmyo Masuno</div>
+                        <h3>কুড়িপাড়া উচ্চ বিদ্যালয়ের ইতিহাস</h3>
+                        <div className="author">Ashraful Pathan</div>
                         <div className="lines-animation">
-                            <p>Drawing on centuries of wisdom, renowned Zen Buddhist priest Shunmyo Masuno applies the essence of Zen to modern life. Through simple, practical lessons, discover how a few minutes a day can transform your life and bring happiness and fulfillment.</p>
+                            <p>
+                                কুড়িপাড়া উচ্চ বিদ্যালয় নারায়ণগঞ্জ জেলার বন্দর উপজেলার মদনপুর এলাকায়, কুড়িপাড়া গ্রামে অবস্থিত একটি খ্যাতনামা ও ঐতিহ্যবাহী শিক্ষা প্রতিষ্ঠান। এই বিদ্যালয়টি প্রতিষ্ঠা করেন আলহাজ্ব এম. এ. রফিক চেয়ারম্যান। এটি ১৯৬৮ সালে প্রতিষ্ঠিত হয়, অর্থাৎ আজ থেকে প্রায় ৫৭ বছর পূর্বে। দীর্ঘ এই পথচলায় বিদ্যালয়টি গৌরবময় ইতিহাস ও সুনাম অর্জন করেছে।
+                                বিদ্যালয়টি একটি আধা-সরকারি প্রতিষ্ঠান, যা শীতলক্ষ্যা নদীর নিকটবর্তী মনোরম পরিবেশে অবস্থিত। বর্তমানে এই বিদ্যালয়ে ৬ষ্ঠ শ্রেণি থেকে ১০ম শ্রেণি পর্যন্ত পাঠদান করা হয়।
+                                কুড়িপাড়া উচ্চ বিদ্যালয় কেবল একটি শিক্ষাপ্রতিষ্ঠান নয়, এটি কুড়িপাড়া ও আশেপাশের এলাকার শিক্ষার বাতিঘর হিসেবে বিবেচিত।
+                            </p>
                         </div>
                     </div>
 
                     <div className="book-description active" data-book-index="2">
-                        <h3>Dieter Rams: Ten Principles for Good Design</h3>
-                        <div className="author">by Dieter Rams</div>
+                        <h3>History of Kuripara High School</h3>
+                        <div className="author">Ashraful Pathan</div>
                         <div className="lines-animation">
-                            <p>The definitive resource for designers at all levels. This comprehensive guide covers Dieter Rams' famous ten principles for good design, providing essential knowledge for creating functional, aesthetic, and long-lasting design solutions.</p>
+                            <p>
+                                Kuripara High School is a renowned and traditional educational institution located in Kuripara village, Madanpur area, Bandar Upazila of Narayanganj district. The school was founded by Alhaj M. A. Rafiq Chairman. It was established in 1968, which means it has a proud legacy spanning nearly 57 years. Over this long journey, the school has achieved a glorious history and reputation.
+                                It is a semi-government institution situated in a scenic environment near the Shitalakshya River. Currently, classes are conducted from grade 6 to grade 10.
+                                Kuripara High School is not just an educational institution—it is considered a beacon of education for the people of Kuripara and the surrounding areas.
+                            </p>
                         </div>
                     </div>
                 </div>
