@@ -9,7 +9,7 @@ export default function Hero() {
       <div>
          <div className="relative">
             <div>
-               <Image src={Hero_img} alt="Logo" className="w-[100vw] h-[49vw] object-cover " />
+               <Image src={Hero_img} alt="Logo" width={1880} className="w-[100vw] h-[49vw] object-cover " />
             </div>
             <motion.div 
                initial={{rotate:"0deg",opacity:0}}

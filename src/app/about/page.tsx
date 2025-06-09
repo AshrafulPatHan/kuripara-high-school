@@ -237,7 +237,7 @@ export default function About_Page(){
     return(
         <div>
             <Navbar/>
-            <div className="">
+            <div id="body-about" >
                 <div className="theme-toggle" id="theme-toggle"></div>
 
                 <svg

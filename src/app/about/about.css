@@ -23,8 +23,8 @@
 .dark-mode {
   /* Dark mode variables */
   --bg-color: #121212;
-  --text-color: #e0e0e0;
-  --title-color: #ffffff;
+  --text-color: #333333;
+  --title-color: #000000;
   --overlay-text-color: rgba(255, 255, 255, 0.05);
   --shelf-bg: linear-gradient(to bottom, #2a2a2a, #1a1a1a);
   --shelf-edge-top: rgba(255, 255, 255, 0.03); /* Lighter in dark mode */
@@ -58,8 +58,8 @@
       format("woff");
 }
 
-body {
-  background-color: var(--bg-color);
+#body-about {
+  /* background-color: var(--bg-color); */
   margin: 0;
   padding: 0;
   height: 100vh;
