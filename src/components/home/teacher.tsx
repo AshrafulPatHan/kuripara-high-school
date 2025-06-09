@@ -20,7 +20,7 @@ const isInView1 = useInView(ref1, { once: false });
 const isInView2 = useInView(ref2, { once: false });
 
    return(
-      <div className="flex justify-center mt-20 max-w-screen overflow-hidden ">
+      <div className="flex justify-center mt-20 max-w-screen overflow-hidden pb-12 ">
          <div className="flex flex-col items-center gap-12 ">
             <div className="flex flex-col items-center lg:items-start lg:flex-row gap-8">
                <motion.div
@@ -28,7 +28,7 @@ const isInView2 = useInView(ref2, { once: false });
                   initial={{ rotate: "0deg", opacity: 0, x: -55, y: 55 }}
                   animate={isInView1 ? { opacity: 1, x: 0, y: 0 } : {}}
                   transition={{ duration: 0.5, ease: "linear" }}
-               className="bg-[#f8f4f4] rounded-[8px] shadow-2xl w-[97vw] sm:w-[277px] h-[300px] flex items-center justify-center ">
+               className="bg-[#f8f4f4] rounded-[8px] shadow-2xl hover:shadow-2xs w-[97vw] sm:w-[277px] h-[300px] flex items-center justify-center ">
                   <div className="flex flex-col items-center">
                      <p className="text-center">
                         <Image src={HeadMaster} width={300} height={200} alt="sir" className="w-[160px] h-[200px] object-cover " />
@@ -43,7 +43,7 @@ const isInView2 = useInView(ref2, { once: false });
                initial={{ rotate: "0deg", opacity: 0, x: -55, y: 55 }}
                   animate={isInView2 ? { opacity: 1, x: 0, y: 0 } : {}}
                   transition={{ duration: 0.5, ease: "linear" }}
-                  className=" w-[97vw] lg:w-[50vw] xl:w-[909px] h-auto xl:h-[300px] bg-[#f8f4f4] rounded-[8px] shadow-2xl p-4 flex flex-col gap-2  ">
+                  className=" w-[97vw] lg:w-[50vw] xl:w-[909px] h-auto xl:h-[300px] bg-[#f8f4f4] rounded-[8px] shadow-2xl hover:shadow-2xs p-4 flex flex-col gap-2  ">
                   <div>
                   <h3>আমাদের শিক্ষকবৃন্দ</h3>
                      <p>
@@ -67,7 +67,7 @@ const isInView2 = useInView(ref2, { once: false });
                   animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
                   transition={{ duration: 0.5, ease: "linear" }}
             className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 items-center  gap-3 lg:gap-7 xl:gap-[37px] " id="teacher-grid">
-               <div className="bg-[#f8f4f4] rounded-[8px]  w-[97vw] sm:w-[200px] xl:w-[277px] py-6 flex items-center justify-center ">
+               <div className="bg-[#f8f4f4] rounded-[8px]  w-[97vw] sm:w-[200px] xl:w-[277px] py-6 flex items-center hover:shadow-2xl justify-center ">
                   <div className="flex flex-col items-center">
                      <p className="text-center">
                         <Image src={Sahan} alt="sir" className=" w-[160px] h-[200px] object-cover " />
@@ -76,7 +76,7 @@ const isInView2 = useInView(ref2, { once: false });
                      <p>সহকারী প্রধান শিক্ষক</p>
                   </div>
                </div>
-               <div className="bg-[#f8f4f4] rounded-[8px] w-[97vw] sm:w-[200px] xl:w-[277px] py-6  flex items-center justify-center ">
+               <div className="bg-[#f8f4f4] rounded-[8px] w-[97vw] sm:w-[200px] xl:w-[277px] py-6  flex items-center hover:shadow-2xl justify-center ">
                   <div className="flex flex-col items-center">
                      <p className="text-center">
                         <Image src={Rabani} alt="sir" className="w-[160px] h-[200px] object-cover " />
@@ -85,7 +85,7 @@ const isInView2 = useInView(ref2, { once: false });
                      <p>রসায়ন শিক্ষক</p>
                   </div>
                </div>
-               <div className="bg-[#f8f4f4] rounded-[8px] w-[97vw] sm:w-[200px] xl:w-[277px] py-6  flex items-center justify-center ">
+               <div className="bg-[#f8f4f4] rounded-[8px] w-[97vw] sm:w-[200px] xl:w-[277px] py-6  flex items-center hover:shadow-2xl justify-center ">
                   <div className="flex flex-col items-center">
                      <p className="text-center">
                         <Image src={Saied} alt="sir" className="w-[160px] h-[200px] object-cover " />
@@ -94,7 +94,7 @@ const isInView2 = useInView(ref2, { once: false });
                      <p>পদার্থবিজ্ঞান শিক্ষক</p>
                   </div>
                </div>
-               <div className="bg-[#f8f4f4] rounded-[8px] w-[97vw] sm:w-[200px] xl:w-[277px] py-6  flex items-center justify-center ">
+               <div className="bg-[#f8f4f4] rounded-[8px] w-[97vw] sm:w-[200px] xl:w-[277px] py-6  flex items-center hover:shadow-2xl justify-center ">
                   <div className="flex flex-col items-center">
                      <p className="text-center">
                         <Image src={Babul} alt="sir" className="w-[160px] h-[200px] object-cover " />

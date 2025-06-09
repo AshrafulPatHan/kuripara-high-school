@@ -87,9 +87,9 @@ const handleViewDetailsMap = (not:any) => {
                <div className="flex gap-5">
                   <div className="flex flex-col bg-[#f8f4f4] w-[97vw] lg:w-[60vw] xl:w-[821px] p-6 rounded-2xl items-center  ">
                      <div>
-                        <div>
+                        <div className="w-[98vw] lg:w-[55vw] xl:w-[800px] rounded-2xl overflow-hidden group">
                            <Image src={first.Photo} alt="Notice"  width={800} height={400}
-                           className="w-[98vw] lg:w-[55vw] xl:w-[800px] object-cover rounded-2xl " />
+                           className=" object-cover rounded-2xl w-full h-full transition-transform duration-300 group-hover:scale-105 " />
                         </div>
                         <div>
                            <p className="text-lg font-semibold mb-2 mt-1">{first.ShortDescription}</p>
@@ -111,8 +111,8 @@ const handleViewDetailsMap = (not:any) => {
                      {rest.map((not)=>(
                      <div key={not._id} className="flex flex-col items-center px-6 py-3 ">
                         <div className="flex gap-4 ">
-                           <div>
-                              <Image src={not.Photo} width={300} height={300} alt="event" className="w-[100px] h-[100px] object-cover rounded-full  " />
+                           <div className="w-[100px] h-[100px] rounded-full overflow-hidden group">
+                              <Image src={not.Photo} width={300} height={300} alt="event" className="w-full h-full object-cover rounded-full transition-transform duration-300 group-hover:scale-110 " />
                            </div>
                            <div className="w-[60%] ">
                               <h3>

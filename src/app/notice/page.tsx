@@ -1,5 +1,6 @@
 "use client"
 
+import { motion } from "motion/react"
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -61,8 +62,11 @@ const handleViewDetailsMap = (not:any) => {
             <div  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-center mt-10 md:mt-20">
                 {event.map((even)=>(
                 <div key={even._id} >
-                    <div className="w-[98vw] sm:w-[350px] h-auto sm:h-[650px] bg-gradient-to-b from-[#dbd9d9] to-[#387ab8] p-4 
-                    flex flex-col items-center ">
+                    <motion.div 
+                        whileHover={{ y: -7 }}
+                        transition={{ type: "spring", stiffness: 200, damping: 15 }}
+                        className="w-[98vw] sm:w-[350px] h-auto sm:h-[650px] bg-gradient-to-b from-[#dbd9d9] to-[#387ab8] p-4 
+                        flex flex-col items-center ">
                         <div className="">
                             <Image src={even.Photo} width={500} height={500}  alt="events photo" className=" w-[90vw] md:w-[300px] sm:h-[300px] object-cover " />
                         </div>
@@ -80,7 +84,7 @@ const handleViewDetailsMap = (not:any) => {
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
                 ))}
             </div>

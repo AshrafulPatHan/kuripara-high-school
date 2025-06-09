@@ -18,8 +18,9 @@ export default function About(){
                 initial={{ rotate: "0deg", opacity: 0, x: -55, y: 55 }}
                     animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
                     transition={{ duration: 0.5, ease: "linear" }}
+                    className="w-[97vw] lg:w-[65vw] xl:w-[600px] rounded-2xl overflow-hidden group"
                 >
-                    <Image src={Kuripara} alt="school" className="w-[97vw] lg:w-[65vw] xl:w-[600px] rounded-2xl " />
+                    <Image src={Kuripara} alt="school" className="object-cover rounded-2xl w-full h-full transition-transform duration-300 group-hover:scale-105  " />
                 </motion.div>
                 <div className="w-[95vw] lg:w-[70vw] xl:w-[600px]  ">
                     {/* <h2 className="text-3xl font-medium">Welcome to Kuripara High School</h2> */}
