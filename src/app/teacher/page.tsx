@@ -180,7 +180,7 @@ export default function Teacher() {
     setPendingNav(null);
     setTimeout(() => {
       if (nav.type === 'goto') navigateTo(nav.index);
-      else navigate(nav.dir);
+      else navigate(nav.dir as 1 | -1);
     }, 50);
   };
 
@@ -222,7 +222,7 @@ export default function Teacher() {
     return () => {
       document.removeEventListener('keydown', handleKey);
     };
-  }, [isAnimating, current]);
+  }, [isAnimating, current, navigate]);
 
   // Initialize counter/title on mount
   useEffect(() => updateCounter(0), []);
