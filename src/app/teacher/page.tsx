@@ -266,7 +266,7 @@ export default function Teacher() {
             <div className="counter-nav prev-slide" onClick={() => navigate(PREV)}>⟪</div>
             <div className="counter-display">
               <span className="current-slide">01</span>
-              <span className="counter-divider">//</span>
+              <span className="counter-divider">0</span>
               <span className="total-slides">06</span>
             </div>
             <div className="counter-nav next-slide" onClick={() => navigate(NEXT)}>⟫</div>
