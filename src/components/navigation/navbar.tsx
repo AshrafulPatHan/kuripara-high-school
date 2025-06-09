@@ -9,7 +9,7 @@ export default function Navbar() {
    return(
    <div className=" sticky top-0 z-50">
       {/* desktop */}
-      <div className="bg-[#fff] shadow-2xl py-2 hidden md:flex md:flex-col  ">
+      <div className="bg-[#fff] shadow-2xl py-2 hidden md:flex md:flex-col max-w-screen overflow-hidden ">
          <div className="flex items-center justify-center gap-[200px] ">
             <div  className="flex flex-row items-center gap-3">
                <Image src={Logo} alt="Logo" width={50} />

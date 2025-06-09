@@ -114,97 +114,97 @@ export default function LinkPage() {
   return (
     <div>
       <Navbar />
-      <div className="container">
-        <div className="top-left">
-          <h2>Books for Your Mental Health</h2>
-        </div>
-        <div className="top-right">
-          <div className="circle circle1"></div>
-          <div className="circle circle2"></div>
-        </div>
-
-        <div className="main-content">
-          <div className="left-text">
-            <h2>The Creative Spark</h2>
-            <p>
-              Rick Rubin shows that creativity ignites from within. Every beat,
-              every brushstroke, and every note is an invitation to explore
-              your inner world.
-            </p>
-          </div>
-
-          <div className="books-wrapper">
-            <div className="books__item">
-              <div className="books__container">
-                <div className="books__cover">
-                  <div className="books__back-cover"></div>
-                  <div className="books__inside">
-                    <div className="books__page"></div>
-                    <div className="books__page"></div>
-                    <div className="books__page"></div>
-                  </div>
-                  <div className="books__image">
-                    <Image
-                      src="https://covers.shakespeareandcompany.com/97818388/9781838858636.jpg"
-                      alt="Creative Act by Rick Rubin"
-                      width={200}
-                      height={300}
-                    />
-                    <div className="books__effect"></div>
-                    <div className="books__light"></div>
-                  </div>
-                  <div className="books__hitbox" data-book-index="0"></div>
-                </div>
-              </div>
-              <div className="books__title">
-                Creative Act
-                <br />
-                Rick Rubin
-              </div>
+      <div className="body-books">
+        <div className="container">
+            <div className="top-left">
+                <h2><a href="https://nctb.portal.gov.bd/site/page/d01e72b0-8ecd-4c81-bffd-c9e117b7fdad/-" target="_blank" rel="noopener noreferrer">Books For High school </a> </h2>
+            </div>
+            <div className="top-right">
+                <div className="circle circle1"></div>
+                <div className="circle circle2"></div>
             </div>
 
-            <div className="books__item">
-              <div className="books__container">
-                <div className="books__cover">
-                  <div className="books__back-cover"></div>
-                  <div className="books__inside">
-                    <div className="books__page"></div>
-                    <div className="books__page"></div>
-                    <div className="books__page"></div>
-                  </div>
-                  <div className="books__image">
-                    <Image
-                      src="https://covers.shakespeareandcompany.com/97988885/9798888500002.jpg"
-                      alt="Psychedelics and Mental Health by Irene de Caso"
-                      width={200}
-                      height={300}
-                    />
-                    <div className="books__effect"></div>
-                    <div className="books__light"></div>
-                  </div>
-                  <div className="books__hitbox" data-book-index="1"></div>
-                </div>
-              </div>
-              <div className="books__title">
-                Psychedelics and Mental Health
-                <br />
-                Irene de Caso
-              </div>
+            <div className="main-content">
+            <div className="left-text">
+                <h2>Find Your Book You Need</h2>
+                <p>
+                    This section is for you book, we work this page your all book you need in school
+                </p>
             </div>
-          </div>
 
-          <div className="right-text">
-            <h2>Mindful Transcendence</h2>
-            <p>
-              In exploring the depths of consciousness, new dimensions of
-              healing emerge. Every insight is a step toward transcending
-              ordinary limits.
-            </p>
-          </div>
-        </div>
+            <div className="books-wrapper">
+                <div className="books__item">
+                <div className="books__container">
+                    <div className="books__cover">
+                    <div className="books__back-cover"></div>
+                    <div className="books__inside">
+                        <div className="books__page"></div>
+                        <div className="books__page"></div>
+                        <div className="books__page"></div>
+                    </div>
+                    <div className="books__image">
+                        <Image
+                        src="https://covers.shakespeareandcompany.com/97818388/9781838858636.jpg"
+                        alt="Creative Act by Rick Rubin"
+                        width={200}
+                        height={300}
+                        />
+                        <div className="books__effect"></div>
+                        <div className="books__light"></div>
+                    </div>
+                    <div className="books__hitbox" data-book-index="0"></div>
+                    </div>
+                </div>
+                <div className="books__title">
+                    Creative Act
+                    <br />
+                    Rick Rubin
+                </div>
+                </div>
 
-        <div className="bottom-center">
-          <span>Mountain Tara, Serbia (43.75° N, 19.67° E)</span>
+                <div className="books__item">
+                <div className="books__container">
+                    <div className="books__cover">
+                    <div className="books__back-cover"></div>
+                    <div className="books__inside">
+                        <div className="books__page"></div>
+                        <div className="books__page"></div>
+                        <div className="books__page"></div>
+                    </div>
+                    <div className="books__image">
+                        <Image
+                        src="https://covers.shakespeareandcompany.com/97988885/9798888500002.jpg"
+                        alt="Psychedelics and Mental Health by Irene de Caso"
+                        width={200}
+                        height={300}
+                        />
+                        <div className="books__effect"></div>
+                        <div className="books__light"></div>
+                    </div>
+                    <div className="books__hitbox" data-book-index="1"></div>
+                    </div>
+                </div>
+                <div className="books__title">
+                    Psychedelics and Mental Health
+                    <br />
+                    Irene de Caso
+                </div>
+                </div>
+            </div>
+
+            <div className="right-text">
+                <h2>The Impotent book</h2>
+                <p>
+                    Find the important book you need for studying on school or you loss your book don't wary find from the website
+                </p>
+            </div>
+            </div>
+
+            <div className="bottom-center">
+            <a href="https://nctb.gov.bd/site/page/079828a6-18e6-44c1-9a2d-59f8d223199c" 
+            target="_blank" rel="noopener noreferrer"
+            className=" underline font-bold text-md">Books for class 10</a>
+            </div>
         </div>
       </div>
       <Footer />

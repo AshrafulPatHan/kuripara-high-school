@@ -23,14 +23,8 @@
   --secondary-font: "Cabinet Grotesk", serif;
 }
 
-/* Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
+.body-books {
   background-color: var(--color-background);
   width: 100vw;
   min-height: 100vh;
@@ -42,7 +36,7 @@ body {
 }
 
 /* Background noise effect */
-body::before {
+.body-books::before {
   content: "";
   position: fixed;
   top: -50%;
@@ -363,3 +357,26 @@ span {
   margin-top: 2rem;
   color: var(--color-text-primary);
 }
+
+
+/* mobile responsive */
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    text-align: center;
+  }
+
+  .left-text,
+  .right-text {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .books-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+
