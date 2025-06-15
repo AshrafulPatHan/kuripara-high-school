@@ -19,7 +19,8 @@ export default function Clint() {
     const trackVisitor = async () => {
       try {
         const data = await getVisitorData();
-        const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
+        let ApiUrl:any = " "
+        // ApiUrl = process.env.NEXT_PUBLIC_API_URL;
 
         await fetch(`${ApiUrl}/api/track-visitor`, {
           method: "POST",
