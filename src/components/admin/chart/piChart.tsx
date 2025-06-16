@@ -6,14 +6,14 @@ export default function PiChart(){
 const data = [
     ["Task", "Hours per Day"],
     ["Work", 9],
-    ["Eat", 2],
-    ["Commute", 2],
-    ["Watch TV", 2],
-    ["Sleep", 7],
+    ["teacher", 2],
+    ["school", 2],
+    ["bill", 2],
+    ["transport", 7],
 ];
 
 const options = {
-    title: "My Daily Activities",
+    title: "School Activities",
   };
     return(
         <div className="ml-5">
