@@ -17,9 +17,8 @@ export default function TotalStudent(){
                 </div>
                 <hr className="text-[#F0F2F5] "/>
                 <div className="flex items-center gap-2 caret-neutral-50 pt-6 pl-4 ">
-                    <p className="  text-[#7B809A] text-[16px] ">In</p>
-                    <p className="text-[#4CAF50] text-[16px]  ">{timestamp}</p>
                     <p className=" text-[#7B809A] text-[16px] ">Last Updated</p>
+                    <p className="text-[#4CAF50] text-[16px]  ">{timestamp}</p>
                 </div>
             </div>
             <div className="w-[64px] h-[64px] bg-gradient-to-b from-[#3E3D45] to-[#202020] rounded-[12px] 

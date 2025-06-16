@@ -15,7 +15,7 @@ export default function AdminAuth() {
       const password:string = event.target.password.value;
 
       // Get Api
-      const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
+      const ApiUrl = process.env.NEXT_PUBLIC_SERVER_ADMIN;
 
       try {
          const response = await fetch(`${ApiUrl}/auth`, {
