@@ -10,11 +10,11 @@ export default function AllEventsAdmin(){
 
    // set event type
    type EventType = {
-   _id: number;
-   Title: string;
-   Description: string;
-   Photo: string;
-   Data: string;
+        _id: number;
+        Title: string;
+        Description: string;
+        Photo: string;
+        Data: string;
    };
 
    const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
