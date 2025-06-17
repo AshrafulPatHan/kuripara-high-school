@@ -59,7 +59,7 @@ export default function AddEvents(){
         const AllFormData = {Title,Description,Photo,Data}
 
         // Api url
-        const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
+        const ApiUrl = process.env.NEXT_PUBLIC_SERVER_ADMIN;
 
         // cake data
         if (!Title || !Description || !Photo) {

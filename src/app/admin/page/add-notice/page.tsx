@@ -69,7 +69,7 @@ export default function AddNotice() {
         });
 
         const AllFormData = { Title, ShortDescription, LongDescription, Photo, Data };
-        const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
+        const ApiUrl = process.env.NEXT_PUBLIC_SERVER_ADMIN;
 
         if (!Title || !ShortDescription || !LongDescription || !Photo) {
             toast.error("All fields are required");
