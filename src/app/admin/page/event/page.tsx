@@ -39,8 +39,17 @@ export default function AllEventsAdmin(){
    };
 
     // delete event
-    const handelEditEvent = (id:any)=>{
-        console.log(id);
+    const handelEditEvent = (even:any)=>{
+        const query = new URLSearchParams({
+            id: String(even._id),
+            Title: even.Title,
+            Description: even.Description,
+            Photo: even.Photo,
+            Data: even.Data,
+            IdData:String(even._id)
+      }).toString();
+
+      router.push(`/admin/page/event/details/edit?${query}`);
     }
     
     // view details
