@@ -3,11 +3,12 @@
 import Image from "next/image"
 import Photo from "@/assets/image/school/student.webp"
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 
 export default function AllEventsAdmin(){
-   const [event,setEvent] = useState<EventType[]>([])
-
+    const [event,setEvent] = useState<EventType[]>([])
+    const router = useRouter();
    // set event type
    type EventType = {
         _id: number;
@@ -43,8 +44,16 @@ export default function AllEventsAdmin(){
     }
     
     // view details
-    const handelViewDetails = (id:any) => {
-        console.log(id);
+    const handelViewDetails = (even:any) => {
+        const query = new URLSearchParams({
+        id: String(even._id),
+        Title: even.Title,
+        Description: even.Description,
+        Photo: even.Photo,
+        Data: even.Data,
+        }).toString();
+
+        router.push(`/admin/page/event/details?${query}`);
     }
 
 
@@ -76,8 +85,8 @@ export default function AllEventsAdmin(){
                                             </h4>
 
                                             <div className="flex flex-row items-center gap-4 ">
-                                                <button onClick={()=>{handelViewDetails(data._id)}} className="text-sm text-red-600 border-[2px] border-red-600 cursor-pointer hover:underline rounded-lg px-4 py-1 w-[116px] h-[33px] font-semibold ">Details</button>
-                                                <button onClick={()=>{handelEditEvent(data._id)}} className="text-sm cursor-pointer bg-[#E91F63] rounded-lg px-4 py-1 w-[116px] h-[33px] text-white font-semibold ">Edit</button>
+                                                <button onClick={()=>{handelViewDetails(data)}} className="text-sm text-red-600 border-[2px] border-red-600 cursor-pointer hover:underline rounded-lg px-4 py-1 w-[116px] h-[33px] font-semibold ">Details</button>
+                                                <button onClick={()=>{handelEditEvent(data)}} className="text-sm cursor-pointer bg-[#E91F63] rounded-lg px-4 py-1 w-[116px] h-[33px] text-white font-semibold ">Edit</button>
                                             </div>
                                         </div>
                                     </div>
