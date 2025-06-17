@@ -38,7 +38,7 @@ export default function AllEventsAdmin(){
    };
 
     // delete event
-    const handelDeleteEvent = (id:any)=>{
+    const handelEditEvent = (id:any)=>{
         console.log(id);
     }
     
@@ -77,7 +77,7 @@ export default function AllEventsAdmin(){
 
                                             <div className="flex flex-row items-center gap-4 ">
                                                 <button onClick={()=>{handelViewDetails(data._id)}} className="text-sm text-red-600 border-[2px] border-red-600 cursor-pointer hover:underline rounded-lg px-4 py-1 w-[116px] h-[33px] font-semibold ">Details</button>
-                                                <button onClick={()=>{handelDeleteEvent(data._id)}} className="text-sm cursor-pointer bg-[#E91F63] rounded-lg px-4 py-1 w-[116px] h-[33px] text-white font-semibold ">Edit</button>
+                                                <button onClick={()=>{handelEditEvent(data._id)}} className="text-sm cursor-pointer bg-[#E91F63] rounded-lg px-4 py-1 w-[116px] h-[33px] text-white font-semibold ">Edit</button>
                                             </div>
                                         </div>
                                     </div>
