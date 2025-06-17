@@ -64,7 +64,7 @@ export default function Side_bar(){
                     <p className="text-md font-bold text-[#ffffffb2] ">Profile</p>
                     <div className="flex flex-row items-center gap-6">
                         <FaUserCircle className="text-xl "/>
-                        <Link href='/admin/page/notice' className="hover:underline">Admin Profile</Link>
+                        <Link href='/admin/page/profile' className="hover:underline">Admin Profile</Link>
                     </div>
                     <div className="flex flex-row items-center gap-6">
                         <FaUserCog className="text-xl "/>

@@ -7,6 +7,7 @@ import { FormEvent, useState, useRef, useMemo } from "react";
 import axios from "axios";
 // import JoditEditor from "jodit-react";
 import dynamic from "next/dynamic";
+import PrivateRoute from "@/components/admin/auth/PrivateRoute";
 
 
 
@@ -91,79 +92,81 @@ export default function AddNotice() {
     };
 
     return (
-        <div
-            className="w-[100%] h-[99%] flex flex-col items-center justify-center bg-cover bg-center rounded-xl"
-            style={{
-                backgroundImage: `url(${Background.src})`,
-            }}
-        >
-            <form onSubmit={handelAddNotice} className="flex flex-col gap-5 bg-[#ffffff] rounded-xl p-6 ">
-                <div>
-                    <h3 className="text-center font-bold text-2xl">Add Notice</h3>
-                </div>
+        <PrivateRoute>
+            <div
+                className="w-[100%] h-[99%] flex flex-col items-center justify-center bg-cover bg-center rounded-xl"
+                style={{
+                    backgroundImage: `url(${Background.src})`,
+                }}
+            >
+                <form onSubmit={handelAddNotice} className="flex flex-col gap-5 bg-[#ffffff] rounded-xl p-6 ">
+                    <div>
+                        <h3 className="text-center font-bold text-2xl">Add Notice</h3>
+                    </div>
 
-                <div className="flex flex-col items-center gap-4">
-                    <div className="flex flex-col lg:flex-row gap-4 ">
-                        <div className="flex flex-col">
-                            <label htmlFor="Title" className="block text-sm font-medium text-zinc-700">
-                                Add A Title
-                            </label>
-                            <input
-                                type="text"
-                                name="title"
-                                placeholder="Title"
-                                required
-                                className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4"
-                            />
+                    <div className="flex flex-col items-center gap-4">
+                        <div className="flex flex-col lg:flex-row gap-4 ">
+                            <div className="flex flex-col">
+                                <label htmlFor="Title" className="block text-sm font-medium text-zinc-700">
+                                    Add A Title
+                                </label>
+                                <input
+                                    type="text"
+                                    name="title"
+                                    placeholder="Title"
+                                    required
+                                    className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4"
+                                />
+                            </div>
+
+                            <div className="flex flex-col">
+                                <label htmlFor="ShortDescription" className="block text-sm font-medium text-zinc-700">
+                                    Short Description
+                                </label>
+                                <input
+                                    type="text"
+                                    name="ShortDescription"
+                                    placeholder="Short Description"
+                                    required
+                                    className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4"
+                                />
+                            </div>
                         </div>
 
                         <div className="flex flex-col">
-                            <label htmlFor="ShortDescription" className="block text-sm font-medium text-zinc-700">
-                                Short Description
-                            </label>
-                            <input
-                                type="text"
-                                name="ShortDescription"
-                                placeholder="Short Description"
-                                required
-                                className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4"
-                            />
-                        </div>
+                                <label htmlFor="Add Photo" className="block text-sm font-medium text-zinc-700">
+                                    Add Photo
+                                </label>
+                                <CustomFileInput onFileSelect={handleFileSelect} />
+                            </div>
                     </div>
 
                     <div className="flex flex-col">
-                            <label htmlFor="Add Photo" className="block text-sm font-medium text-zinc-700">
-                                Add Photo
-                            </label>
-                            <CustomFileInput onFileSelect={handleFileSelect} />
-                        </div>
-                </div>
+                        <label htmlFor="LongDescription" className="block text-sm font-medium text-zinc-700">
+                            Long Description
+                        </label>
+                        {/* <JoditEditor
+                            ref={editor}
+                            value={content}
+                            config={config}
+                            tabIndex={1}
+                            onBlur={newContent => setContent(newContent)}
+                            onChange={() => {}}
+                        /> */}
+                        <JoditEditor value={content} onChange={setContent} />
+                    </div>
 
-                <div className="flex flex-col">
-                    <label htmlFor="LongDescription" className="block text-sm font-medium text-zinc-700">
-                        Long Description
-                    </label>
-                    {/* <JoditEditor
-                        ref={editor}
-                        value={content}
-                        config={config}
-                        tabIndex={1}
-                        onBlur={newContent => setContent(newContent)}
-                        onChange={() => {}}
-                    /> */}
-                    <JoditEditor value={content} onChange={setContent} />
-                </div>
-
-                <div className="flex justify-center">
-                    <button
-                        type="submit"
-                        className="w-[90%] sm:w-[300px] lg:w-[350px] h-[40px] text-white 
-                        bg-gradient-to-t from-[#E93B77] to-[#da6d93] rounded-[8px] mt-7 "
-                    >
-                        Add Notice
-                    </button>
-                </div>
-            </form>
-        </div>
+                    <div className="flex justify-center">
+                        <button
+                            type="submit"
+                            className="w-[90%] sm:w-[300px] lg:w-[350px] h-[40px] text-white 
+                            bg-gradient-to-t from-[#E93B77] to-[#da6d93] rounded-[8px] mt-7 "
+                        >
+                            Add Notice
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </PrivateRoute>
     );
 }

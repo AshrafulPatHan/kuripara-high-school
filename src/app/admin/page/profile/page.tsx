@@ -1,8 +1,13 @@
+import PrivateRoute from "@/components/admin/auth/PrivateRoute";
 
 
 
 export default function AdminProfile(){
     return(
-        <div></div>
+        <PrivateRoute>
+            <div>
+                profile
+            </div>
+        </PrivateRoute>
     )
 }
