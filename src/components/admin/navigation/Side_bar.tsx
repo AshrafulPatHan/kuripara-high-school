@@ -73,7 +73,7 @@ export default function Side_bar(){
                     </div>
                     <div className="flex flex-row items-center gap-6">
                         <FaUserCog className="text-xl "/>
-                        <Link href='/admin/page/event' className="hover:underline">Update Profile</Link>
+                        <Link href='/admin/page/update' className="hover:underline">Update Profile</Link>
                     </div>
                     <div className="flex flex-row items-center gap-6">
                         <GrDocumentConfig className="text-xl "/>

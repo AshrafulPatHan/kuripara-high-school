@@ -7,6 +7,7 @@ import Side_bar from "@/components/admin/navigation/Side_bar";
 import Admin_nav from "@/components/admin/navigation/Admin_nav";
 import Admin_Footer from "@/components/admin/navigation/Admin_Footer";
 import "./app.css";
+import PrivateRoute from "@/components/admin/auth/PrivateRoute";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,16 +34,18 @@ export default function RootLayout({
   return (
     <Providers>
       <Theme>
-        <div className="flex flex-row gap-8 bg-[#E5E5E5]">
-          <Side_bar />
-          <div className="flex flex-col min-h-screen">
-            <Admin_nav />
-            <div className="flex-grow mt-12">
-              {children}
+        <PrivateRoute>
+          <div className="flex flex-row gap-8 bg-[#E5E5E5]">
+            <Side_bar />
+            <div className="flex flex-col min-h-screen">
+              <Admin_nav />
+              <div className="flex-grow mt-12">
+                {children}
+              </div>
+              <Admin_Footer />
             </div>
-            <Admin_Footer />
           </div>
-        </div>
+        </PrivateRoute>
       </Theme>
     </Providers>
   );
