@@ -102,37 +102,41 @@ export default function AddNotice() {
                     <h3 className="text-center font-bold text-2xl">Add Notice</h3>
                 </div>
 
-                <div className="flex flex-col">
-                    <label htmlFor="Title" className="block text-sm font-medium text-zinc-700">
-                        Add A Title
-                    </label>
-                    <input
-                        type="text"
-                        name="title"
-                        placeholder="Title"
-                        required
-                        className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4"
-                    />
-                </div>
+                <div className="flex flex-col items-center gap-4">
+                    <div className="flex flex-col lg:flex-row gap-4 ">
+                        <div className="flex flex-col">
+                            <label htmlFor="Title" className="block text-sm font-medium text-zinc-700">
+                                Add A Title
+                            </label>
+                            <input
+                                type="text"
+                                name="title"
+                                placeholder="Title"
+                                required
+                                className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4"
+                            />
+                        </div>
 
-                <div className="flex flex-col">
-                    <label htmlFor="Add Photo" className="block text-sm font-medium text-zinc-700">
-                        Add Photo
-                    </label>
-                    <CustomFileInput onFileSelect={handleFileSelect} />
-                </div>
+                        <div className="flex flex-col">
+                            <label htmlFor="ShortDescription" className="block text-sm font-medium text-zinc-700">
+                                Short Description
+                            </label>
+                            <input
+                                type="text"
+                                name="ShortDescription"
+                                placeholder="Short Description"
+                                required
+                                className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4"
+                            />
+                        </div>
+                    </div>
 
-                <div className="flex flex-col">
-                    <label htmlFor="ShortDescription" className="block text-sm font-medium text-zinc-700">
-                        Short Description
-                    </label>
-                    <input
-                        type="text"
-                        name="ShortDescription"
-                        placeholder="Short Description"
-                        required
-                        className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4"
-                    />
+                    <div className="flex flex-col">
+                            <label htmlFor="Add Photo" className="block text-sm font-medium text-zinc-700">
+                                Add Photo
+                            </label>
+                            <CustomFileInput onFileSelect={handleFileSelect} />
+                        </div>
                 </div>
 
                 <div className="flex flex-col">
@@ -150,13 +154,15 @@ export default function AddNotice() {
                     <JoditEditor value={content} onChange={setContent} />
                 </div>
 
-                <button
-                    type="submit"
-                    className="w-[90%] sm:w-[300px] lg:w-[350px] h-[40px] text-white 
-                    bg-gradient-to-t from-[#E93B77] to-[#da6d93] rounded-[8px]"
-                >
-                    Add Notice
-                </button>
+                <div className="flex justify-center">
+                    <button
+                        type="submit"
+                        className="w-[90%] sm:w-[300px] lg:w-[350px] h-[40px] text-white 
+                        bg-gradient-to-t from-[#E93B77] to-[#da6d93] rounded-[8px] mt-7 "
+                    >
+                        Add Notice
+                    </button>
+                </div>
             </form>
         </div>
     );
