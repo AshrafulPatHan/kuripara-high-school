@@ -10,6 +10,7 @@ import { FaPhotoVideo } from "react-icons/fa";
 import { MdAddAPhoto } from "react-icons/md";
 import { FaUserCog } from "react-icons/fa";
 import { GrDocumentConfig } from "react-icons/gr";
+import { IoHome } from "react-icons/io5";
 
 
 
@@ -30,7 +31,7 @@ export default function Side_bar(){
             <div className="flex flex-col gap-3">
                 <div className="flex flex-row items-center gap-4 ">
                     <Image src={Gov} width={300} height={300} className="w-[30px] h-[30px] " alt="Government logo" />
-                    <Link href='/admin' className="hover:underline">Kuripara High School</Link>
+                    <Link href='/' className="hover:underline">Kuripara High School</Link>
                 </div>
                 <div className="flex flex-col gap-3">
                     {/* Analytics */}
@@ -49,6 +50,10 @@ export default function Side_bar(){
                     {/* Page */}
                     <hr className="w-[100%] text-[#ffffffb2] my-2 "/>
                     <p className="text-md font-bold text-[#ffffffb2] ">Page</p>
+                    <div className="flex flex-row items-center gap-6">
+                        <IoHome className="text-xl "/>
+                        <Link href='/admin' className="hover:underline">Home</Link>
+                    </div>
                     <div className="flex flex-row items-center gap-6">
                         <RiPagesLine className="text-xl "/>
                         <Link href='/admin/page/notice' className="hover:underline">All Notice</Link>
@@ -83,7 +88,7 @@ export default function Side_bar(){
                         <Link href='/admin/page/chang-password' className=" w-[100%] h-[40px] bg-[#4F4F52] rounded-[4px] text-center pt-[7px] ">Chang Password</Link>
                     </div>
                     <div className="flex flex-row items-center gap-6">
-                        <button onClick={handleLogout} className=" w-[100%] h-[40px] bg-[#E91F63] rounded-[4px] ">Log Out</button>
+                        <button onClick={handleLogout} className=" w-[100%] h-[40px] bg-[#E91F63] rounded-[4px] cursor-pointer ">Log Out</button>
                     </div>
                 </div>
             </div>
