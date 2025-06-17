@@ -40,7 +40,9 @@ export default function Notices_Page() {
 
    // set loading
    if (event.length === 0) {
-      return <p>Loading ...</p>
+      return  <div className="flex flex-col items-center justify-center h-screen">
+            <div className="h-10 w-10 animate-[spin_2s_linear_infinite] rounded-full border-4 border-dashed border-sky-600"></div>
+        </div>
    };
 
 const handleViewDetailsMap = (not:any) => {

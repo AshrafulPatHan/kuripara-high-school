@@ -28,17 +28,17 @@ export default function Album() {
         .then((res) => res.json())
         .then((data) => {
             setEvent(data);
-            // setLoading(false);
         })
         .catch((error) => {
             console.error("Error fetching data:", error);
-            // setLoading(false);
         });
     }, [ApiUrl]);
 
    // set loading
    if (event.length === 0) {
-      return <p>Loading ...</p>
+      return <div className="flex flex-col items-center justify-center h-screen">
+            <div className="h-10 w-10 animate-[spin_2s_linear_infinite] rounded-full border-8 border-dotted border-sky-600"></div>
+        </div>
    };
 
 
