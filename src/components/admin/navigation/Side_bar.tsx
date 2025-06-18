@@ -85,7 +85,7 @@ export default function Side_bar(){
                     <hr className="w-[100%] text-[#ffffffb2] my-2 "/>
                     <p className="text-md font-bold text-[#ffffffb2] ">Action</p>
                     <div className="flex flex-row items-center gap-6">
-                        <Link href='/admin/page/chang-password' className=" w-[100%] h-[40px] bg-[#4F4F52] rounded-[4px] text-center pt-[7px] ">Chang Password</Link>
+                        <Link href='/admin/page/auth/update' className=" w-[100%] h-[40px] bg-[#4F4F52] rounded-[4px] text-center pt-[7px] ">Chang Password</Link>
                     </div>
                     <div className="flex flex-row items-center gap-6">
                         <button onClick={handleLogout} className=" w-[100%] h-[40px] bg-[#E91F63] rounded-[4px] cursor-pointer ">Log Out</button>
