@@ -35,7 +35,7 @@ export default function RootLayout({
     <Providers>
       <Theme>
         <PrivateRoute>
-          <div className="flex flex-row gap-8 bg-[#E5E5E5]">
+          <div className="flex flex-row gap-8 bg-[#E5E5E5] overflow-x-auto">
             <Side_bar />
             <div className="flex flex-col min-h-screen">
               <Admin_nav />

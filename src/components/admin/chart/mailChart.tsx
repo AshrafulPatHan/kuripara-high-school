@@ -8,7 +8,7 @@ export default function Chart(){
         <div className="mt-20 flex  flex-row items-center justify-between bg-white rounded-[12px] relative ">
             <PiChart/>
             <LineChart/>
-            <div className="absolute top-0 left-[28vw] flex flex-col items-center ">
+            <div className="absolute top-0 left-[33%] hidden 2xl:flex 2xl:flex-col items-center ">
                 {/* <h3>Data Analysis</h3> */}
                 <AnimateChart/>
             </div>

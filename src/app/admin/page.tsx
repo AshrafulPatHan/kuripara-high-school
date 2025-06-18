@@ -10,9 +10,11 @@ import NoticeAdminTable from "@/components/admin/table/noticeTabil";
 export default function Admin(){
    return(
       <PrivateRoute>
-         <Total/>
-         <Chart/>
-         <NoticeAdminTable/>
+         <div className="overflow-x-auto">
+            <Total/>
+            <Chart/>
+            <NoticeAdminTable/>
+         </div>
       </PrivateRoute>
    )
 };

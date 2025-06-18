@@ -76,11 +76,11 @@ export default function NoticeAdminTable(){
                             <div className="flex flex-row items-center gap-14">
                                 <p>{not.Data}</p>
                                 <button onClick={()=>{handelEditNotice(not)}} className="w-[44px] h-[44px] bg-gradient-to-b from-[#3E3D45] to-[#202020] rounded-[12px] 
-                                flex flex-col justify-center items-center  ">
+                                flex flex-col justify-center items-center cursor-pointer ">
                                     <MdOutlineEdit className="text-2xl text-white "/>
                                 </button>
                                 <button onClick={()=>{handelViewDetails(not)}} className="w-[44px] h-[44px] bg-gradient-to-b from-[#3E3D45] to-[#202020] rounded-[12px] 
-                                flex flex-col justify-center items-center  ">
+                                flex flex-col justify-center items-center cursor-pointer ">
                                     <MdDeleteForever className="text-2xl text-white "/>
                                 </button>
                             </div>
