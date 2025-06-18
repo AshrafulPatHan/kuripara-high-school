@@ -1,25 +1,44 @@
 "use client"
+import { useSearchParams } from "next/navigation"; // ✅ import this
 import Image from "next/image";
 import Background from "@/assets/image/university-418219_1920.jpg";
 import CustomFileInput from "@/components/admin/ui/input/CustomInput";
 import toast from "react-hot-toast";
 import { FormEvent, useMemo, useState } from "react";
 import axios from "axios";
-import PrivateRoute from "@/components/admin/auth/PrivateRoute";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 
+export default function EditNoticeData() {
+    const searchParams = useSearchParams(); // ✅ get searchParams
 
+    const id = searchParams.get("id");
+    const Title = searchParams.get("Title");
+    const ShortDescription = searchParams.get("ShortDescription");
+    const LongDescription = searchParams.get("LongDescription");
+    const Photo = searchParams.get("Photo");
+    const Data = searchParams.get("Data");
+    const IdData = searchParams.get("IdData");
 
-
-export default function EditNoticeData({searchParams}:any){
-    const { id,Title, ShortDescription,LongDescription, Photo, Data,IdData } = searchParams;
     const router = useRouter();
-    const [content, setContent] = useState('');
+    const [content, setContent] = useState(LongDescription || '');
+
+    // the text editor
+        const JoditEditor = dynamic(() => import("@/components/admin/editor/JoditEditor"), {
+        ssr: false
+    });
+
+    const config = useMemo(() => ({
+        readonly: false, 
+        placeholder: "Start typings...",
+        defaultValue: LongDescription
+    }), [LongDescription]);
 
 
-    // On from submit
-    // handle form submission
+    if (!id || !Title || !ShortDescription || !LongDescription || !Photo || !Data || !IdData) {
+        return <p className="text-red-600 text-center mt-10">❌ প্রয়োজনীয় তথ্য পাওয়া যায়নি</p>
+    }
+
     const handelUpdateNotice = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const form = event.currentTarget;
@@ -34,15 +53,15 @@ export default function EditNoticeData({searchParams}:any){
             day: "numeric"
         });
 
-        const AllFormData = { Title, ShortDescription, LongDescription, Photo, Data };
+        const AllFormData = { Title, ShortDescription, LongDescription, Photo, Data,IdData };
         const ApiUrl = process.env.NEXT_PUBLIC_SERVER_ADMIN;
 
         if (!Title || !ShortDescription || !LongDescription || !Photo) {
             toast.error("All fields are required");
         } else {
             try {
-                const res = await axios.post(`${ApiUrl}/post-notice`, AllFormData);
-                if (res.status === 200 || res.status === 201) {
+                const res = await axios.put(`${ApiUrl}/update-notice`, AllFormData);
+                if (res.status === 200 ) {
                     toast.success("Notice is Update successful!");
                     form.reset();
                     router.push("/admin/page/notice");
@@ -56,28 +75,17 @@ export default function EditNoticeData({searchParams}:any){
         }
     };
 
-    console.log("id data is -----",IdData);
 
-    // Dynamic import of the client-side-only component
-    const JoditEditor = dynamic(() => import("@/components/admin/editor/JoditEditor"), {
-    ssr: false
-    });
-    // config editor
-    const config = useMemo(() => ({
-        readonly: false, 
-        placeholder: "Start typings...",
-        defaultValue:{LongDescription}
-    }), [LongDescription]);
 
     return(
-        <PrivateRoute>
+        <div>
             <div
                 className="w-[100%] h-[99%] flex flex-col items-center justify-center bg-cover bg-center rounded-xl"
                 style={{
                     backgroundImage: `url(${Background.src})`,
                 }}
             >
-                <form onSubmit={handelUpdateNotice} className="flex flex-col gap-5 bg-[#ffffff] rounded-xl p-6 ">
+                <form onSubmit={handelUpdateNotice} className="flex flex-col gap-5 bg-[#ffffff] rounded-xl p-6 w-[50vw] ">
                     <div>
                         <h3 className="text-center font-bold text-2xl">Add Notice</h3>
                     </div>
@@ -131,11 +139,11 @@ export default function EditNoticeData({searchParams}:any){
                             className="w-[90%] sm:w-[300px] lg:w-[350px] h-[40px] text-white 
                             bg-gradient-to-t from-[#E93B77] to-[#da6d93] rounded-[8px] mt-7 "
                         >
-                            Add Notice
+                            Update Notice
                         </button>
                     </div>
                 </form>
             </div>
-        </PrivateRoute>
+        </div>
     )
 }

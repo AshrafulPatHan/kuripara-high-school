@@ -76,7 +76,7 @@ export default function AllNoticeAdmin(){
                 <div></div>
                 {/* all events */}
                 <div className="flex flex-col items-center justify-center">
-                    <h2>All Events Album</h2>
+                    <h2 className="text-2xl font-semibold mb-7">All Notice </h2>
                     <div className="grid grid-cols-4 gap-7 ">
                         {event.map((data)=>(
                             <div key={data._id}>

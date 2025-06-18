@@ -1,8 +1,6 @@
 "use client"
 
-// event/details/page.tsx
-import Footer from "@/components/navigation/footer";
-import Navbar from "@/components/navigation/navbar";
+
 import axios from "axios";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -24,7 +22,7 @@ export default function NoticeDetails({ searchParams }: any) {
     const router = useRouter();
 
     let _IdData:string = id
-    const handelEditDetails = (even:any) => {
+    const handelEditNotice = (even:any) => {
       const query = new URLSearchParams({
             id: String(even._id),
             Title: even.Title,
@@ -35,7 +33,7 @@ export default function NoticeDetails({ searchParams }: any) {
             IdData:_IdData
       }).toString();
 
-      router.push(`/admin/page/event/details/edit?${query}`);
+      router.push(`/admin/page/notice/edit?${query}`);
     };
   
     // delete notice
@@ -47,9 +45,9 @@ export default function NoticeDetails({ searchParams }: any) {
         const res = await axios.delete(`${process.env.NEXT_PUBLIC_SERVER_ADMIN}/delete-notice/${id}`);
         if (res.status === 200) {
             toast.success("notice delete is add successfully!");
-            router.push("/admin/page/event");
+            router.push("/admin/page/notice");
         } else {
-            toast.error("Event is not add!");
+            toast.error("notice is not Delete!");
         }
         } catch (err) {
         console.error("Delete Error:", err);
@@ -63,16 +61,16 @@ export default function NoticeDetails({ searchParams }: any) {
     <div>
       <div className="flex flex-col items-center justify-center mt-20">
         <div className="mx-[3vw]">
-          <Image src={Photo} alt="Notice" width={1000} height={900} className="rounded-xl mb-4  " />
+          <Image src={Photo} alt="Notice" width={500} height={500} className="rounded-xl mb-4  w-[500px] object-cover " />
         </div>
-        <div className="w-[97vw] lg:w-[50vw] ">
+        <div className="w-[97vw] lg:w-[50vw] flex flex-col items-center ">
             <div>
                 <h1 className=" text-xl md:text-2xl font-bold text-center">{Title}</h1>
-                {/* <p className="text-gray-500 mt-2">Date: {Data}</p> */}
-                <p className="text-gray-500 mt-2">id: {id}</p>
+                <p className="text-gray-500 mt-2">Date: {Data}</p>
+                {/* <p className="text-gray-500 mt-2">id: {id}</p> */}
             </div>
             <p className="mt-3">{ShortDescription}</p>
-            <div className="bg-gradient-to-b from-[#e0dbdb] to-[#b3a6a6] w-[99vw] sm:w-[70vw] p-4 rounded-lg ">
+            <div className="bg-gradient-to-b from-[#e0dbdb] to-[#b3a6a6] w-[99vw] sm:w-[60vw] p-4 rounded-lg ">
                 {/* Responsive iframe CSS */}
                 <style>
                     {`
@@ -102,7 +100,7 @@ export default function NoticeDetails({ searchParams }: any) {
             </div>
             <div className="flex flex-row items-center gap-4 mt-4 ">
                 <button  onClick={handleDeleteNotice} className="text-sm text-red-600 border-[2px] border-red-600 cursor-pointer hover:underline rounded-lg px-4 py-1 w-[116px] h-[33px] font-semibold ">Delete</button>
-                <button onClick={()=>{handelEditDetails(searchParams)}} className="text-sm cursor-pointer bg-[#E91F63] rounded-lg px-4 py-1 w-[116px] h-[33px] text-white font-semibold ">Edit</button>
+                <button onClick={()=>{handelEditNotice(searchParams)}} className="text-sm cursor-pointer bg-[#E91F63] rounded-lg px-4 py-1 w-[116px] h-[33px] text-white font-semibold ">Edit</button>
             </div>
         </div>
       </div>
