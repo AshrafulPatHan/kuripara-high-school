@@ -123,7 +123,6 @@ export default function EditNoticeData() {
                                 />
                             </div>
                         </div>
-
                     </div>
 
                     <div className="flex flex-col">

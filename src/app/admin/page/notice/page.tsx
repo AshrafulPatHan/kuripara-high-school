@@ -40,29 +40,29 @@ export default function AllNoticeAdmin(){
    };
 
     // delete Notice
-    const handelEditNotice = (even:any)=>{
+    const handelEditNotice = (data:any)=>{
         const query = new URLSearchParams({
-            id: String(even._id),
-            Title: even.Title,
-            ShortDescription: even.ShortDescription,
-            LongDescription: even.LongDescription,
-            Photo: even.Photo,
-            Data: even.Data,
-            IdData:String(even._id)
+            id: String(data._id),
+            Title: data.Title,
+            ShortDescription: data.ShortDescription,
+            LongDescription: data.LongDescription,
+            Photo: data.Photo,
+            Data: data.Data,
+            IdData:String(data._id)
       }).toString();
 
       router.push(`/admin/page/notice/edit?${query}`);
     }
     
     // view details
-    const handelViewDetails = (even:any) => {
+    const handelViewDetails = (data:any) => {
         const query = new URLSearchParams({
-        id: String(even._id),
-        Title: even.Title,
-        ShortDescription: even.ShortDescription,
-        LongDescription: even.LongDescription,
-        Photo: even.Photo,
-        Data: even.Data,
+        id: String(data._id),
+        Title: data.Title,
+        ShortDescription: data.ShortDescription,
+        LongDescription: data.LongDescription,
+        Photo: data.Photo,
+        Data: data.Data,
         }).toString();
 
         router.push(`/admin/page/notice/details?${query}`);
