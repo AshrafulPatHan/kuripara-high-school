@@ -39,8 +39,8 @@ export default function AllNoticeAdmin(){
         </div>;
    };
 
-    // delete event
-    const handelEditEvent = (even:any)=>{
+    // delete Notice
+    const handelEditNotice = (even:any)=>{
         const query = new URLSearchParams({
             id: String(even._id),
             Title: even.Title,
@@ -98,7 +98,7 @@ export default function AllNoticeAdmin(){
 
                                             <div className="flex flex-row items-center gap-4 ">
                                                 <button onClick={()=>{handelViewDetails(data)}} className="text-sm text-red-600 border-[2px] border-red-600 cursor-pointer hover:underline rounded-lg px-4 py-1 w-[116px] h-[33px] font-semibold ">Details</button>
-                                                <button onClick={()=>{handelEditEvent(data)}} className="text-sm cursor-pointer bg-[#E91F63] rounded-lg px-4 py-1 w-[116px] h-[33px] text-white font-semibold ">Edit</button>
+                                                <button onClick={()=>{handelEditNotice(data)}} className="text-sm cursor-pointer bg-[#E91F63] rounded-lg px-4 py-1 w-[116px] h-[33px] text-white font-semibold ">Edit</button>
                                             </div>
                                         </div>
                                     </div>

@@ -5,12 +5,14 @@ import axios from 'axios'
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { MdOutlineEdit } from "react-icons/md";
+import { useRouter } from "next/navigation";
 
 
 
 
 export default function NoticeAdminTable(){
     const [data, setData] = useState<any[] | null[]>([]);
+    const router = useRouter();
 
     // get notice data
     useEffect(()=>{
@@ -19,6 +21,35 @@ export default function NoticeAdminTable(){
             .then((res) => setData(res.data))
             .catch((error) => console.error(error))
         })
+
+    // delete Notice
+    const handelEditNotice = (even:any)=>{
+        const query = new URLSearchParams({
+            id: String(even._id),
+            Title: even.Title,
+            ShortDescription: even.ShortDescription,
+            LongDescription: even.LongDescription,
+            Photo: even.Photo,
+            Data: even.Data,
+            IdData:String(even._id)
+      }).toString();
+
+      router.push(`/admin/page/notice/edit?${query}`);
+    }
+    
+    // view details
+    const handelViewDetails = (even:any) => {
+        const query = new URLSearchParams({
+        id: String(even._id),
+        Title: even.Title,
+        ShortDescription: even.ShortDescription,
+        LongDescription: even.LongDescription,
+        Photo: even.Photo,
+        Data: even.Data,
+        }).toString();
+
+        router.push(`/admin/page/notice/details?${query}`);
+    }
     return(
         <div className="mt-20 mb-20">
             <div className="flex flex-col bg-[#ffffffea] rounded-[12px] my-2 py-4 ">
@@ -44,11 +75,11 @@ export default function NoticeAdminTable(){
                             <h4 className=" text-center ">{not.ShortDescription}</h4>
                             <div className="flex flex-row items-center gap-14">
                                 <p>{not.Data}</p>
-                                <button className="w-[44px] h-[44px] bg-gradient-to-b from-[#3E3D45] to-[#202020] rounded-[12px] 
+                                <button onClick={()=>{handelEditNotice(not)}} className="w-[44px] h-[44px] bg-gradient-to-b from-[#3E3D45] to-[#202020] rounded-[12px] 
                                 flex flex-col justify-center items-center  ">
                                     <MdOutlineEdit className="text-2xl text-white "/>
                                 </button>
-                                <button className="w-[44px] h-[44px] bg-gradient-to-b from-[#3E3D45] to-[#202020] rounded-[12px] 
+                                <button onClick={()=>{handelViewDetails(not)}} className="w-[44px] h-[44px] bg-gradient-to-b from-[#3E3D45] to-[#202020] rounded-[12px] 
                                 flex flex-col justify-center items-center  ">
                                     <MdDeleteForever className="text-2xl text-white "/>
                                 </button>
