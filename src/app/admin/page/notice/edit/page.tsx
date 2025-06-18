@@ -1,7 +1,7 @@
 "use client"
 
 
-export default function AllNoticeAdmin(){
+export default function EditNotice(){
     return(
         <div></div>
     )

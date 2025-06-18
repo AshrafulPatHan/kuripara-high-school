@@ -6,12 +6,13 @@ import toast from "react-hot-toast";
 import { FormEvent, useState } from "react";
 import axios from "axios";
 import PrivateRoute from "@/components/admin/auth/PrivateRoute";
+import { useRouter } from "next/navigation";
 
 
 
 export default function EditEventData({searchParams}:any){
     const { id,Title, Description, Photo, Data,IdData } = searchParams;
-
+    const router = useRouter();
 
     // On from submit
     const handelFromEvents = async (event: FormEvent<HTMLFormElement>) =>{
@@ -37,6 +38,7 @@ export default function EditEventData({searchParams}:any){
                 const res = await axios.put(`${ApiUrl}/update-event`, AllFormData);
                 if (res.status === 200) {
                     toast.success("event is update successfully!");
+                     router.push("/admin/page/event");
                 } else {
                     toast.error("error is coming to sending data!");
                 }
