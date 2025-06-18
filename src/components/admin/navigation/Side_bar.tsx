@@ -25,8 +25,8 @@ export default function Side_bar(){
     };
 
     return(
-        <div className="sticky top-4 z-50  ">
-            <div className="w-[250px] bg-gradient-to-t from-[#202020] to-[#3E3D45] h-[97vh] ml-2 p-4  rounded-[12px] text-white">
+        <div className="sticky top-4 z-50 h-screen  mt-4 ">
+            <div className="w-[250px] bg-gradient-to-t from-[#202020] to-[#3E3D45] h-[97vh] ml-2 p-4  rounded-[12px] text-white  ">
                 <div className="flex flex-col gap-3  ">
                     <div className="flex flex-row items-center gap-4 ">
                         <Image src={Gov} width={300} height={300} className="w-[30px] h-[30px] " alt="Government logo" />

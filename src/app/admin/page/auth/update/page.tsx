@@ -42,7 +42,9 @@ export default function UpdatePassword() {
     return(
         <div>
             <form onSubmit={handelChangePassword} className="flex flex-col items-center gap-5">
+                <p>Name</p>
                 <input type="text" name="name" id="" required className="border border-black rounded-lg w-[300px] h-[32px] px-4 py-1 " />
+                <p>Password</p>
                 <input type="text" name="password" id="" required className="border border-black rounded-lg w-[300px] h-[32px] px-4 py-1 "  />
                 <button className="bg-blue-600 p-4 rounded-lg">Change password</button>
             </form>

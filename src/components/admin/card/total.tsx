@@ -6,7 +6,7 @@ import TotalView from "./toView";
 
 export default function Total(){
     return(
-        <div className="flex flex-row items-center gap-[6.4vw] ">
+        <div className="grid grid-cols-2 xl:grid-cols-4 items-center gap-[6.4vw] ">
             <TotalView/>
             <TotalEvents/>
             <TotalNotice/>

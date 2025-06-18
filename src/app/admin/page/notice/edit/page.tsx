@@ -85,7 +85,7 @@ export default function EditNoticeData() {
                     backgroundImage: `url(${Background.src})`,
                 }}
             >
-                <form onSubmit={handelUpdateNotice} className="flex flex-col gap-5 bg-[#ffffff] rounded-xl p-6 w-[50vw] ">
+                <form onSubmit={handelUpdateNotice} className="flex flex-col gap-5 bg-[#ffffff] rounded-xl p-6 w-[120vw] xl:w-[50vw] ">
                     <div>
                         <h3 className="text-center font-bold text-2xl">Add Notice</h3>
                     </div>
@@ -136,7 +136,7 @@ export default function EditNoticeData() {
                     <div className="flex justify-center">
                         <button
                             type="submit"
-                            className="w-[90%] sm:w-[300px] lg:w-[350px] h-[40px] text-white 
+                            className="w-[97%] lg:w-[350px] h-[40px] text-white 
                             bg-gradient-to-t from-[#E93B77] to-[#da6d93] rounded-[8px] mt-7 "
                         >
                             Update Notice

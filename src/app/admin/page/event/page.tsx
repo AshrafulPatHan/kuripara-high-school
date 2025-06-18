@@ -74,7 +74,7 @@ export default function AllEventsAdmin(){
                 {/* all events */}
                 <div className="flex flex-col items-center justify-center">
                     <h2>All Events Album</h2>
-                    <div className="grid grid-cols-4 gap-7 ">
+                    <div className="grid grid-cols-1 xl:grid-cols-4 gap-7 ">
                         {event.map((data)=>(
                             <div key={data._id}>
                                 <div className="flex flex-col gap-3 w-[300px]  ">

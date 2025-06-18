@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Admin_Footer(){
     return(
         <div>
-            <div className="flex flex-row items-center justify-between  p-4 rounded-[12px] mb-0  ">
+            <div className="flex flex-col lg:flex-row items-center justify-between  p-4 rounded-[12px] mb-0  ">
                 <div>
                     <p>© Create by ashraful pathan</p>
                 </div>

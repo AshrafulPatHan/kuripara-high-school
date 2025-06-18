@@ -70,14 +70,14 @@ export default function AllNoticeAdmin(){
 
 
     return(
-        <div>
+        <div className="overflow-x-hidden">
             <div>
                 {/* sorting and search */}
                 <div></div>
                 {/* all events */}
-                <div className="flex flex-col items-center justify-center">
+                <div className="flex flex-col md:items-center md:justify-center ml-2 md:ml-0 overflow-x-hidden">
                     <h2 className="text-2xl font-semibold mb-7">All Notice </h2>
-                    <div className="grid grid-cols-4 gap-7 ">
+                    <div className="grid grid-cols-1 xl:grid-cols-4 gap-7 ">
                         {event.map((data)=>(
                             <div key={data._id}>
                                 <div className="flex flex-col gap-3 w-[300px]  ">

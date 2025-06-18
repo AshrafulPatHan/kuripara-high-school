@@ -65,29 +65,31 @@ export default function NoticeAdminTable(){
                         </div>
                     </div>
                 </div>
-                {data.map((not)=> (
-                    <div key={not._id}>
-                        <hr className="w-[100%] text-[#F0F2F5] " />
-                        <div className="flex flex-row items-center justify-between h-[70px] my-2 py-4 px-9 ">
-                            <div>
-                                <Image src={not.Photo} width={300} height={300} alt="notice photo" className="w-14 h-14 object-cover rounded-full " />
-                            </div>
-                            <h4 className=" text-center ">{not.ShortDescription}</h4>
-                            <div className="flex flex-row items-center gap-14">
-                                <p>{not.Data}</p>
-                                <button onClick={()=>{handelEditNotice(not)}} className="w-[44px] h-[44px] bg-gradient-to-b from-[#3E3D45] to-[#202020] rounded-[12px] 
-                                flex flex-col justify-center items-center cursor-pointer ">
-                                    <MdOutlineEdit className="text-2xl text-white "/>
-                                </button>
-                                <button onClick={()=>{handelViewDetails(not)}} className="w-[44px] h-[44px] bg-gradient-to-b from-[#3E3D45] to-[#202020] rounded-[12px] 
-                                flex flex-col justify-center items-center cursor-pointer ">
-                                    <MdDeleteForever className="text-2xl text-white "/>
-                                </button>
+                <div>
+                    {data.map((not)=> (
+                        <div key={not._id}>
+                            <hr className="w-[100%] text-[#F0F2F5] " />
+                            <div className="flex flex-row items-center justify-between h-[70px] my-2 py-4 px-9 ">
+                                <div>
+                                    <Image src={not.Photo} width={300} height={300} alt="notice photo" className="w-14 h-14 object-cover rounded-full " />
+                                </div>
+                                <h4 className=" text-center w-[400px] lg:w-[600px] ">{not.ShortDescription}</h4>
+                                <div className="flex flex-row items-center gap-14">
+                                    <p>{not.Data}</p>
+                                    <button onClick={()=>{handelEditNotice(not)}} className="w-[44px] h-[44px] bg-gradient-to-b from-[#3E3D45] to-[#202020] rounded-[12px] 
+                                    flex flex-col justify-center items-center cursor-pointer ">
+                                        <MdOutlineEdit className="text-2xl text-white "/>
+                                    </button>
+                                    <button onClick={()=>{handelViewDetails(not)}} className="w-[44px] h-[44px] bg-gradient-to-b from-[#3E3D45] to-[#202020] rounded-[12px] 
+                                    flex flex-col justify-center items-center cursor-pointer ">
+                                        <MdDeleteForever className="text-2xl text-white "/>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
-                
+                    ))}
+                </div>
+               
             </div>
         </div>
     )

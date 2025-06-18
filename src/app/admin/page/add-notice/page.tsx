@@ -99,7 +99,7 @@ export default function AddNotice() {
                     backgroundImage: `url(${Background.src})`,
                 }}
             >
-                <form onSubmit={handelAddNotice} className="flex flex-col gap-5 bg-[#ffffff] rounded-xl p-6 ">
+                <form onSubmit={handelAddNotice} className="flex flex-col gap-5 bg-[#ffffff] rounded-xl p-6 w-[120vw] xl:w-auto ">
                     <div>
                         <h3 className="text-center font-bold text-2xl">Add Notice</h3>
                     </div>

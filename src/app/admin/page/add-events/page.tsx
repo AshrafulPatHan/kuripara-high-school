@@ -117,10 +117,10 @@ export default function AddEvents(){
                                     handleFileSelect(file);
                                     }
                                 }}
-                                className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4
+                                className="block w-[97%] text-sm text-gray-500 file:mr-4 file:py-2 file:px-4
                                     file:rounded file:border-0 file:text-sm file:font-semibold
                                     file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100
-                                border border-black rounded-lg    
+                                border border-black rounded-lg 
                                 "
                             />
                             <label className="text-xs text-gray-400">Max size 32MB</label>
@@ -134,7 +134,7 @@ export default function AddEvents(){
                         <input type="text" name="description" id="" placeholder="Add Description"
                         className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4  " />
                     </div>
-                    <button type="submit" className=" w-[90%] sm:w-[300px] lg:w-[350px] h-[40px] text-white 
+                    <button type="submit" className=" w-[97%] sm:w-[300px] lg:w-[350px] h-[40px] text-white 
                     bg-gradient-to-t from-[#E93B77] to-[#da6d93] rounded-[8px] ">
                         Add Events
                     </button>
