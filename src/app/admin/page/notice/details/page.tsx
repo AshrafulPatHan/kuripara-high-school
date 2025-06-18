@@ -20,10 +20,10 @@ function wrapIframe(html: string): string {
 // main function
 
 export default function NoticeDetails({ searchParams }: any) {
-  const { id,Title, ShortDescription,LongDescription, Photo, Data } = searchParams;
-  const router = useRouter();
+    const { id,Title, ShortDescription,LongDescription, Photo, Data } = searchParams;
+    const router = useRouter();
 
-  let _IdData:string = id
+    let _IdData:string = id
     const handelEditDetails = (even:any) => {
       const query = new URLSearchParams({
             id: String(even._id),
@@ -38,14 +38,15 @@ export default function NoticeDetails({ searchParams }: any) {
       router.push(`/admin/page/event/details/edit?${query}`);
     };
   
-    const handleDeleteEvent = async () => {
+    // delete notice
+    const handleDeleteNotice = async () => {
         const confirmDelete = confirm("Are you sure delete this data?");
         if (!confirmDelete) return;
 
         try {
-        const res = await axios.delete(`${process.env.NEXT_PUBLIC_SERVER_ADMIN}/delete-event/${id}`);
+        const res = await axios.delete(`${process.env.NEXT_PUBLIC_SERVER_ADMIN}/delete-notice/${id}`);
         if (res.status === 200) {
-            toast.success("Event is add successfully!");
+            toast.success("notice delete is add successfully!");
             router.push("/admin/page/event");
         } else {
             toast.error("Event is not add!");
@@ -100,7 +101,7 @@ export default function NoticeDetails({ searchParams }: any) {
                 />
             </div>
             <div className="flex flex-row items-center gap-4 mt-4 ">
-                <button  onClick={handleDeleteEvent} className="text-sm text-red-600 border-[2px] border-red-600 cursor-pointer hover:underline rounded-lg px-4 py-1 w-[116px] h-[33px] font-semibold ">Delete</button>
+                <button  onClick={handleDeleteNotice} className="text-sm text-red-600 border-[2px] border-red-600 cursor-pointer hover:underline rounded-lg px-4 py-1 w-[116px] h-[33px] font-semibold ">Delete</button>
                 <button onClick={()=>{handelEditDetails(searchParams)}} className="text-sm cursor-pointer bg-[#E91F63] rounded-lg px-4 py-1 w-[116px] h-[33px] text-white font-semibold ">Edit</button>
             </div>
         </div>

@@ -34,7 +34,7 @@ export default function EventDetailsAdmin({ searchParams }: any) {
     try {
       const res = await axios.delete(`${process.env.NEXT_PUBLIC_SERVER_ADMIN}/delete-event/${id}`);
       if (res.status === 200) {
-        toast.success("Event is add successfully!");
+        toast.success("Event is delete successfully!");
         router.push("/admin/page/event");
       } else {
         toast.error("Event is not add!");
