@@ -56,7 +56,7 @@ export default function EventDetailsAdmin({ searchParams }: any) {
             <div>
                 <h1 className=" text-xl md:text-2xl font-bold text-center">{Title}</h1>
                 <p className="text-gray-500 mt-2">Date: {Data}</p>
-                <p className="text-gray-500 mt-2">id: {id}</p>
+                {/* <p className="text-gray-500 mt-2">id: {id}</p> */}
             </div>
             <p className="mt-3">{Description}</p>
             <div className="flex flex-row items-center gap-4 mt-4 ">
