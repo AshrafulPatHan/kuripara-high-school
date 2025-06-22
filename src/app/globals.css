@@ -1,5 +1,14 @@
-@import "tailwindcss";
+/* @import "tailwindcss"; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
 
 
 .rdw-editor-main {

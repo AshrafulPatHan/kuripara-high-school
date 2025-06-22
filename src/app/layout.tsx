@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "@radix-ui/themes/styles.css";
-import { Theme } from "@radix-ui/themes";
+// @ts-ignore
+import { Theme, ThemePanel } from '@radix-ui/themes';
 import Providers from "@/redux/Provider";
 import { Toaster } from "react-hot-toast";
+import '@radix-ui/themes/styles.css';
 
 
 
