@@ -6,7 +6,14 @@ import { Theme, ThemePanel } from '@radix-ui/themes';
 import Providers from "@/redux/Provider";
 import { Toaster } from "react-hot-toast";
 import '@radix-ui/themes/styles.css';
+import { Inter } from 'next/font/google'
 
+// Inter font setup
+const inter = Inter({
+  subsets: ['latin'], 
+  variable: '--font-inter',
+  display: 'swap',
+})
 
 
 export const metadata: Metadata = {
@@ -20,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
       <body>
         <Providers>
           <Theme>
