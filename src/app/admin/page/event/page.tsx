@@ -72,7 +72,7 @@ export default function AllEventsAdmin(){
                 {/* sorting and search */}
                 <div></div>
                 {/* all events */}
-                <div className="flex flex-col items-center justify-center">
+                <div className="flex flex-col items-start md:items-center ml-4 md:ml-0 justify-center">
                     <h2>All Events Album</h2>
                     <div className="grid grid-cols-1 xl:grid-cols-4 gap-7 ">
                         {event.map((data)=>(

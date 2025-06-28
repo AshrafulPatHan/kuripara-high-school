@@ -21,7 +21,7 @@ const options = {
             chartType="PieChart"
             data={data}
             options={options}
-            className="w-[700px] h-[400px] "
+            className=" w-[97vw] md:w-[500px] 2xl:w-[700px] h-auto md:h-[400px] "
             />
         </div>
     )

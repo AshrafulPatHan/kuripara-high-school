@@ -42,7 +42,8 @@ const ChartData = [
 ];
     return(
         <div className="mr-5">
-            <Chart chartType="ColumnChart" data={ChartData} className="w-[600px] h-[400px] " />
+            <Chart chartType="ColumnChart" data={ChartData} 
+            className="w-[97vw] md:w-[400px] 2xl:w-[600px] h-auto md:h-[400px] " />
         </div>
     )
 }

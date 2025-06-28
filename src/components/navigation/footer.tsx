@@ -34,7 +34,7 @@ export default function Footer() {
                   <div>
                      <p className="text-xs text-[#ffffffb2] ">Created By</p>
                      <h2 className="text-lg font-bold text-white ">Ashraful Pathan</h2>
-                     <p className="text-xs text-[#000000b2] bg-amber-300 px-1 py-0 text-center rounded-2xl mt-[4px] ">Frontend Developer</p>
+                     <p className="text-xs text-[#000000b2] bg-amber-300 px-1 py-0 text-center rounded-2xl mt-[4px] ">mern-stack developer</p>
                      <a target="_blank" rel="noopener noreferrer" href="https://www.ashraful.top"
                      className="text-xs text-[#000000b2] bg-blue-300 px-10 py-0 text-center rounded-2xl mt-[6px]  ">ashraful.top</a>
                   </div>

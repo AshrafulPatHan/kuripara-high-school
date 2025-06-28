@@ -12,7 +12,7 @@ import Admin_Footer from "@/components/admin/navigation/Admin_Footer";
 
 export const metadata: Metadata = {
   title: "Admin Login",
-  description: "Admin Panel",
+  description: "Admin Panel Login",
 };
 
 export default function RootLayout({

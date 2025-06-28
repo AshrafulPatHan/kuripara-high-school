@@ -30,7 +30,7 @@ export default function RootLayout({
             </div>
 
             {/* Main Content Area */}
-            <div className="flex flex-col min-h-screen overflow-x-auto">
+            <div className="flex flex-col min-h-screen overflow-x-auto ">
               {/* Navbar - Sticky */}
                 <Admin_nav />
 

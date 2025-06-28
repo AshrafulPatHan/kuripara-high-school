@@ -57,22 +57,23 @@ export default function Admin_nav(){
             <div className="md:hidden">
                 <div className="flex items-center justify-between mx-2  bg-[#ffffffe1] px-2 py-2 rounded-xl  ">
                     <div>
-                        <button onClick={() => setIsOpen(true)} className="text-2xl font-bold underline">Admin</button>
+                        <button onClick={() => setIsOpen(true)} className="text-2xl font-bold underline">Options</button>
                     </div>
                     <div>
                         <Image width={500} height={500} src={Profile} alt="Profile" className="rounded-full w-[40px] h-[40px] bg-blue-400  " />
                     </div>
                 </div>
-                <div className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
+                <div className={`fixed top-0 left-0 h-full overflow-y-auto w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
                 isOpen ? "translate-x-0" : "-translate-x-full"
                 }`}>
-                    <div className="p-4 flex justify-between items-center border-b">
+                    <div className="p-4 flex justify-between items-center bg-[#3E3D45] text-white ">
                         <h2 className="text-lg font-semibold">Menu</h2>
-                        <button onClick={() => setIsOpen(false)} className="text-gray-600">
+                        <button onClick={() => setIsOpen(false)} className="text-gray-200">
                             ✕
                         </button>
                     </div>
-                    <div className="w-[250px] bg-gradient-to-t from-[#202020] to-[#3E3D45] h-[97vh] ml-2 p-4  rounded-[12px] text-white  overflow-y-scroll h-screen ">
+                    {/* mobile sidebar */}
+                    <div className="w-[100%] bg-gradient-to-t from-[#202020] to-[#3E3D45] h-screen p-4  text-white  overflow-y-auto ">
                         <div className="flex flex-col gap-3 overflow-y-scroll ">
                             <div className="flex flex-row items-center gap-4 ">
                                 <Image src={Gov} width={300} height={300} className="w-[30px] h-[30px] " alt="Government logo" />

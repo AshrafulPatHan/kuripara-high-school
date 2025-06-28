@@ -9,12 +9,12 @@ import NoticeAdminTable from "@/components/admin/table/noticeTabil";
 
 export default function Admin(){
    return(
-      <PrivateRoute>
-         <div className="">
+      <div>
+         <div >
             <Total/>
             <Chart/>
             <NoticeAdminTable/>
          </div>
-      </PrivateRoute>
+      </div>
    )
 };

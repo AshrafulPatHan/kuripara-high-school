@@ -51,7 +51,7 @@ export default function NoticeAdminTable(){
         router.push(`/admin/page/notice/details?${query}`);
     }
     return(
-        <div className="mt-20 mb-20 overflow-hidden">
+        <div className="mt-20 mb-20 overflow-x-scroll ">
             <div className="flex flex-col bg-[#ffffffea] rounded-[12px] my-2 py-4 ">
                 <div className="flex flex-col gap-12 pb-3 px-10 ">
                     <h3 className="font-bold text-xl ">Latest Notice</h3>
