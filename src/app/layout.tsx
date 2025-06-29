@@ -35,7 +35,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://kuripara-high-school.vercel.app",
   },
-  keywords: ["কুড়িপাড়া উচ্চ বিদ্যালয়", "Kuripara High School", "Narayanganj School", "Madanpur School", "Bangladesh High School", "SSC School Narayanganj"],
+  keywords: ["কুড়িপাড়া উচ্চ বিদ্যালয়", "Kuripara High School", "Narayanganj School", "Madanpur School", 
+      "Bangladesh High School", "SSC School Narayanganj", "কুড়িপাড়া উচ্চ বিদ্যালয়ের ইতিহাস", "শিক্ষাপ্রতিষ্ঠান", "history of Kuripara High School",
+      "Kuripara High School teacher", "Kuripara High School photo", "কুড়িপাড়া উচ্চ বিদ্যালয়ের শিক্ষকবৃন্দ", "bast school in Narayanganj", 
+      "government school in narayanganj", "Kuripara", "Kuripara school", "Kuripara playground", "Kuripara student", "Kuripara event",
+      "কুড়িপাড়া উচ্চ বিদ্যালয় মদনপুর", "মদনপুর","শিক্ষার আলো","সাহান স্যার",
+    ],
   authors: [{ name: "Kuripara High School Authority" }],
   robots: "index, follow"
 };
