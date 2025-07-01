@@ -38,11 +38,11 @@ export default function About(){
                     </div><div className=" flex items-center gap-1">
                         <p className="text-lg font-medium">Phone :</p>
                         {/* <p className="text-blue-500">016727-27490</p> */}
-                        <p className="text-blue-500 text-sm lg:text-lg">+8801614871378</p>
+                        <p className="text-blue-500 text-sm lg:text-lg">+8801xxxxxxx</p>
                     </div>
                     <div className=" flex items-center gap-1 ">
                         <p className="text-lg font-medium">Email:</p>
-                        <p className="text-blue-500 text-sm lg:text-lg">ashrafulpathan3927@gmail.com</p>
+                        <p className="text-blue-500 text-sm lg:text-lg">ku....@gmail.com</p>
                     </div>
                 </div>
             </div>
