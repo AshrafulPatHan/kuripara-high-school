@@ -23,7 +23,7 @@ export default function TotalView(){
     
 
     useEffect(()=>{
-        const ApiUrl = process.env.NEXT_PUBLIC_SERVER_ADMIN;
+        const ApiUrl = process.env.NEXT_PUBLIC_SERVER_2_ADMIN;
         axios.get(`${ApiUrl}/visitor-number`)
         .then((res) => setData(res.data))
         .catch((error) => console.error(error))
