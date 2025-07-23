@@ -23,10 +23,10 @@ export default function Events() {
    Data: string;
    };
 
-   const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
+   const ApiUrl = process.env.NEXT_PUBLIC_API_NEXT_SERVER;
  // fetch data
     useEffect(() => {
-        fetch(`${ApiUrl}/latest-album`)
+        fetch(`${ApiUrl}/api/public/events/latest-album`)
         .then((res) => res.json())
         .then((data) => {
             setEvent(data);

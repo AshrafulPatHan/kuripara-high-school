@@ -32,12 +32,12 @@ type NoticeType = {
 };
 
 // get url
-const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
+const ApiUrl = process.env.NEXT_PUBLIC_API_NEXT_SERVER;
 
 
 // fetch data
     useEffect(() => {
-        fetch(`${ApiUrl}/latest-notice`)
+        fetch(`${ApiUrl}/api/public/notice/latest-notice`)
         .then((res) => res.json())
         .then((data) => {
             setNotice(data);
