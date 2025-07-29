@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import "./app.css";
+import Navbar from "@/components/navigation/navbar";
+import Footer from "@/components/navigation/footer";
 
 
 export default function Teacher() {
@@ -37,8 +39,10 @@ const teachers = [
 
 
   return (
+  <>
+  <Navbar/>
     <div className=" px-4 flex flex-col items-center mx-auto py-10 spacer layer1 ">
-      <h2 className="text-2xl text-center font-semibold mb-8 text-white">শিক্ষক ও কর্মচারীবৃন্দ</h2>
+      <h2 className="text-2xl text-center font-semibold pb-8 text-white">শিক্ষক ও কর্মচারীবৃন্দ</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
         {teachers.map((teacher, index) => (
           <div key={index} className="bg-[#d1c4c4] rounded-lg py-6 flex flex-col items-center hover:shadow-xl hover:shadow-gray-300">
@@ -55,5 +59,7 @@ const teachers = [
         ))}
       </div>
     </div>
+    <Footer/>
+  </>
   );
 }

@@ -62,7 +62,7 @@ const handleViewDetailsMap = (even:any) => {
 
 
    return(
-      <div className="flex justify-center mt-20">
+      <div className="flex justify-center mt-20 mb-20">
          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-5 ">
             <div>
                <nav className="flex flex-row items-center justify-between mb-4 bg-[#f8f4f4] rounded-[8px] p-3 w-[97vw] lg:w-[60vw] xl:w-[821px] ">

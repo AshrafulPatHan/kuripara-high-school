@@ -6,7 +6,7 @@ import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
    return(
-      <div className="flex justify-center bg-[#002147] mt-20 pt-10 pb-4 text-white max-w-screen overflow-hidden ">
+      <div className="flex justify-center bg-[#002147] pt-10 pb-4 text-white max-w-screen overflow-hidden ">
          <div className="flex flex-col items-center gap-3">
             <div className="flex items-center gap-[1vw] md:gap-[46.1vw] xl:gap-[900px] max-w-screen overflow-hidden ">
                <div className="flex items-center gap-2">
