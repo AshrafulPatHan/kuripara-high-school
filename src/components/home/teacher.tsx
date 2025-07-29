@@ -11,6 +11,7 @@ import Babul from "@/assets/image/school/babul_sir.jpg";
 import Link from "next/link";
 
 
+
 export default function Teacher() {
 const ref = useRef(null);
 const ref1 = useRef(null);

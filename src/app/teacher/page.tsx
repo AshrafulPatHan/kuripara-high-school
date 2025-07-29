@@ -1,8 +1,7 @@
 "use client"
 
 import Image from "next/image";
-// import ok from "/teacher/";
-
+import "./app.css";
 
 
 export default function Teacher() {
@@ -38,11 +37,11 @@ const teachers = [
 
 
   return (
-    <div className="w-[95vw] mx-auto py-10">
-      <h2 className="text-2xl text-center font-semibold mb-8">শিক্ষক ও কর্মচারীবৃন্দ</h2>
+    <div className=" px-4 flex flex-col items-center mx-auto py-10 spacer layer1 ">
+      <h2 className="text-2xl text-center font-semibold mb-8 text-white">শিক্ষক ও কর্মচারীবৃন্দ</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
         {teachers.map((teacher, index) => (
-          <div key={index} className="bg-[#f8f4f4] rounded-lg py-6 flex flex-col items-center hover:shadow-2xl">
+          <div key={index} className="bg-[#d1c4c4] rounded-lg py-6 flex flex-col items-center hover:shadow-xl hover:shadow-gray-300">
             <Image
               src={teacher.photo}
               alt={teacher.name}
