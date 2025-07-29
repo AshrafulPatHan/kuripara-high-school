@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Gov from "@/assets/image/gov.png";
+import Gov from "@/assets/image/officeal.png";
 import Ashraful from "@/assets/image/ashraful.png";
 import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 

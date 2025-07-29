@@ -5,13 +5,12 @@ import { RiPagesFill } from "react-icons/ri";
 import { useRouter } from "next/navigation";
 import { RiPagesLine } from "react-icons/ri";
 import Image from "next/image";
-import Gov from "@/assets/image/gov.png";
+import Gov from "@/assets/image/officeal.png";
 import { FaPhotoVideo } from "react-icons/fa";
 import { MdAddAPhoto } from "react-icons/md";
 import { FaUserCog } from "react-icons/fa";
 import { GrDocumentConfig } from "react-icons/gr";
 import { IoHome } from "react-icons/io5";
-
 
 
 

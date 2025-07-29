@@ -26,8 +26,8 @@ export default function Number() {
             className="flex flex-row items-center justify-between w-[100vw] py-32 px-[6vw] sm:px-[8.3vw] text-white  "
          >
             <NumberBox icon={<FaHome />} number={1968} title="Founded" inView={inView} />
-            <NumberBox icon={<FaUsers />} number={15} title="Teacher" inView={inView} />
-            <NumberBox icon={<PiStudentFill />} number={1200} title="Student" inView={inView} />
+            <NumberBox icon={<FaUsers />} number={18} title="Teacher" inView={inView} />
+            <NumberBox icon={<PiStudentFill />} number={900} title="Student" inView={inView} />
             <NumberBox icon={<FaStar />} number={5} title="Rating" inView={inView} />
          </div>
       </div>
