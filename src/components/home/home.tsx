@@ -12,6 +12,9 @@ import Navbar from "@/components/navigation/navbar";
 import About from "./about";
 import { Component, useEffect } from "react";
 import { getVisitorData } from "../data/Visitor";
+import Intro from "./official/intro";
+import StudentsData from "./official/Student";
+import NotesData from "./official/Notes";
 
 
 export default function Clint() {
@@ -43,6 +46,10 @@ export default function Clint() {
             <Hero/>
             <About/>
             <History/>
+            {/* new section */}
+            <Intro/>
+            <StudentsData/>
+            <NotesData/>
             <Number/>
             <Teacher/>
             {/* <News/> */}
