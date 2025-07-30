@@ -7,7 +7,7 @@ import HeadMaster from "@/assets/image/school/Kamal_sir.jpg";
 import Rabani from "@/assets/image/school/Rabani.jpg";
 import শফিকুল from "@/assets/image/school/sofik.jpeg";
 import Pronoy from "@/assets/image/school/comp.jpeg"; 
-import Sahan from "@/assets/image/school/Sahan_sir.jpg"; 
+import Babul from "@/assets/image/school/babul_sir.jpg"; 
 import Link from "next/link";
 
 
@@ -83,7 +83,7 @@ const isInView2 = useInView(ref2, { once: false });
                         <Image src={Rabani} alt="sir" className="w-[160px] h-[200px] object-cover " />
                      </p>
                      <h3 className="text-center text-xl">গোলাম রব্বানী</h3>
-                     <p>সহকারী শিক্ষক</p>
+                     <p>রসায়ন শিক্ষক</p>
                   </div>
                </div>
                <div className="bg-[#f8f4f4] rounded-[8px] w-[97vw] sm:w-[200px] xl:w-[277px] py-6  flex items-center hover:shadow-2xl justify-center ">
@@ -98,10 +98,10 @@ const isInView2 = useInView(ref2, { once: false });
                <div className="bg-[#f8f4f4] rounded-[8px] w-[97vw] sm:w-[200px] xl:w-[277px] py-6  flex items-center hover:shadow-2xl justify-center ">
                   <div className="flex flex-col items-center">
                      <p className="text-center">
-                        <Image src={Sahan} alt="sir" className="w-[160px] h-[200px] object-cover " />
+                        <Image src={Babul} alt="sir" className="w-[160px] h-[200px] object-cover " />
                      </p>
-                     <h3 className="text-center text-xl">মোঃ শাহান উল্লাহ </h3>
-                     <p>সহকারী শিক্ষক</p>
+                     <h3 className="text-center text-xl">মোঃ তায়েফুর রহমান বাবুল </h3>
+                     <p>ইংরেজির শিক্ষক</p>
                   </div>
                </div>
             </motion.div>

@@ -12,9 +12,9 @@ const teachers = [
   { name: "মোঃ কামাল হোসেন", designation: "প্রধান শিক্ষক", photo: "/teacher/Kamal_sir.jpg" },
   { name: "শফিকুল ইসলাম", designation: "সহকারী প্রধান শিক্ষক", photo: "/teacher/sofik.jpeg" },
   { name: "মনজুরুল মোরশেদ", designation: "সহকারী শিক্ষক  (কৃষি শিক্ষা)", photo: "/teacher/মনজুরুল-মোরশেদ.jpg", cv:"/doc/মনজুরুল-মোরশেদ.html" },
-  { name: "মোসাম্মৎ রেকে্যানা ", designation: "সহকারী শিক্ষক ", photo: "/teacher/raksona.jpg" },
-  { name: "পারভীন আক্তার", designation: "সহকারী শিক্ষক (বিজ্ঞান)", photo: "/teacher/avatar-person.svg" }, //parvin image is not found
-  { name: "শাঈখ গোলাম রব্বানী", designation: "সহকারী শিক্ষক (বাংলা)", photo: "/teacher/Rabani.jpg" },
+  { name: "মোসাম্মৎ রেক্সোনা ", designation: "সহকারী শিক্ষক ( বাংলা)", photo: "/teacher/raksona.jpg" },
+  { name: "পারভীন আক্তার", designation: "সহকারী শিক্ষক (সামাজিক বিজ্ঞান)", photo: "/teacher/avatar-person.svg" }, //parvin image is not found
+  { name: "শাঈখ গোলাম রব্বানী", designation: "সহকারী শিক্ষক (ভৌত বিজ্ঞান)", photo: "/teacher/Rabani.jpg" },
   { name: "মুহাম্মদ তায়েফুর রহমান বাবুল", designation: "সহকারী শিক্ষক (ইংরেজি)", photo: "/teacher/babul_sir.jpg" },
   { name: "মোঃ আমিন হোসেন", designation: "সহকারী শিক্ষক (ইংরেজি)", photo: "/teacher/amir_hosen.jpeg" },
   { name: "ফাহিমা মেহজাবিন", designation: "সহকারী শিক্ষক (ইংরেজি)", photo: "/teacher/avatar-person.svg" }, // fahima image is not found
