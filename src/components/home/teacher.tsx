@@ -74,7 +74,7 @@ const isInView2 = useInView(ref2, { once: false });
                         <Image src={শফিকুল} alt="sir" className=" w-[160px] h-[200px] object-cover " />
                      </p>
                      <h3 className="text-center text-xl">শফিকুল ইসলাম</h3>
-                     <p>সহকারী প্রধান শিক্ষক</p>
+                     <p>সহকারী প্রধান শিক্ষক (ভারপ্রাপ্ত)</p>
                   </div>
                </div>
                <div className="bg-[#f8f4f4] rounded-[8px] w-[97vw] sm:w-[200px] xl:w-[277px] py-6  flex items-center hover:shadow-2xl justify-center ">
@@ -82,8 +82,8 @@ const isInView2 = useInView(ref2, { once: false });
                      <p className="text-center">
                         <Image src={Rabani} alt="sir" className="w-[160px] h-[200px] object-cover " />
                      </p>
-                     <h3 className="text-center text-xl">গোলাম রব্বানী</h3>
-                     <p>রসায়ন শিক্ষক</p>
+                     <h3 className="text-center text-xl">গোলাম রব্বানী </h3>
+                     <p>ভৌত বিজ্ঞান </p>
                   </div>
                </div>
                <div className="bg-[#f8f4f4] rounded-[8px] w-[97vw] sm:w-[200px] xl:w-[277px] py-6  flex items-center hover:shadow-2xl justify-center ">

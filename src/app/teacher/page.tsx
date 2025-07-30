@@ -11,22 +11,25 @@ export default function Teacher() {
 const teachers = [
   { name: "মোঃ কামাল হোসেন", designation: "প্রধান শিক্ষক", photo: "/teacher/Kamal_sir.jpg" },
   { name: "শফিকুল ইসলাম", designation: "সহকারী প্রধান শিক্ষক", photo: "/teacher/sofik.jpeg" },
-  { name: "মনজুরুল মোরশেদ", designation: "সহকারী শিক্ষক  (কৃষি শিক্ষা)", photo: "/teacher/মনজুরুল-মোরশেদ.jpg", cv:"/doc/মনজুরুল-মোরশেদ.html" },
-  { name: "মোসাম্মৎ রেক্সোনা ", designation: "সহকারী শিক্ষক ( বাংলা)", photo: "/teacher/raksona.jpg" },
-  { name: "পারভীন আক্তার", designation: "সহকারী শিক্ষক (সামাজিক বিজ্ঞান)", photo: "/teacher/avatar-person.svg" }, //parvin image is not found
-  { name: "শাঈখ গোলাম রব্বানী", designation: "সহকারী শিক্ষক (ভৌত বিজ্ঞান)", photo: "/teacher/Rabani.jpg" },
-  { name: "মুহাম্মদ তায়েফুর রহমান বাবুল", designation: "সহকারী শিক্ষক (ইংরেজি)", photo: "/teacher/babul_sir.jpg" },
-  { name: "মোঃ আমিন হোসেন", designation: "সহকারী শিক্ষক (ইংরেজি)", photo: "/teacher/amir_hosen.jpeg" },
-  { name: "ফাহিমা মেহজাবিন", designation: "সহকারী শিক্ষক (ইংরেজি)", photo: "/teacher/avatar-person.svg" }, // fahima image is not found
+  { name: "মনজুরুল মোরশেদ", designation: "সহকারী শিক্ষক  সিনিয়র শিক্ষক(কৃষি শিক্ষা)", photo: "/teacher/মনজুরুল-মোরশেদ.jpg", cv:"/doc/মনজুরুল-মোরশেদ.html" },
+  { name: "মোসাম্মৎ রেক্সোনা ", designation: "সহকারী শিক্ষক সিনিয়র শিক্ষক( বাংলা)", photo: "/teacher/raksona.jpg" },
+  { name: "পারভীন আক্তার", designation: "সহকারী শিক্ষক সিনিয়র শিক্ষক(সামাজিক বিজ্ঞান)", photo: "/teacher/avatar-person.svg" }, //parvin image is not found
+  { name: "শাঈখ গোলাম রব্বানী", designation: "সহকারী শিক্ষক সিনিয়র শিক্ষক(ভৌত বিজ্ঞান)", photo: "/teacher/Rabani.jpg" },
+  { name: "মুহাম্মদ তায়েফুর রহমান বাবুল", designation: "সহকারী শিক্ষক সিনিয়র শিক্ষক(ইংরেজি)", photo: "/teacher/babul_sir.jpg" },
+  { name: "আমির হোসেন", designation: "সহকারী শিক্ষক সিনিয়র শিক্ষক( ইসলাম শিক্ষা)", photo: "/teacher/amir_hosen.jpeg" },
+  // 1
+  { name: "ফাহিমা মেহজাবিন", designation: "সহকারী শিক্ষক (গার্হস্থ্য বিজ্ঞান)", photo: "/teacher/avatar-person.svg" }, // fahima image is not found
   { name: "নুসরাত জাহান মুনি", designation: "সহকারী শিক্ষক (ধর্ম)", photo: "/teacher/mene.jpeg" },
   { name: "সৈয়দা সাদিয়া আফরিন", designation: "সহকারী শিক্ষক", photo: "/teacher/sadiya_afrin.jpeg" },
   { name: "শাহাদাত হোসেন", designation: "সহকারী শিক্ষক", photo: "/teacher/sahadat.jpeg" },
-  { name: "মোঃ শাহান উল্লাহ", designation: "সহকারী শিক্ষক", photo: "/teacher/Sahan_sir.jpg" },
-  { name: "শাকিল আহম্মেদ", designation: "সহকারী শিক্ষক", photo: "/teacher/sakil.jpeg" },
-  { name: "সিরাজুম মুনিরা রিমি", designation: "সহকারী শিক্ষক", photo: "/teacher/remi.jpeg" },
-  { name: "সাদ্দাম হোসেন", designation: "সহকারী শিক্ষক", photo: "/teacher/suddum.jpeg" },
-  { name: "মোঃ নাইম", designation: "সহকারী শিক্ষক", photo: "/teacher/nayem.jpeg" },
-  { name: "আজহারুল ইসলাম", designation: "সহকারী শিক্ষক", photo: "/teacher/aujharul.jpeg" },
+  // 2
+  { name: "মোঃ শাহান উল্লাহ", designation: "সহকারী শিক্ষক (খণ্ডকালীন)", photo: "/teacher/Sahan_sir.jpg" },
+  { name: "শাকিল আহম্মেদ", designation: "সহকারী শিক্ষক (খণ্ডকালীন)", photo: "/teacher/sakil.jpeg" },
+  { name: "সিরাজুম মুনিরা রিমি", designation: "সহকারী শিক্ষক (খণ্ডকালীন)", photo: "/teacher/remi.jpeg" },
+  { name: "সাদ্দাম হোসেন", designation: "সহকারী শিক্ষক (খণ্ডকালীন)", photo: "/teacher/suddum.jpeg" },
+  { name: "মোঃ নাইম", designation: "সহকারী শিক্ষক (খণ্ডকালীন)", photo: "/teacher/nayem.jpeg" },
+  { name: "আজহারুল ইসলাম", designation: "সহকারী শিক্ষক (খণ্ডকালীন)", photo: "/teacher/aujharul.jpeg" },
+  // 3
   { name: "মোঃ তৈমুর হাসান প্রনয়", designation: "কম্পিউটার ল্যাব", photo: "/teacher/comp.jpeg" },
   { name: "সোহেনা আক্তার অনি", designation: "অফিস সহকারী", photo: "/teacher/avatar-person.svg" },// ony image is not found
   { name: "মোঃ ইসমাইল", designation: "পিয়ন", photo: "/teacher/avatar-person.svg" },
