@@ -25,7 +25,7 @@ const teachers = [
   // 2
   { name: "মোঃ শাহান উল্লাহ", designation: "সহকারী শিক্ষক (খণ্ডকালীন)", photo: "/teacher/Sahan_sir.jpg" },
   { name: "শাকিল আহম্মেদ", designation: "সহকারী শিক্ষক (খণ্ডকালীন)", photo: "/teacher/sakil.jpeg" },
-  { name: "সিরাজুম মুনিরা রিমি", designation: "সহকারী শিক্ষক (খণ্ডকালীন)", photo: "/teacher/remi.jpeg" },
+  { name: "সিরাজুম মুনিরা রিমি", designation: "সহকারী শিক্ষক (খণ্ডকালীন)", photo: "/teacher/meme-main.jpeg" },
   { name: "সাদ্দাম হোসেন", designation: "সহকারী শিক্ষক (খণ্ডকালীন)", photo: "/teacher/suddum.jpeg" },
   { name: "মোঃ নাইম", designation: "সহকারী শিক্ষক (খণ্ডকালীন)", photo: "/teacher/nayem.jpeg" },
   { name: "আজহারুল ইসলাম", designation: "সহকারী শিক্ষক (খণ্ডকালীন)", photo: "/teacher/aujharul.jpeg" },
