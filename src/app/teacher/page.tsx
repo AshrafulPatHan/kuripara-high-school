@@ -11,7 +11,7 @@ export default function Teacher() {
 const teachers = [
   { name: "মোঃ কামাল হোসেন", designation: "প্রধান শিক্ষক", photo: "/teacher/Kamal_sir.jpg" },
   { name: "শফিকুল ইসলাম", designation: "সহকারী প্রধান শিক্ষক", photo: "/teacher/sofik.jpeg" },
-  { name: "মনজুরুল মোসাদ্দেক", designation: "সহকারী শিক্ষক (গণিত)", photo: "/teacher/mosad_sir.jpg", cv:"/doc/মনজুরুল-মোরশেদ.html" },
+  { name: "মনজুরুল মোসাদ্দেক", designation: "সহকারী শিক্ষক (গণিত)", photo: "/teacher/মনজুরুল-মোরশেদ.jpg", cv:"/doc/মনজুরুল-মোরশেদ.html" },
   { name: "মোসাম্মৎ রেকে্যানা ", designation: "সহকারী শিক্ষক ", photo: "/teacher/raksona.jpg" },
   { name: "পারভীন আক্তার", designation: "সহকারী শিক্ষক (বিজ্ঞান)", photo: "/teacher/avatar-person.svg" }, //parvin image is not found
   { name: "শাঈখ গোলাম রব্বানী", designation: "সহকারী শিক্ষক (বাংলা)", photo: "/teacher/Rabani.jpg" },
