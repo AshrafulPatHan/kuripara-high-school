@@ -15,7 +15,7 @@ const teachers = [
   { name: "মোসাম্মৎ রেক্সোনা ", designation: "সিনিয়র শিক্ষক( বাংলা)", photo: "/teacher/raksona.jpg" },
   { name: "পারভীন আক্তার", designation: " সিনিয়র শিক্ষক(সামাজিক বিজ্ঞান)", photo: "/teacher/parbin.jpeg" }, //parvin image is not found
   { name: "শাহ গোলাম রব্বানী", designation: " সিনিয়র শিক্ষক(ভৌত বিজ্ঞান)", photo: "/teacher/Rabani.jpg" },
-  { name: "তায়ফুর রহমান বাবুল", designation: " সিনিয়র শিক্ষক(ইংরেজি)", photo: "/teacher/babul_sir.jpg" },
+  { name: "মোঃ তায়ফুর রহমান বাবুল", designation: " সিনিয়র শিক্ষক(ইংরেজি)", photo: "/teacher/babul_sir.jpg" },
   { name: "আমির হোসেন", designation: " সিনিয়র শিক্ষক( ইসলাম শিক্ষা)", photo: "/teacher/amir_hosen.jpeg" },
   // 1
   { name: "ফাহিমা মেহজাবিন", designation: "সহকারী শিক্ষক (গার্হস্থ্য বিজ্ঞান)", photo: "/teacher/fahima.jpeg" }, // fahima image is not found
