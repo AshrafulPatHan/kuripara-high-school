@@ -51,7 +51,7 @@
                 <Link href='/about' className="text-lg  ">ABOUT</Link>
                 <Link href='/notice' className="text-lg  ">NOTICES</Link>
                 <Link href='/album' className="text-lg  ">EVENTS</Link>
-                <Link href='/books' className="text-lg  ">BOOKS</Link>
+                <Link href='/teacher' className="text-lg  ">TEACHER</Link>
                </div>
             </div>
             </div>

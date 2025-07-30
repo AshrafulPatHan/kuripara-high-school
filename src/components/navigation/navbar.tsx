@@ -21,7 +21,7 @@ export default function Navbar() {
                <Link href='/about' className="text-xl font-bold ">ABOUT</Link>
                <Link href='/notice' className="text-xl font-bold ">NOTICES</Link>
                <Link href='/album' className="text-xl font-bold ">EVENTS</Link>
-               <Link href='/books' className="text-xl font-bold ">BOOKS</Link>
+               <Link href='/teacher' className="text-xl font-bold ">TEACHER</Link>
             </div>
          </div>
       </div>

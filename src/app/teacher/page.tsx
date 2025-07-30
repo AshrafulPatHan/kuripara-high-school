@@ -19,9 +19,9 @@ const teachers = [
   { name: "আমির হোসেন", designation: " সিনিয়র শিক্ষক( ইসলাম শিক্ষা)", photo: "/teacher/amir_hosen.jpeg" },
   // 1
   { name: "ফাহিমা মেহজাবিন", designation: "সহকারী শিক্ষক (গার্হস্থ্য বিজ্ঞান)", photo: "/teacher/avatar-person.svg" }, // fahima image is not found
-  { name: "নুসরাত জাহান মুনি", designation: "সহকারী শিক্ষক (ধর্ম)", photo: "/teacher/mene.jpeg" },
-  { name: "সৈয়দা সাদিয়া আফরিন", designation: "সহকারী শিক্ষক", photo: "/teacher/sadiya_afrin.jpeg" },
-  { name: "শাহাদাত হোসেন", designation: "সহকারী শিক্ষক", photo: "/teacher/sahadat.jpeg" },
+  { name: "নুসরাত জাহান মনি", designation: "সহকারী শিক্ষক (ব্যবসায় শিক্ষা)", photo: "/teacher/mene.jpeg" },
+  { name: "সৈয়দা সাদিয়া আফরিন", designation: "সহকারী শিক্ষক (খন্ডকালীন)(ইংরেজি)", photo: "/teacher/sadiya_afrin.jpeg" },
+  { name: "শাহাদাত হোসেন", designation: "সহকারী শিক্ষক ( ব্যবসায় শিক্ষা)(খণ্ডকালীন)", photo: "/teacher/sahadat.jpeg" },
   // 2
   { name: "মোঃ শাহান উল্লাহ", designation: "সহকারী শিক্ষক (খণ্ডকালীন)", photo: "/teacher/Sahan_sir.jpg" },
   { name: "শাকিল আহম্মেদ", designation: "সহকারী শিক্ষক (খণ্ডকালীন)", photo: "/teacher/sakil.jpeg" },
