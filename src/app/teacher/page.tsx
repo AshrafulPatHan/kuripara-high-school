@@ -11,12 +11,12 @@ export default function Teacher() {
 const teachers = [
   { name: "মোঃ কামাল হোসেন", designation: "প্রধান শিক্ষক", photo: "/teacher/Kamal_sir.jpg" },
   { name: "শফিকুল ইসলাম", designation: "সহকারী প্রধান শিক্ষক (ভারপ্রাপ্ত)", photo: "/teacher/sofik.jpeg" },
-  { name: "মনজুরুল মোরশেদ", designation: "সহকারী শিক্ষক  সিনিয়র শিক্ষক(কৃষি শিক্ষা)", photo: "/teacher/মনজুরুল-মোরশেদ.jpg", cv:"/doc/মনজুরুল-মোরশেদ.html" },
-  { name: "মোসাম্মৎ রেক্সোনা ", designation: "সহকারী শিক্ষক সিনিয়র শিক্ষক( বাংলা)", photo: "/teacher/raksona.jpg" },
-  { name: "পারভীন আক্তার", designation: "সহকারী শিক্ষক সিনিয়র শিক্ষক(সামাজিক বিজ্ঞান)", photo: "/teacher/avatar-person.svg" }, //parvin image is not found
-  { name: "শাঈখ গোলাম রব্বানী", designation: "সহকারী শিক্ষক সিনিয়র শিক্ষক(ভৌত বিজ্ঞান)", photo: "/teacher/Rabani.jpg" },
-  { name: "মুহাম্মদ তায়েফুর রহমান বাবুল", designation: "সহকারী শিক্ষক সিনিয়র শিক্ষক(ইংরেজি)", photo: "/teacher/babul_sir.jpg" },
-  { name: "আমির হোসেন", designation: "সহকারী শিক্ষক সিনিয়র শিক্ষক( ইসলাম শিক্ষা)", photo: "/teacher/amir_hosen.jpeg" },
+  { name: "মনজুরুল মোরশেদ", designation: " সিনিয়র শিক্ষক(কৃষি শিক্ষা)", photo: "/teacher/মনজুরুল-মোরশেদ.jpg", cv:"/doc/মনজুরুল-মোরশেদ.html" },
+  { name: "মোসাম্মৎ রেক্সোনা ", designation: "সিনিয়র শিক্ষক( বাংলা)", photo: "/teacher/raksona.jpg" },
+  { name: "পারভীন আক্তার", designation: " সিনিয়র শিক্ষক(সামাজিক বিজ্ঞান)", photo: "/teacher/avatar-person.svg" }, //parvin image is not found
+  { name: "শাঈখ গোলাম রব্বানী", designation: " সিনিয়র শিক্ষক(ভৌত বিজ্ঞান)", photo: "/teacher/Rabani.jpg" },
+  { name: "মুহাম্মদ তায়েফুর রহমান বাবুল", designation: " সিনিয়র শিক্ষক(ইংরেজি)", photo: "/teacher/babul_sir.jpg" },
+  { name: "আমির হোসেন", designation: " সিনিয়র শিক্ষক( ইসলাম শিক্ষা)", photo: "/teacher/amir_hosen.jpeg" },
   // 1
   { name: "ফাহিমা মেহজাবিন", designation: "সহকারী শিক্ষক (গার্হস্থ্য বিজ্ঞান)", photo: "/teacher/avatar-person.svg" }, // fahima image is not found
   { name: "নুসরাত জাহান মুনি", designation: "সহকারী শিক্ষক (ধর্ম)", photo: "/teacher/mene.jpeg" },
@@ -57,8 +57,8 @@ const teachers = [
               className="w-[160px] h-[200px] object-cover rounded-md"
             />
             <h3 className="mt-4 text-xl font-medium text-center">{teacher.name}</h3>
-            <div className="flex items-center gap-2">
-              <p className="text-gray-700 text-center">{teacher.designation}</p>
+            <div className="flex flex-col items-center gap-2">
+              <p className="text-gray-700 text-center w-[150px] mx-auto ">{teacher.designation}</p>
               {/* শুধু তখনই CV দেখান যখন teacher.cv আছে */}
                 {teacher.cv && (
                   <a
