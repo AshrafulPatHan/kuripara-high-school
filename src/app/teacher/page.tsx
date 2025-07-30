@@ -31,7 +31,7 @@ const teachers = [
   { name: "আজহারুল ইসলাম", designation: "সহকারী শিক্ষক (খণ্ডকালীন)", photo: "/teacher/aujharul.jpeg" },
   // 3
   { name: "মোঃ তৈমুর হাসান প্রনয়", designation: "কম্পিউটার ল্যাব অপারেটর", photo: "/teacher/comp.jpeg" },
-  { name: "সোহেনা আক্তার অনি", designation: "অফিস সহকারী", photo: "/teacher/avatar-person.svg" },// ony image is not found
+  { name: "সোহেনা আক্তার অনি", designation: "অফিস সহকারী", photo: "/teacher/sohana.jpeg" },// ony image is not found
   { name: "মোঃ ইসমাইল", designation: "পিয়ন", photo: "/teacher/ismile.jpeg" },
   { name: "লাখি আক্তার ", designation: "আয়া", photo: "/teacher/laki.jpeg" },
   { name: "মোসা: সালমা আক্তার", designation: "পরিচ্ছন্নতাকর্মী", photo: "/teacher/salma.jpeg" },
