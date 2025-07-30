@@ -5,7 +5,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import HeadMaster from "@/assets/image/school/Kamal_sir.jpg";
 import Rabani from "@/assets/image/school/Rabani.jpg";
-import শফিকুল from "@/assets/image/school/sofik.jpeg";
+import শফিকুল from "@/assets/image/school/soficol-main.jpeg";
 import Pronoy from "@/assets/image/school/comp.jpeg"; 
 import Babul from "@/assets/image/school/babul_sir.jpg"; 
 import Link from "next/link";

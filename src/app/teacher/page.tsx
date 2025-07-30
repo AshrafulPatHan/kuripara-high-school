@@ -10,15 +10,15 @@ export default function Teacher() {
 
 const teachers = [
   { name: "মোঃ কামাল হোসেন", designation: "প্রধান শিক্ষক", photo: "/teacher/Kamal_sir.jpg" },
-  { name: "শফিকুল ইসলাম", designation: "সহকারী প্রধান শিক্ষক (ভারপ্রাপ্ত)", photo: "/teacher/sofik.jpeg" },
+  { name: "শফিকুল ইসলাম", designation: "সহকারী প্রধান শিক্ষক (ভারপ্রাপ্ত)", photo: "/teacher/soficol-main.jpeg" },
   { name: "মনজুরুল মোরশেদ", designation: " সিনিয়র শিক্ষক(কৃষি শিক্ষা)", photo: "/teacher/মনজুরুল-মোরশেদ.jpg", cv:"/doc/মনজুরুল-মোরশেদ.html" },
   { name: "মোসাম্মৎ রেক্সোনা ", designation: "সিনিয়র শিক্ষক( বাংলা)", photo: "/teacher/raksona.jpg" },
-  { name: "পারভীন আক্তার", designation: " সিনিয়র শিক্ষক(সামাজিক বিজ্ঞান)", photo: "/teacher/avatar-person.svg" }, //parvin image is not found
+  { name: "পারভীন আক্তার", designation: " সিনিয়র শিক্ষক(সামাজিক বিজ্ঞান)", photo: "/teacher/parbin.jpeg" }, //parvin image is not found
   { name: "শাহ গোলাম রব্বানী", designation: " সিনিয়র শিক্ষক(ভৌত বিজ্ঞান)", photo: "/teacher/Rabani.jpg" },
   { name: "তায়ফুর রহমান বাবুল", designation: " সিনিয়র শিক্ষক(ইংরেজি)", photo: "/teacher/babul_sir.jpg" },
   { name: "আমির হোসেন", designation: " সিনিয়র শিক্ষক( ইসলাম শিক্ষা)", photo: "/teacher/amir_hosen.jpeg" },
   // 1
-  { name: "ফাহিমা মেহজাবিন", designation: "সহকারী শিক্ষক (গার্হস্থ্য বিজ্ঞান)", photo: "/teacher/avatar-person.svg" }, // fahima image is not found
+  { name: "ফাহিমা মেহজাবিন", designation: "সহকারী শিক্ষক (গার্হস্থ্য বিজ্ঞান)", photo: "/teacher/fahima.jpeg" }, // fahima image is not found
   { name: "নুসরাত জাহান মনি", designation: "সহকারী শিক্ষক (ব্যবসায় শিক্ষা)", photo: "/teacher/mene.jpeg" },
   { name: "সৈয়দা সাদিয়া আফরিন", designation: "সহকারী শিক্ষক (খন্ডকালীন)(ইংরেজি)", photo: "/teacher/sadiya_afrin.jpeg" },
   { name: "শাহাদাত হোসেন", designation: "সহকারী শিক্ষক ( ব্যবসায় শিক্ষা)(খণ্ডকালীন)", photo: "/teacher/sahadat.jpeg" },
