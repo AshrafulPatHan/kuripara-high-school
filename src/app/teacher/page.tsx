@@ -36,7 +36,7 @@ const teachers = [
   { name: "লাখি আক্তার ", designation: "আয়া", photo: "/teacher/laki.jpeg" },
   { name: "মোসা: সালমা আক্তার", designation: "পরিচ্ছন্নতাকর্মী", photo: "/teacher/salma.jpeg" },
   { name: "রোকসানা আক্তার", designation: "পরিচ্ছন্নতাকর্মী", photo: "/teacher/roksana.jpeg" },
-  { name: "তাওলাদ হোসেন", designation: "গার্ড", photo: "/teacher/avatar-person.svg" }
+  { name: "তাওলাদ হোসেন", designation: "গার্ড", photo: "/teacher/toulad.jpeg" }
   //ok
 ];
 
