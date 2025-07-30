@@ -2,7 +2,7 @@
 
 import Events from "@/components/home/Events";
 import Hero from "@/components/home/hero";
-import History from "@/components/home/history";
+// import History from "@/components/home/history";
 import News from "@/components/home/News";
 import Notices from "@/components/home/Notices";
 import Number from "@/components/home/number";
@@ -45,7 +45,7 @@ export default function Clint() {
             <Navbar/>
             <Hero/>
             <About/>
-            <History/>
+            {/* <History/> */}
             {/* new section */}
             <Intro/>
             <StudentsData/>

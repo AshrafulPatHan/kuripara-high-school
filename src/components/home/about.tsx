@@ -11,7 +11,7 @@ export default function About(){
     const ref = useRef(null);
     const isInView = useInView(ref, { once: false });
     return(
-        <div className="flex justify-center mt-7 sm:mt-20 mx-2 max-w-screen overflow-hidden ">
+        <div className="flex justify-center mt-7 sm:mt-20 px-2 max-w-screen overflow-hidden ">
             <div className="flex flex-col lg:flex-row items-start gap-5 ">
                 <motion.div 
                 ref={ref}
@@ -22,13 +22,14 @@ export default function About(){
                 >
                     <Image src={Kuripara} alt="school" className="object-cover rounded-2xl w-full h-full transition-transform duration-300 group-hover:scale-105  " />
                 </motion.div>
-                <div className="w-[95vw] lg:w-[70vw] xl:w-[600px]  ">
+                <div className="w-[95vw] lg:w-[70%] xl:w-[600px]  ">
                     {/* <h2 className="text-3xl font-medium">Welcome to Kuripara High School</h2> */}
                     <h2 className="text-lg lg:text-3xl font-bold lg:font-medium"> কুড়িপাড়া উচ্চ বিদ্যালয়ে আপনাকে স্বাগতম!</h2>
                     <p className="mt-2">
                         কুড়িপাড়া উচ্চ বিদ্যালয় নারায়ণগঞ্জ জেলার বন্দর উপজেলার , কুড়িপাড়া গ্রামে অবস্থিত একটি খ্যাতনামা শিক্ষা প্রতিষ্ঠান। এটি একটি আধা-সরকারি বিদ্যালয় যা শীতলক্ষ্যা নদীর নিকটবর্তী অবস্থানে অবস্থিত, প্রকৃতির সান্নিধ্যে নির্মিত এই বিদ্যালয়টি শিক্ষার আদর্শ কেন্দ্র হিসেবে পরিচিত।
                         <br/>
-                        বিদ্যালয়টিতে ৬ষ্ঠ শ্রেণি থেকে ১০ম শ্রেণি পর্যন্ত পাঠদান করা হয়। এখানে অভিজ্ঞ ও নিবেদিতপ্রাণ শিক্ষকবৃন্দ পাঠদান করেন, যারা শিক্ষার্থীদের সর্বোচ্চ মানের শিক্ষা প্রদান করে থাকেন। বিদ্যালয়ের ফলাফল অত্যন্ত চমৎকার — প্রতি বছর ১০০% পাশের হার এবং অসংখ্য শিক্ষার্থী জিপিএ-৫ (A+) অর্জন করে থাকে।
+                        বিদ্যালয়টিতে ৬ষ্ঠ শ্রেণি থেকে ১০ম শ্রেণি পর্যন্ত পাঠদান করা হয়। এখানে অভিজ্ঞ ও নিবেদিতপ্রাণ শিক্ষকবৃন্দ পাঠদান করেন, যারা শিক্ষার্থীদের সর্বোচ্চ মানের শিক্ষা প্রদান করে থাকেন। বিদ্যালয়ের ফলাফল অত্যন্ত চমৎকার — 
+                        {/* প্রতি বছর ১০০% পাশের হার এবং অসংখ্য শিক্ষার্থী জিপিএ-৫ (A+) অর্জন করে থাকে। */}
                         <br/>
                         কুড়িপাড়া উচ্চ বিদ্যালয় কেবলমাত্র একটি শিক্ষাপ্রতিষ্ঠান নয়, এটি শিক্ষার আলো ছড়ানোর একটি মহৎ কেন্দ্র।
                     </p>

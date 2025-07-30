@@ -1,15 +1,13 @@
 import Image from "next/image";
-
+import Ku from "@/assets/image/school/ku.webp";
+import "./official.css"
 
 export default function Intro(){
     return(
-        <div>
-            <div>
-                <div>
-                    <Image src="" alt="" />
-                </div>
-                <div>
-                    <h1>বিদ্যালয় পরিচিতি</h1>
+        <div className="flex flex-col items-center mt-20 px-2 mx-auto max-w-screen overflow-hidden">
+            <div >
+                <div className="w-[95vw] lg:w-[70vw] xl:w-[60vw] ">
+                    <h1 className="text-center mb-7 font-bold text-2xl">বিদ্যালয় পরিচিতি</h1>
                     <p className="main-text-intro">
                         <span className="span-text-intro">
                             বিদ্যালয়ের নাম :
