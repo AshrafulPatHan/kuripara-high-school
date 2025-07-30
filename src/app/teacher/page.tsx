@@ -58,7 +58,7 @@ const teachers = [
             />
             <h3 className="mt-4 text-xl font-medium text-center">{teacher.name}</h3>
             <div className="flex flex-col items-center gap-2">
-              <p className="text-gray-700 text-center w-[150px] mx-auto ">{teacher.designation}</p>
+              <p className="text-gray-700 text-center mx-auto ">{teacher.designation}</p>
               {/* শুধু তখনই CV দেখান যখন teacher.cv আছে */}
                 {teacher.cv && (
                   <a
