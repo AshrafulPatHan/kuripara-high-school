@@ -76,7 +76,7 @@ const isInView2 = useInView(ref2, { once: false });
                      <p className="text-center">
                         <Image src={শফিকুল} alt="sir" className=" w-[160px] h-[200px] object-cover " />
                      </p>
-                     <h3 className="text-center text-xl">শফিকুল ইসলাম</h3>
+                     <h3 className="text-center text-xl">মোঃ শফিকুল ইসলাম</h3>
                      <p>সিনিয়র শিক্ষক (শরীরচর্চা)</p>
                   </div>
                </div>
