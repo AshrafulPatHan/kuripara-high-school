@@ -4,10 +4,13 @@ import { motion, useInView } from "motion/react"
 import { useRef } from "react";
 import Image from "next/image";
 import HeadMaster from "@/assets/image/school/Kamal_sir.jpg";
-import Rabani from "@/assets/image/school/Rabani.jpg";
 import শফিকুল from "@/assets/image/school/soficol-main.jpeg";
-import Pronoy from "@/assets/image/school/comp.jpeg"; 
-import Babul from "@/assets/image/school/babul_sir.jpg"; 
+import morsad from "@/assets/image/school/মনজুরুল-মোরশেদ.jpg";
+import raksona from "@/assets/image/school/raksona.jpg";
+import parbin from "@/assets/image/school/parbin.jpeg";
+// import Rabani from "@/assets/image/school/Rabani.jpg";
+// import Pronoy from "@/assets/image/school/comp.jpeg"; 
+// import Babul from "@/assets/image/school/babul_sir.jpg"; 
 import Link from "next/link";
 
 
@@ -80,28 +83,28 @@ const isInView2 = useInView(ref2, { once: false });
                <div className="bg-[#f8f4f4] rounded-[8px] w-[97vw] sm:w-[200px] xl:w-[277px] py-6  flex items-center hover:shadow-2xl justify-center ">
                   <div className="flex flex-col items-center">
                      <p className="text-center">
-                        <Image src={Rabani} alt="sir" className="w-[160px] h-[200px] object-cover " />
+                        <Image src={morsad} alt="sir" className="w-[160px] h-[200px] object-cover " />
                      </p>
-                     <h3 className="text-center text-xl">গোলাম রব্বানী </h3>
-                     <p>ভৌত বিজ্ঞান </p>
+                     <h3 className="text-center text-xl">মনজুরুল মোরশেদ</h3>
+                     <p>সিনিয়র শিক্ষক</p>
                   </div>
                </div>
                <div className="bg-[#f8f4f4] rounded-[8px] w-[97vw] sm:w-[200px] xl:w-[277px] py-6  flex items-center hover:shadow-2xl justify-center ">
                   <div className="flex flex-col items-center">
                      <p className="text-center">
-                        <Image src={Pronoy} alt="sir" className="w-[160px] h-[200px] object-cover " />
+                        <Image src={raksona} alt="sir" className="w-[160px] h-[200px] object-cover " />
                      </p>
-                     <h3 className="text-center text-xl">মোঃ তৈমুর হাসান প্রনয়</h3>
-                     <p>কম্পিউটার ল্যাব সহঃ শিক্ষক</p>
+                     <h3 className="text-center text-xl">মোসাম্মৎ রেক্সোনা</h3>
+                     <p>সিনিয়র শিক্ষক</p>
                   </div>
                </div>
                <div className="bg-[#f8f4f4] rounded-[8px] w-[97vw] sm:w-[200px] xl:w-[277px] py-6  flex items-center hover:shadow-2xl justify-center ">
                   <div className="flex flex-col items-center">
                      <p className="text-center">
-                        <Image src={Babul} alt="sir" className="w-[160px] h-[200px] object-cover " />
+                        <Image src={parbin} alt="sir" className="w-[160px] h-[200px] object-cover " />
                      </p>
-                     <h3 className="text-center text-xl">মোঃ তায়েফুর রহমান বাবুল </h3>
-                     <p>ইংরেজির শিক্ষক</p>
+                     <h3 className="text-center text-xl">পারভীন আক্তার</h3>
+                     <p>সিনিয়র শিক্ষক</p>
                   </div>
                </div>
             </motion.div>
