@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>মনজুরুল মোরশেদ — CV</title>
+
+  <!-- ঐচ্ছিক: Google Fonts (ইউনিকোড বাংলা) -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet"> -->
+
+  <style>
+  /* ----------------------------------------
+     Theme variables
+  -----------------------------------------*/
+  :root {
+    --text:      #111827;
+    --muted:     #6b7280;
+    --border:    #e5e7eb;
+    --bg:        #ffffff;
+    --bg-soft:   #f9fafb;
+    --link:      #2563eb;
+  }
+
+  /* ----------------------------------------
+     Base / reset
+  -----------------------------------------*/
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family:
+      "Noto Sans Bengali",
+      system-ui, -apple-system, Segoe UI, Roboto,
+      "Helvetica Neue", Arial, "Nirmala UI", "Bangla MN", sans-serif;
+    line-height: 1.65;
+    color: var(--text);
+    background: var(--bg);
+  }
+
+  /* Better default media behavior */
+  img, svg, video, canvas {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* ----------------------------------------
+     Layout helpers
+  -----------------------------------------*/
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+
+  .card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .03);
+  }
+
+  .pad {
+    padding: 16px;
+  }
+
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .header__img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  .section {
+    margin-top: 20px;
+  }
+
+  .section__title {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  /* Key–value grid */
+  .kv {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .kv__row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .kv__key {
+    min-width: 140px;
+    font-weight: 600;
+    color: var(--muted);
+  }
+
+  .kv__val {
+    flex: 1;
+  }
+  .email-of{
+	font-size: 10px;
+  }
+
+  /* ----------------------------------------
+     Table (শিক্ষাগত যোগ্যতা)
+  -----------------------------------------*/
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+
+  table {
+    width: 100%;
+    min-width: 620px;             /* enables horizontal scroll on mobile */
+    border-collapse: collapse;
+    background: var(--bg);
+  }
+
+  th,
+  td {
+    padding: 10px 12px;
+    text-align: left;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: var(--bg-soft);
+    font-weight: 700;
+  }
+
+  /* ----------------------------------------
+     Utilities
+  -----------------------------------------*/
+  .small {
+    font-size: .95rem;
+  }
+
+  a {
+    color: var(--link);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* ----------------------------------------
+     Responsive (≥ 640px)
+  -----------------------------------------*/
+  @media (min-width: 640px) {
+    .header { gap: 20px; }
+    h1 { font-size: 1.75rem; }
+
+    .kv {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .kv__key {
+      min-width: 160px;
+    }
+  }
+</style>
+
+</head>
+<body>
+  <main class="container">
+    <!-- হেডার -->
+    <section class="card pad">
+      <div class="header">
+        <img class="header__img" src="morshed-sir-CV_html_fa7c3a4d.jpg" alt="মনজুরুল মোরশেদ-এর ছবি" />
+        <div>
+          <h1>মনজুরুল মোরশেদ</h1>
+          <div class="subtitle">সিনিয়র শিক্ষক</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ব্যক্তিগত তথ্য -->
+    <section class="section card pad">
+      <h2 class="section__title">ব্যক্তিগত তথ্য</h2>
+      <div class="kv">
+        <div class="kv__row">
+          <div class="kv__key">নাম</div>
+          <div class="kv__val">মনজুরুল মোরশেদ <span class="small">/ ইংরেজি: Monzurul Morshed</span></div>
+        </div>
+        <div class="kv__row">
+          <div class="kv__key">পিতার নাম</div>
+          <div class="kv__val">আবুল কাসেম <span class="small">/ ইংরেজি: Abul Kasem</span></div>
+        </div>
+        <div class="kv__row">
+          <div class="kv__key">মাতার নাম</div>
+          <div class="kv__val">রমিছা খাতুন <span class="small">/ ইংরেজি: Ramisa Khatun</span></div>
+        </div>
+        <div class="kv__row">
+          <div class="kv__key">জন্ম তারিখ</div>
+          <div class="kv__val">01-05-1972</div>
+        </div>
+        <div class="kv__row">
+          <div class="kv__key">জাতীয়তা</div>
+          <div class="kv__val">জন্মসূত্রে বাংলাদেশী</div>
+        </div>
+        <div class="kv__row">
+          <div class="kv__key">জাতীয় পরিচয়পত্র</div>
+          <div class="kv__val">7784517265</div>
+        </div>
+        <div class="kv__row">
+          <div class="kv__key">স্থায়ী ঠিকানা</div>
+          <div class="kv__val">গ্রাম: মোসলেমাবাদ, ডাকঘর: মোসলেমাবাদ, উপজেলা: মাদারগঞ্জ, জেলা: জামালপুর, পোস্ট কোড: 2010</div>
+        </div>
+        <div class="kv__row">
+          <div class="kv__key">বর্তমান ঠিকানা/অফিস</div>
+          <div class="kv__val">সিনিয়র শিক্ষক, কুড়িপাড়া উচ্চ বিদ্যালয়, ১ নং ডিসি মিলস, উপজেলা: বন্দর, জেলা: নারায়ণগঞ্জ</div>
+        </div>
+        <div class="kv__row">
+          <div class="kv__key">ইনডেক্স নং</div>
+          <div class="kv__val">D340708</div>
+        </div>
+        <div class="kv__row">
+          <div class="kv__key">বর্তমান পদবী</div>
+          <div class="kv__val">সিনিয়র শিক্ষক</div>
+        </div>
+        <div class="kv__row">
+          <div class="kv__key">বেতন স্কেল / কোড</div>
+          <div class="kv__val">23000/- — কোড: 08</div>
+        </div>
+        <div class="kv__row">
+          <div class="kv__key">প্রথম যোগদান</div>
+          <div class="kv__val">21-10-1995</div>
+        </div>
+        <div class="kv__row">
+          <div class="kv__key">প্রথম এমপিও</div>
+          <div class="kv__val">ফেব্রুয়ারি 1996</div>
+        </div>
+        <div class="kv__row">
+          <div class="kv__key">বর্তমান প্রতিষ্ঠানে যোগদান</div>
+          <div class="kv__val">08-02-1998</div>
+        </div>
+        <div class="kv__row">
+          <div class="kv__key">বর্তমান প্রতিষ্ঠানে এমপিও</div>
+          <div class="kv__val">মার্চ 1999</div>
+        </div>
+        <div class="kv__row">
+          <div class="kv__key">উচ্চতর স্কেল</div>
+          <div class="kv__val">01-07-2001</div>
+        </div>
+        <div class="kv__row">
+          <div class="kv__key">প্রথম টাইম স্কেল</div>
+          <div class="kv__val">01-07-2009</div>
+        </div>
+        <div class="kv__row">
+          <div class="kv__key">দ্বিতীয় টাইম স্কেল</div>
+          <div class="kv__val">01-09-2022</div>
+        </div>
+        <div class="kv__row">
+          <div class="kv__key">মোবাইল</div>
+          <div class="kv__val">01557753951</div>
+        </div>
+        <div class="kv__row">
+          <div class="kv__key">ই-মেইল</div>
+          <div class="email-of"><a href="mailto:morshedsir1988@gmail.com">morshedsir1988@gmail.com</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- শিক্ষাগত যোগ্যতা -->
+    <section class="section">
+      <h2 class="section__title">শিক্ষাগত যোগ্যতা</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ক্রম</th>
+              <th>পরীক্ষার নাম</th>
+              <th>পাসের সন</th>
+              <th>বোর্ড / বিশ্ববিদ্যালয়</th>
+              <th>ফলাফল</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01</td>
+              <td>এস.এস.সি</td>
+              <td>1988</td>
+              <td>ঢাকা শিক্ষা বোর্ড</td>
+              <td>দ্বিতীয় বিভাগ</td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td>এইচ.এস.সি</td>
+              <td>1991</td>
+              <td>ঢাকা শিক্ষা বোর্ড</td>
+              <td>দ্বিতীয় বিভাগ</td>
+            </tr>
+            <tr>
+              <td>03</td>
+              <td>বি.এসসি</td>
+              <td>1993</td>
+              <td>জাতীয় বিশ্ববিদ্যালয়</td>
+              <td>দ্বিতীয় বিভাগ</td>
+            </tr>
+            <tr>
+              <td>04</td>
+              <td>এম.এসসি (রসায়ন)</td>
+              <td>2018</td>
+              <td>ফারইস্ট ইন্টারন্যাশনাল ইউনিভার্সিটি, ঢাকা</td>
+              <td>CGPA 3.59 / 4.00</td>
+            </tr>
+            <tr>
+              <td>05</td>
+              <td>এম.এ (আই.এস)</td>
+              <td>2010</td>
+              <td>বাংলাদেশ ইসলামি বিশ্ববিদ্যালয়, ঢাকা</td>
+              <td>CGPA 3.76 / 4.00</td>
+            </tr>
+            <tr>
+              <td>06</td>
+              <td>বি.এড</td>
+              <td>2000</td>
+              <td>জাতীয় বিশ্ববিদ্যালয়</td>
+              <td>দ্বিতীয় বিভাগ</td>
+            </tr>
+            <tr>
+              <td>07</td>
+              <td>এম.এড</td>
+              <td>2003</td>
+              <td>আই.ই.আর, ঢাকা বিশ্ববিদ্যালয়</td>
+              <td>দ্বিতীয় শ্রেণি</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
