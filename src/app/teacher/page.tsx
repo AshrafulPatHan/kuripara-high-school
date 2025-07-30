@@ -45,7 +45,7 @@ const teachers = [
       <h2 className="text-2xl text-center font-semibold pb-8 text-white">শিক্ষক ও কর্মচারীবৃন্দ</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
         {teachers.map((teacher, index) => (
-          <div key={index} className="bg-[#d1c4c4] rounded-lg py-6 flex flex-col items-center hover:shadow-xl hover:shadow-gray-300">
+          <div key={index} className="bg-[#d1c4c4] rounded-lg py-6 px-1 flex flex-col items-center hover:shadow-xl hover:shadow-gray-300">
             <Image
               src={teacher.photo}
               alt={teacher.name}
