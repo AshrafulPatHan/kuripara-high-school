@@ -11,7 +11,7 @@ export default function Teacher() {
 const teachers = [
   { name: "মোঃ কামাল হোসেন", designation: "প্রধান শিক্ষক", photo: "/teacher/Kamal_sir.jpg" },
   { name: "শফিকুল ইসলাম", designation: "সহকারী প্রধান শিক্ষক", photo: "/teacher/sofik.jpeg" },
-  { name: "মনজুরুল মোসাদ্দেক", designation: "সহকারী শিক্ষক (গণিত)", photo: "/teacher/mosad_sir.jpg" },
+  { name: "মনজুরুল মোসাদ্দেক", designation: "সহকারী শিক্ষক (গণিত)", photo: "/teacher/mosad_sir.jpg", cv:"/doc/মনজুরুল-মোরশেদ.html" },
   { name: "মোসাম্মৎ রেকে্যানা ", designation: "সহকারী শিক্ষক ", photo: "/teacher/raksona.jpg" },
   { name: "পারভীন আক্তার", designation: "সহকারী শিক্ষক (বিজ্ঞান)", photo: "/teacher/avatar-person.svg" }, //parvin image is not found
   { name: "শাঈখ গোলাম রব্বানী", designation: "সহকারী শিক্ষক (বাংলা)", photo: "/teacher/Rabani.jpg" },
@@ -54,7 +54,22 @@ const teachers = [
               className="w-[160px] h-[200px] object-cover rounded-md"
             />
             <h3 className="mt-4 text-xl font-medium text-center">{teacher.name}</h3>
-            <p className="text-gray-700 text-center">{teacher.designation}</p>
+            <div className="flex items-center gap-2">
+              <p className="text-gray-700 text-center">{teacher.designation}</p>
+              {/* শুধু তখনই CV দেখান যখন teacher.cv আছে */}
+                {teacher.cv && (
+                  <a
+                    href={teacher.cv}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-gray-700 underline hover:no-underline"
+                    aria-label={`${teacher.name} - CV`}
+                  >
+                    (CV)
+                  </a>
+                )}
+            </div>
+            
           </div>
         ))}
       </div>
