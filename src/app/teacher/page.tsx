@@ -13,12 +13,12 @@ const teachers = [
   { name: "মোঃ শফিকুল ইসলাম", designation: "সিনিয়র শিক্ষক(শরীরচর্চা)", photo: "/teacher/soficol-main.jpeg" },
   { name: "মনজুরুল মোরশেদ", designation: " সিনিয়র শিক্ষক(কৃষি শিক্ষা)", photo: "/teacher/মনজুরুল-মোরশেদ.jpg", cv:"/doc/morshed-sir-CV.html" },
   { name: "মোসাম্মৎ রেক্সোনা ", designation: "সিনিয়র শিক্ষক(বাংলা)", photo: "/teacher/raksona.jpg" },
-  { name: "পারভীন আক্তার", designation: " সিনিয়র শিক্ষক(সামাজিক বিজ্ঞান)", photo: "/teacher/parbin.jpeg" }, //parvin image is not found
+  { name: "পারভীন আক্তার", designation: " সিনিয়র শিক্ষক(সামাজিক বিজ্ঞান)", photo: "/teacher/new-parbin-madum.jpeg" }, 
   { name: "শাহ গোলাম রব্বানী", designation: " সিনিয়র শিক্ষক(ভৌত বিজ্ঞান)", photo: "/teacher/Rabani.jpg" },
   { name: "মোঃ তায়ফুর রহমান বাবুল", designation: " সিনিয়র শিক্ষক(ইংরেজি)", photo: "/teacher/babul_sir.jpg" },
   { name: "মোঃ আমির হোসেন", designation: " সিনিয়র শিক্ষক(ইসলাম শিক্ষা)", photo: "/teacher/amir_hosen.jpeg" },
   // 1
-  { name: "ফাহিমা মেহজাবিন", designation: "সহকারী শিক্ষক (গার্হস্থ্য বিজ্ঞান)", photo: "/teacher/fahima.jpeg" }, // fahima image is not found
+  { name: "ফাহিমা মেহজাবিন", designation: "সহকারী শিক্ষক (গার্হস্থ্য বিজ্ঞান)", photo: "/teacher/fahima.jpeg" }, 
   { name: "নুসরাত জাহান মনি", designation: "সহকারী শিক্ষক (ব্যবসায় শিক্ষা)", photo: "/teacher/mene.jpeg" },
   { name: "সৈয়দা সাদিয়া আফরিন", designation: "সহকারী শিক্ষক (খন্ডকালীন)", photo: "/teacher/sadiya_afrin.jpeg" },
   { name: "শাহাদাত হোসাইন", designation: "সহকারী শিক্ষক (খণ্ডকালীন)", photo: "/teacher/sahadat.jpeg" },
@@ -31,8 +31,9 @@ const teachers = [
   { name: "আজহারুল ইসলাম", designation: "সহকারী শিক্ষক (খণ্ডকালীন)", photo: "/teacher/aujharul.jpeg" },
   // 3
   { name: "মোঃ তৈমুর হাসান প্রনয়", designation: "কম্পিউটার ল্যাব অপারেটর", photo: "/teacher/comp.jpeg" },
-  { name: "সোহেনা আক্তার অনি", designation: "অফিস সহকারী", photo: "/teacher/sohana.jpeg" },// ony image is not found
+  { name: "সোহেনা আক্তার অনি", designation: "অফিস সহকারী", photo: "/teacher/sohana.jpeg" },
   { name: "মোঃ ইসমাইল", designation: "পিয়ন", photo: "/teacher/ismile.jpeg" },
+  { name: "মুন্না হাসান", designation: "নিরাপত্তাকর্মী", photo: "/teacher/munna.jpeg" }, //image
   { name: "লাখি আক্তার ", designation: "আয়া", photo: "/teacher/laki.jpeg" },
   { name: "মোসা: সালমা আক্তার", designation: "পরিচ্ছন্নতাকর্মী", photo: "/teacher/salma.jpeg" },
   { name: "রোকসানা আক্তার", designation: "পরিচ্ছন্নতাকর্মী", photo: "/teacher/roksana.jpeg" },
