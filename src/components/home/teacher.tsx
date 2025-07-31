@@ -7,7 +7,7 @@ import HeadMaster from "@/assets/image/school/Kamal_sir.jpg";
 import শফিকুল from "@/assets/image/school/soficol-main.jpeg";
 import morsad from "@/assets/image/school/মনজুরুল-মোরশেদ.jpg";
 import raksona from "@/assets/image/school/raksona.jpg";
-import parbin from "@/assets/image/school/parbin.jpeg";
+import parbin from "@/assets/image/school/new-parbin-madum.jpeg";
 // import Rabani from "@/assets/image/school/Rabani.jpg";
 // import Pronoy from "@/assets/image/school/comp.jpeg"; 
 // import Babul from "@/assets/image/school/babul_sir.jpg"; 
