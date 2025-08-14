@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
-import Background from "@/assets/image/university-418219_1920.jpg";
+import Background from "https://i.ibb.co.com/9HctPtdG/yura-lytkin-C9-LAdcvmg-VU-unsplash.jpg";
 import CustomFileInput from "@/components/admin/ui/input/CustomInput";
 import toast from "react-hot-toast";
 import { FormEvent, useState, useRef, useMemo } from "react";
 import axios from "axios";
 // import JoditEditor from "jodit-react";
+import JoditEditor from "@/components/admin/editor/JoditEditor"
 import dynamic from "next/dynamic";
 import PrivateRoute from "@/components/admin/auth/PrivateRoute";
 
@@ -17,9 +18,9 @@ export default function AddNotice() {
     const editor = useRef(null);
 
     // Dynamic import of the client-side-only component
-    const JoditEditor = dynamic(() => import("@/components/admin/editor/JoditEditor"), {
-    ssr: false
-    });
+    // const JoditEditor = dynamic(() => import("@/components/admin/editor/JoditEditor"), {
+    // ssr: false
+    // });
     // config editor
     const config = useMemo(() => ({
         readonly: false, 
@@ -96,94 +97,90 @@ export default function AddNotice() {
             <div
                 className="w-[100%] h-[99%] flex flex-col items-center justify-center bg-cover bg-center rounded-xl"
                 style={{
-                    backgroundImage: `url(${Background.src})`,
+                    backgroundImage: `url("https://i.ibb.co.com/9HctPtdG/yura-lytkin-C9-LAdcvmg-VU-unsplash.jpg")`,
                 }}
             >
-                <form onSubmit={handelAddNotice} className="flex flex-col gap-5 bg-[#ffffff] rounded-xl my-4 p-6 w-[120vw] xl:w-auto ">
-                    <div>
-                        <h3 className="text-center font-bold text-2xl">Add Notice</h3>
-                    </div>
+                <form
+                  onSubmit={handelAddNotice}
+                  className="flex flex-col items-center gap-5 rounded-xl my-4 p-6 
+                             w-[120vw] xl:w-auto
+                             bg-white/10 border border-white/30
+                             backdrop-blur-[2.3px] shadow-lg"
+                >
+                  <div>
+                    <h3 className="text-center font-bold text-2xl text-white">Add Notice</h3>
+                  </div>
 
-                    <div className="flex flex-col items-center gap-4">
-                        <div className="flex flex-col lg:flex-row gap-4 ">
-                            <div className="flex flex-col">
-                                <label htmlFor="Title" className="block text-sm font-medium text-zinc-700">
-                                    Add A Title
-                                </label>
-                                <input
-                                    type="text"
-                                    name="title"
-                                    placeholder="Title"
-                                    required
-                                    className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4"
-                                />
-                            </div>
+                  <div className="flex flex-col items-center gap-4">
+                    <div className="flex flex-col lg:flex-row gap-4">
+                      <div className="flex flex-col">
+                        <label htmlFor="Title" className="block text-sm font-medium text-white">
+                          Add A Title
+                        </label>
+                        <input
+                          type="text"
+                          name="title"
+                          placeholder="Title"
+                          required
+                          className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border border-white/50 px-4 bg-white/10 text-white placeholder-white/70 focus:outline-none"
+                        />
+                      </div>
 
-                            <div className="flex flex-col">
-                                <label htmlFor="ShortDescription" className="block text-sm font-medium text-zinc-700">
-                                    Short Description
-                                </label>
-                                <input
-                                    type="text"
-                                    name="ShortDescription"
-                                    placeholder="Short Description"
-                                    required
-                                    className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4"
-                                />
-                            </div>
-                        </div>
-
-                        <div className="flex flex-col">
-                                <label htmlFor="Add Photo" className="block text-sm font-medium text-zinc-700">
-                                    Add Photo
-                                </label>
-                                <fieldset >
-                                    <input
-                                        type="file"
-                                        accept="image/*"
-                                        onChange={(e) => {
-                                            const file = e.target.files?.[0];
-                                            if (file) {
-                                            handleFileSelect(file);
-                                            }
-                                        }}
-                                        className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4
-                                            file:rounded file:border-0 file:text-sm file:font-semibold
-                                            file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100
-                                        border border-black rounded-lg    
-                                        "
-                                    />
-                                    <label className="text-xs text-gray-400">Max size 32MB</label>
-                                </fieldset>
-                                {/* <CustomFileInput onFileSelect={handleFileSelect} /> */}
-                            </div>
+                      <div className="flex flex-col">
+                        <label htmlFor="ShortDescription" className="block text-sm font-medium text-white">
+                          Short Description
+                        </label>
+                        <input
+                          type="text"
+                          name="ShortDescription"
+                          placeholder="Short Description"
+                          required
+                          className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border border-white/50 px-4 bg-white/10 text-white placeholder-white/70 focus:outline-none"
+                        />
+                      </div>
                     </div>
 
                     <div className="flex flex-col">
-                        <label htmlFor="LongDescription" className="block text-sm font-medium text-zinc-700">
-                            Long Description
-                        </label>
-                        {/* <JoditEditor
-                            ref={editor}
-                            value={content}
-                            config={config}
-                            tabIndex={1}
-                            onBlur={newContent => setContent(newContent)}
-                            onChange={() => {}}
-                        /> */}
-                        <JoditEditor value={content} onChange={setContent} />
+                      <label htmlFor="Add Photo" className="block text-sm font-medium text-white">
+                        Add Photo
+                      </label>
+                      <fieldset>
+                        <input
+                          type="file"
+                          accept="image/*"
+                          onChange={(e) => {
+                            const file = e.target.files?.[0];
+                            if (file) {
+                              handleFileSelect(file);
+                            }
+                          }}
+                          className="block w-full text-sm text-white file:mr-4 file:py-2 file:px-4
+                                     file:rounded file:border-0 file:text-sm file:font-semibold
+                                     file:bg-pink-50 file:text-pink-700 hover:file:bg-pink-100
+                                     border border-white/50 rounded-lg bg-white/10"
+                        />
+                        <label className="text-xs text-white/70">Max size 32MB</label>
+                      </fieldset>
                     </div>
+                  </div>
 
-                    <div className="flex justify-center">
-                        <button
-                            type="submit"
-                            className="w-[90%] sm:w-[300px] lg:w-[350px] h-[40px] text-white 
-                            bg-gradient-to-t from-[#E93B77] to-[#da6d93] rounded-[8px] mt-7 "
-                        >
-                            Add Notice
-                        </button>
-                    </div>
+                  <div className="flex flex-col items-center justify-center px-2 w-[99vw] sm:w-auto">
+                    <label htmlFor="LongDescription" className="block text-sm font-medium text-white">
+                      Long Description
+                    </label>
+                    <JoditEditor value={content} onChange={setContent} />
+                  </div>
+
+                  <div className="flex justify-center">
+                    <button
+                      type="submit"
+                      className="w-40 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all"
+                    >
+                      Add Notice
+                    </button>
+                  </div>
                 </form>
+
             </div>
         </PrivateRoute>
     );
