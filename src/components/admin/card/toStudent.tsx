@@ -10,7 +10,7 @@ export default function TotalStudent(){
     });
     return(
         <div className="relative h-[155px] pt-6 ">
-            <div className="w-[302px] h-[134px] bg-[#ffff] shadow-xl rounded-[12px]  ">
+            <div className="w-[97vw] sm:w-[302px] h-[134px] bg-[#ffff] shadow-xl rounded-[12px]  ">
                 <div className="flex flex-col items-end pt-3 pr-6 ">
                     <p className="text-[#7B809A] text-[14px]  ">Total Student</p>
                     <p className="text-2xl font-bold">1200</p>
