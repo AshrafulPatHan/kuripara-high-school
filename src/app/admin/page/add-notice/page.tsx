@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Background from "https://i.ibb.co.com/9HctPtdG/yura-lytkin-C9-LAdcvmg-VU-unsplash.jpg";
 import CustomFileInput from "@/components/admin/ui/input/CustomInput";
 import toast from "react-hot-toast";
 import { FormEvent, useState, useRef, useMemo } from "react";

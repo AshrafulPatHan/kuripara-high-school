@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image";
-import Background from "@/assets/image/university-418219_1920.jpg";
 import CustomFileInput from "@/components/admin/ui/input/CustomInput";
 import toast from "react-hot-toast";
 import { FormEvent, useState } from "react";
@@ -86,59 +85,87 @@ export default function AddEvents(){
     }
     return(
         <PrivateRoute>
-            <div className="w-[100%] h-[99%] flex flex-col items-center justify-center bg-cover bg-center rounded-xl " 
+            <div className="w-[100vw] md:w-[100%] h-[99%] flex flex-col items-center justify-center bg-cover bg-center rounded-xl " 
                     style={{
-                backgroundImage: `url(${Background.src})`,
+                backgroundImage: `url("https://i.ibb.co.com/9HctPtdG/yura-lytkin-C9-LAdcvmg-VU-unsplash.jpg")`,
+                filter: "brightness(80%)"
             }}
             >
-                <form onSubmit={handelFromEvents} className="flex flex-col gap-5 bg-[#ffffff] rounded-xl p-6 ">
-                    <div>
-                    <h3 className="text-center font-bold text-2xl">Add Events</h3>
-                    </div>
-                    <div className="flex flex-col">
-                        <label htmlFor="Title" className="block text-sm font-medium text-zinc-700">
-                        Add A Title
-                        </label>
-                        <input type="text" name="title" id="" placeholder="Title" 
-                        className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4  " />
-                    </div>
-                    <div className="flex flex-col">
-                        <label htmlFor="Add Photo" className="block text-sm font-medium text-zinc-700">
-                            Add Photo
-                        </label>
-                        {/* custom input filed */}
-                        <fieldset >
-                            <input
-                                type="file"
-                                accept="image/*"
-                                onChange={(e) => {
-                                    const file = e.target.files?.[0];
-                                    if (file) {
-                                    handleFileSelect(file);
-                                    }
-                                }}
-                                className="block w-[97%] text-sm text-gray-500 file:mr-4 file:py-2 file:px-4
-                                    file:rounded file:border-0 file:text-sm file:font-semibold
-                                    file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100
-                                border border-black rounded-lg 
-                                "
-                            />
-                            <label className="text-xs text-gray-400">Max size 32MB</label>
-                        </fieldset>
-                        {/* <CustomFileInput onFileSelect={handleFileSelect} /> */}
-                    </div>
-                    <div className="flex flex-col">
-                        <label htmlFor="Description" className="block text-sm font-medium text-zinc-700">
-                            Add Description
-                        </label>
-                        <input type="text" name="description" id="" placeholder="Add Description"
-                        className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4  " />
-                    </div>
-                    <button type="submit" className=" w-[97%] sm:w-[300px] lg:w-[350px] h-[40px] text-white 
-                    bg-gradient-to-t from-[#E93B77] to-[#da6d93] rounded-[8px] ">
-                        Add Events
-                    </button>
-                </form>
+            <form
+              onSubmit={handelFromEvents}
+              className="flex flex-col gap-5 
+                         bg-white/10 border border-white/30 
+                         backdrop-blur-[2.2px] shadow-lg
+                         rounded-xl p-6"
+            >
+              <div>
+                <h3 className="text-center font-bold text-2xl text-white">Add Events</h3>
+              </div>
+
+              <div className="flex flex-col">
+                <label htmlFor="Title" className="block text-sm font-medium text-white">
+                  Add A Title
+                </label>
+                <input
+                  type="text"
+                  name="title"
+                  placeholder="Title"
+                  className="w-[97%] xl:w-[350px] h-[40px] 
+                             rounded-lg border border-white/50 
+                             px-4 bg-white/10 
+                             text-white placeholder-white/70 
+                             focus:outline-none"
+                />
+              </div>
+
+              <div className="flex flex-col">
+                <label htmlFor="Add Photo" className="block text-sm font-medium text-white">
+                  Add Photo
+                </label>
+                <fieldset>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => {
+                      const file = e.target.files?.[0];
+                      if (file) {
+                        handleFileSelect(file);
+                      }
+                    }}
+                    className="block w-[97%] text-sm text-white
+                               file:mr-4 file:py-2 file:px-4
+                               file:rounded file:border-0 file:text-sm file:font-semibold
+                               file:bg-pink-50 file:text-pink-700 hover:file:bg-pink-100
+                               border border-white/50 rounded-lg bg-white/10"
+                  />
+                  <label className="text-xs text-white/70">Max size 32MB</label>
+                </fieldset>
+              </div>
+
+              <div className="flex flex-col">
+                <label htmlFor="Description" className="block text-sm font-medium text-white">
+                  Add Description
+                </label>
+                <input
+                  type="text"
+                  name="description"
+                  placeholder="Add Description"
+                  className="w-[97%] xl:w-[350px] h-[40px] 
+                             rounded-lg border border-white/50 
+                             px-4 bg-white/10 
+                             text-white placeholder-white/70 
+                             focus:outline-none"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-lg font-semibold hover:from-green-500 hover:to-blue-600 transition-all"
+              >
+                Add Events
+              </button>
+            </form>
+
             </div>
         </PrivateRoute>
     )
