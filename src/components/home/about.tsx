@@ -11,9 +11,9 @@ import { useRef } from "react";
 
 export default function About(){
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: false });
+    const isInView = useInView(ref, { once: true });
     return(
-        <div className="flex justify-center mt-7 sm:mt-20 px-2 max-w-screen overflow-hidden ">
+        <div className="flex justify-center mt-7 sm:mt-20 pb-10 px-2 max-w-screen overflow-hidden ">
             <div className="flex flex-col lg:flex-row items-start gap-5 ">
                 <motion.div 
                 ref={ref}
@@ -31,7 +31,7 @@ export default function About(){
                             কুড়িপাড়া উচ্চ বিদ্যালয়ে আপনাকে স্বাগতম!
                         </h1>
                     </div>
-                    <div className="bg-white py-4 pl-3 pr-5 shadow-xl rounded-2xl text-gray-700 leading-relaxed text-base lg:text-lg backdrop-blur-sm bg-white/50 p-6  border border-white/20  hover:bg-white/60 transition-all duration-300 ">
+                    <div className="bg-white py-10 pl-3 pr-5 shadow-xl rounded-2xl text-gray-700 leading-relaxed text-base lg:text-lg backdrop-blur-sm bg-white/50 p-6  border border-white/20  hover:bg-white/60 transition-all duration-300 ">
                         <p className="mb-5">
                             কুড়িপাড়া উচ্চ বিদ্যালয় নারায়ণগঞ্জ জেলার বন্দর উপজেলার , কুড়িপাড়া গ্রামে অবস্থিত একটি খ্যাতনামা শিক্ষা প্রতিষ্ঠান। এটি একটি আধা-সরকারি বিদ্যালয় যা শীতলক্ষ্যা নদীর নিকটবর্তী অবস্থানে অবস্থিত, প্রকৃতির সান্নিধ্যে নির্মিত এই বিদ্যালয়টি শিক্ষার আদর্শ কেন্দ্র হিসেবে পরিচিত।
                         </p>

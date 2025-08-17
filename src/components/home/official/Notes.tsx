@@ -20,7 +20,7 @@ export default function NotesData() {
     ];
 
   return (
-    <section className="mt-20 px-4 mx-auto max-w-screen-lg">
+    <section className="mt-20 px-4 mx-auto max-w-screen-lg  max-w-screen overflow-x-hidden ">
       <div className="bg-white shadow-lg rounded-2xl p-6 md:p-8 border border-gray-200">
         <h2 className="text-center mb-8 font-bold text-3xl text-gray-800">
           📒 নোটস
