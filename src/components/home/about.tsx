@@ -27,7 +27,7 @@ export default function About(){
                 <div className="w-[95vw] lg:w-[70%] xl:w-[600px] flex flex-col gap-3 ">
                     {/* <h2 className="text-3xl font-medium">Welcome to Kuripara High School</h2> */}
                     <div className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent ">
-                        <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4">
+                        <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 text-center ">
                             কুড়িপাড়া উচ্চ বিদ্যালয়ে আপনাকে স্বাগতম!
                         </h1>
                     </div>

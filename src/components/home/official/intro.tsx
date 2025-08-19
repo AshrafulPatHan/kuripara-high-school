@@ -11,7 +11,7 @@ export default function Intro(){
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-teal-200 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse"></div>
             </div>
 
-            <div className="relative z-10 flex flex-col items-center pt-20 pb-16 px-4">
+            <div className="relative z-10 flex flex-col items-center pt-20 pb-16 px-1 sm:px-4">
                 {/* Header Section with School Logo */}
                 <div className="mb-12 text-center">
                     {/*<div className="relative inline-block mb-6">
@@ -47,11 +47,11 @@ export default function Intro(){
                         </div>
 
                         {/* Information Grid */}
-                        <div className="p-8 space-y-8">
+                        <div className="p-2 sm:p-8 space-y-8">
                             {/* Basic Information */}
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl p-6 border border-emerald-200">
-                                    <div className="flex items-start gap-4">
+                                    <div className="flex flex-col sm:flex-row items-start gap-4">
                                         <div className="bg-emerald-500 rounded-full p-2 flex-shrink-0">
                                             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-4m-5 0H3m2 0h3M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
@@ -66,8 +66,8 @@ export default function Intro(){
                                     </div>
                                 </div>
 
-                                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 border border-blue-200">
-                                    <div className="flex items-start gap-4">
+                                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-2 sm:p-6 border border-blue-200">
+                                    <div className="flex flex-col sm:flex-row items-start gap-4">
                                         <div className="bg-blue-500 rounded-full p-2 flex-shrink-0">
                                             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
