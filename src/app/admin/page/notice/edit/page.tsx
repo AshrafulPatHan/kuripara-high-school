@@ -62,7 +62,14 @@ export default function EditNoticeData() {
             toast.error("All fields are required");
         } else {
             try {
-                const res = await axios.put(`${ApiUrl}/update-notice`, AllFormData);
+                // 🟢 এখানেই টোকেন পাঠাতে হবে
+                const token = localStorage.getItem("adminToken");
+
+                const res = await axios.put(`${ApiUrl}/update-notice`, AllFormData,{
+                headers: {
+                  Authorization: `Bearer ${token}`  // 🔑 token পাঠানো হচ্ছে
+                }
+              });
                 if (res.status === 200 ) {
                     toast.success("Notice is Update successful!");
                     form.reset();

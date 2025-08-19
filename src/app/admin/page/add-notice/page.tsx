@@ -54,42 +54,55 @@ export default function AddNotice() {
     };
 
     // handle form submission
-    const handelAddNotice = async (event: FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        const form = event.currentTarget;
+  const handelAddNotice = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
 
-        const Title = (form.elements.namedItem("title") as HTMLInputElement).value;
-        const ShortDescription = (form.elements.namedItem("ShortDescription") as HTMLInputElement).value;
-        const LongDescription = content;
+    const Title = (form.elements.namedItem("title") as HTMLInputElement).value;
+    const ShortDescription = (form.elements.namedItem("ShortDescription") as HTMLInputElement).value;
+    const LongDescription = content;
 
-        const Data = new Date().toLocaleDateString("bn-BD", {
-            year: "numeric",
-            month: "long",
-            day: "numeric"
-        });
+    const Data = new Date().toLocaleDateString("bn-BD", {
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    });
 
-        const AllFormData = { Title, ShortDescription, LongDescription, Photo, Data };
-        const ApiUrl = process.env.NEXT_PUBLIC_SERVER_ADMIN;
+    const AllFormData = { Title, ShortDescription, LongDescription, Photo, Data };
+    const ApiUrl = process.env.NEXT_PUBLIC_SERVER_ADMIN;
 
-        if (!Title || !ShortDescription || !LongDescription || !Photo) {
-            toast.error("All fields are required");
-        } else {
-            try {
-                const res = await axios.post(`${ApiUrl}/post-notice`, AllFormData);
-                if (res.status === 200 || res.status === 201) {
-                    toast.success("Notice is add successful!");
-                    form.reset();
-                    setPhoto('');
-                    setContent('');
-                } else {
-                    toast.error("Fail to send data!");
-                }
-            } catch (err) {
-                console.error("POST error:", err);
-                toast.error("Server error!");
+    if (!Title || !ShortDescription || !LongDescription || !Photo) {
+      toast.error("All fields are required");
+    } else {
+      try {
+        // 🟢 এখানেই টোকেন পাঠাতে হবে
+        const token = localStorage.getItem("adminToken");
+
+        const res = await axios.post(
+          `${ApiUrl}/post-notice`,
+          AllFormData,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`  // 🔑 token পাঠানো হচ্ছে
             }
+          }
+        );
+
+        if (res.status === 200 || res.status === 201) {
+          toast.success("Notice is add successful!");
+          form.reset();
+          setPhoto('');
+          setContent('');
+        } else {
+          toast.error("Fail to send data!");
         }
-    };
+      } catch (err) {
+        console.error("POST error:", err);
+        toast.error("Server error!");
+      }
+    }
+  };
+
 
     return (
         <PrivateRoute>

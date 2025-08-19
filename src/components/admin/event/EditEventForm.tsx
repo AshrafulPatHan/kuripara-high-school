@@ -35,7 +35,14 @@ export default function EditEventForm({
       toast.error("সব ফিল্ড পূরণ করুন");
     } else {
       try {
-        const res = await axios.put(`${ApiUrl}/update-event`, AllFormData);
+        // 🟢 এখানেই টোকেন পাঠাতে হবে
+        const token = localStorage.getItem("adminToken");
+
+        const res = await axios.put(`${ApiUrl}/update-event`, AllFormData,{
+          headers: {
+            Authorization: `Bearer ${token}`  // 🔑 token পাঠানো হচ্ছে
+          }
+        });
         if (res.status === 200) {
           toast.success("ইভেন্ট সফলভাবে আপডেট হয়েছে!");
           router.push("/admin/page/event");

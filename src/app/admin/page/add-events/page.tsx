@@ -66,7 +66,14 @@ export default function AddEvents(){
         }else{
             // post data using Axios
             try {
-                const res = await axios.post(`${ApiUrl}/post-album`, AllFormData);
+                const token = localStorage.getItem("adminToken");
+
+
+                const res = await axios.post(`${ApiUrl}/post-album`, AllFormData,{
+                  headers: {
+                    Authorization: `Bearer ${token}`  // 🔑 token পাঠানো হচ্ছে
+                  }
+                });
 
                 if (res.status === 200 || res.status === 201) {
                     toast.success("Notice is add successful!");
