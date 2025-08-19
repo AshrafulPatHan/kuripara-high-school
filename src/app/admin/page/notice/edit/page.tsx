@@ -8,7 +8,7 @@ import { FormEvent, useMemo, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
-import JoditEditor from "@/components/admin/editor/JoditEditor"
+// import JoditEditor from "@/components/admin/editor/JoditEditor"
 
 
 export default function EditNoticeData() {
@@ -26,9 +26,9 @@ export default function EditNoticeData() {
     const [content, setContent] = useState(LongDescription || '');
 
     // the text editor
-    //     const JoditEditor = dynamic(() => import("@/components/admin/editor/JoditEditor"), {
-    //     ssr: false
-    // });
+        const JoditEditor = dynamic(() => import("@/components/admin/editor/JoditEditor"), {
+        ssr: false
+    });
 
     const config = useMemo(() => ({
         readonly: false, 

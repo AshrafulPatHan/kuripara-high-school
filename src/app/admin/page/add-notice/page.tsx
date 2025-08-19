@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { FormEvent, useState, useRef, useMemo } from "react";
 import axios from "axios";
 // import JoditEditor from "jodit-react";
-import JoditEditor from "@/components/admin/editor/JoditEditor"
+// import JoditEditor from "@/components/admin/editor/JoditEditor"
 import dynamic from "next/dynamic";
 import PrivateRoute from "@/components/admin/auth/PrivateRoute";
 
@@ -17,9 +17,9 @@ export default function AddNotice() {
     const editor = useRef(null);
 
     // Dynamic import of the client-side-only component
-    // const JoditEditor = dynamic(() => import("@/components/admin/editor/JoditEditor"), {
-    // ssr: false
-    // });
+    const JoditEditor = dynamic(() => import("@/components/admin/editor/JoditEditor"), {
+    ssr: false
+    });
     // config editor
     const config = useMemo(() => ({
         readonly: false, 
