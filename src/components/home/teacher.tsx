@@ -49,7 +49,7 @@ const isInView2 = useInView(ref2, { once: false });
                   transition={{ duration: 0.5, ease: "linear" }}
                   className=" w-[97vw] lg:w-[50vw] xl:w-[909px] h-auto xl:h-[300px] bg-[#f8f4f4] rounded-[8px] shadow-2xl hover:shadow-2xs p-4 flex flex-col gap-2  ">
                   <div>
-                  <h3>আমাদের শিক্ষকবৃন্দ</h3>
+                  <h3 className="font-bold">আমাদের শিক্ষকবৃন্দ</h3>
                      <p>
                         কুড়িপাড়া উচ্চ বিদ্যালয়ে বর্তমানে মোট ১৮ জন অভিজ্ঞ ও দক্ষ শিক্ষক কর্মরত রয়েছেন। প্রত্যেক শিক্ষকই তাঁর নিজ নিজ বিষয়ে বিশেষ দক্ষতা ও অভিজ্ঞতার অধিকারী। তাঁরা শিক্ষার্থীদের প্রতি অত্যন্ত যত্নবান এবং পেশাদারভাবে শ্রেণি পরিচালনা করে থাকেন।
                      </p>

@@ -23,7 +23,7 @@ export default function TotalView(){
     
 
     useEffect(()=>{
-        const ApiUrl = process.env.NEXT_PUBLIC_SERVER_2_ADMIN;
+        const ApiUrl = process.env.NEXT_PUBLIC_SERVER_ADMIN;
         axios.get(`${ApiUrl}/visitor-number`)
         .then((res) => setData(res.data))
         .catch((error) => console.error(error))
@@ -31,7 +31,7 @@ export default function TotalView(){
     return(
         <div>
             <div className="relative h-[155px] pt-6 ">
-                <div className="w-[302px] h-[134px] bg-[#ffffff] shadow-xl rounded-[12px]  ">
+                <div className="w-[97vw] sm:w-[302px] h-[134px] bg-[#ffffff] shadow-xl rounded-[12px]  ">
                     <div className="flex flex-col items-end pt-3 pr-6 ">
                         <p className="text-[#7B809A] text-[14px]  ">Total website visits</p>
                         <p className="text-2xl font-bold">{data}</p>

@@ -1,0 +1,11 @@
+.QuickLinks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns by default */
+  gap: 1rem;
+}
+
+@media (max-width: 400px) {
+  .QuickLinks {
+    grid-template-columns: 1fr; /* On mobile: only 1 column */
+  }
+}

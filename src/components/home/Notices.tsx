@@ -85,17 +85,17 @@ const handleViewDetailsMap = (not:any) => {
          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-5 ">
             <div >
                <div className="flex gap-5">
-                  <div className="flex flex-col bg-[#f8f4f4] w-[97vw] lg:w-[60vw] xl:w-[821px] p-6 rounded-2xl items-center  ">
+                  <div className="flex flex-col bg-[#f8f4f4] w-[97vw] lg:w-[60vw] xl:w-[830px] h-auto lg:h-[72vh] xl:h-[630px] p-6 rounded-2xl items-center  ">
                      <div>
-                        <div className="w-[98vw] lg:w-[55vw] xl:w-[800px] rounded-2xl overflow-hidden group">
+                        <div className="w-[90vw] lg:w-[100%] xl:w-[800px] h-auto lg:h-[60vh] xl:h-[500px] rounded-2xl overflow-hidden group">
                            <Image src={first.Photo} alt="Notice"  width={800} height={400}
                            className=" object-cover rounded-2xl w-full h-full transition-transform duration-300 group-hover:scale-105 " />
                         </div>
                         <div>
-                           <p className="text-lg font-semibold mb-2 mt-1">{first.ShortDescription}</p>
+                           <p className="text-lg font-medium mb-2 mt-2">{first.ShortDescription}</p>
                            <button 
                            onClick={handleViewDetails}
-                           className="bg-amber-200 p-3 text-sm font-bold hover:underline cursor-pointer rounded-lg">
+                           className="bg-amber-200 p-3 text-sm font-bold hover:underline cursor-pointer rounded-lg items-end">
                               View Details
                            </button>
                         </div>
@@ -109,7 +109,7 @@ const handleViewDetailsMap = (not:any) => {
                      All Notice
                   </div>
                      {rest.map((not)=>(
-                     <div key={not._id} className="flex flex-col items-center px-6 py-3 ">
+                     <div key={not._id} className="flex flex-col  px-6 py-3 ">
                         <div className="flex gap-4 ">
                            <div className="w-[100px] h-[100px] rounded-full overflow-hidden group">
                               <Image src={not.Photo} width={300} height={300} alt="event" className="w-full h-full object-cover rounded-full transition-transform duration-300 group-hover:scale-110 " />

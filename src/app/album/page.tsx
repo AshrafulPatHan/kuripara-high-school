@@ -45,14 +45,14 @@ export default function Album() {
    return(
       <div>
         <Navbar/>
-        <div className="flex flex-col items-center max-w-screen overflow-hidden mb-20 ">
+        <div className="flex flex-col items-center max-w-screen overflow-hidden pb-20 ">
             <div  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-center mt-10 md:mt-20">
                 {event.map((even)=>(
                 <div key={even._id} >
                     <motion.div
                          whileHover={{ y: -7 }}
                         transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                        className="w-[98vw] sm:w-[350px] h-auto sm:h-[650px] bg-gradient-to-b from-[#dbd9d9] to-[#387ab8] p-4 
+                        className="w-[98vw] sm:w-[350px] h-auto sm:h-[650px] bg-gradient-to-tr from-[#f1f1f1] to-[#dfd7d7] shadow-lg p-4  rounded-2xl
                         flex flex-col items-center ">
                         <div className="">
                             <Image src={even.Photo} width={500} height={500}  alt="events photo" className=" w-[90vw] md:w-[300px] sm:h-[300px] object-cover " />

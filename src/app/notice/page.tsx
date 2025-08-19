@@ -1,3 +1,5 @@
+
+
 "use client"
 
 import { motion } from "motion/react"
@@ -67,10 +69,10 @@ const handleViewDetailsMap = (not:any) => {
                     <motion.div 
                         whileHover={{ y: -7 }}
                         transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                        className="w-[98vw] sm:w-[350px] h-auto sm:h-[650px] bg-gradient-to-b from-[#dbd9d9] to-[#387ab8] p-4 
+                        className="w-[98vw] sm:w-[350px] h-auto sm:h-[550px] bg-gradient-to-tr from-[#f1f1f1] to-[#dfd7d7] shadow-lg p-4  rounded-2xl
                         flex flex-col items-center ">
                         <div className="">
-                            <Image src={even.Photo} width={500} height={500}  alt="events photo" className=" w-[90vw] md:w-[300px] sm:h-[300px] object-cover " />
+                            <Image src={even.Photo} width={500} height={500}  alt="events photo" className=" w-[90vw] md:w-[300px] sm:h-[300px] object-cover rounded-2xl " />
                         </div>
                         <div className="flex flex-col items-center justify-between w-[300px] h-[300px] ">
                             <div>
@@ -81,7 +83,7 @@ const handleViewDetailsMap = (not:any) => {
                             <div>
                                 <button 
                                 onClick={()=> {handleViewDetailsMap(even)}}
-                                className="border p-2 rounded-lg text-sm cursor-pointer" >
+                                className="px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-lg font-semibold hover:from-green-500 hover:to-blue-600 transition-all" >
                                     View Details
                                 </button>
                             </div>

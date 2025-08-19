@@ -1,13 +1,15 @@
 "use client"
 import { useSearchParams } from "next/navigation"; // ✅ import this
 import Image from "next/image";
-import Background from "@/assets/image/university-418219_1920.jpg";
+// import Background from "@/assets/image/university-418219_1920.jpg";
 import CustomFileInput from "@/components/admin/ui/input/CustomInput";
 import toast from "react-hot-toast";
 import { FormEvent, useMemo, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
+import JoditEditor from "@/components/admin/editor/JoditEditor"
+
 
 export default function EditNoticeData() {
     const searchParams = useSearchParams(); // ✅ get searchParams
@@ -24,9 +26,9 @@ export default function EditNoticeData() {
     const [content, setContent] = useState(LongDescription || '');
 
     // the text editor
-        const JoditEditor = dynamic(() => import("@/components/admin/editor/JoditEditor"), {
-        ssr: false
-    });
+    //     const JoditEditor = dynamic(() => import("@/components/admin/editor/JoditEditor"), {
+    //     ssr: false
+    // });
 
     const config = useMemo(() => ({
         readonly: false, 
@@ -60,7 +62,14 @@ export default function EditNoticeData() {
             toast.error("All fields are required");
         } else {
             try {
-                const res = await axios.put(`${ApiUrl}/update-notice`, AllFormData);
+                // 🟢 এখানেই টোকেন পাঠাতে হবে
+                const token = localStorage.getItem("adminToken");
+
+                const res = await axios.put(`${ApiUrl}/update-notice`, AllFormData,{
+                headers: {
+                  Authorization: `Bearer ${token}`  // 🔑 token পাঠানো হচ্ছে
+                }
+              });
                 if (res.status === 200 ) {
                     toast.success("Notice is Update successful!");
                     form.reset();
@@ -80,69 +89,92 @@ export default function EditNoticeData() {
     return(
         <div>
             <div
-                className="w-[100%] h-[99%] flex flex-col items-center justify-center bg-cover bg-center rounded-xl"
-                style={{
-                    backgroundImage: `url(${Background.src})`,
-                }}
-            >
-                <form onSubmit={handelUpdateNotice} className="flex flex-col gap-5 bg-[#ffffff] rounded-xl p-6 w-[120vw] xl:w-[50vw] ">
-                    <div>
-                        <h3 className="text-center font-bold text-2xl">Add Notice</h3>
+            className="w-full min-h-screen flex items-center justify-center bg-cover bg-center rounded-xl p-4 sm:p-6"
+    style={{
+    backgroundImage: `url("https://i.ibb.co.com/Hfz5cTxV/garrett-parker-Dlk-F4-db-COU-unsplash.jpg")`,
+     }}
+    >
+  <form
+    onSubmit={handelUpdateNotice}
+    className="flex flex-col gap-5 rounded-xl p-6 w-full sm:w-[97%] lg:w-[70%] xl:w-[70%]
+               bg-white/10 backdrop-blur-[2.5px] border border-white/30 shadow-lg"
+              >
+                <div>
+                  <h3 className="text-center font-bold text-2xl text-white drop-shadow-lg">
+                    Add Notice
+                  </h3>
+                </div>
+
+                <div className="flex flex-col items-center gap-4">
+                  <div>
+                    <Image
+                      src={Photo}
+                      width={500}
+                      height={500}
+                      className="w-40 h-40 sm:w-60 sm:h-60 object-cover rounded-lg"
+                      alt="image"
+                    />
+                  </div>
+                  <div className="flex flex-col lg:flex-row gap-4 w-full">
+                    <div className="flex flex-col w-full">
+                      <label
+                        htmlFor="Title"
+                        className="block text-sm font-medium text-white"
+                      >
+                        Add A Title
+                      </label>
+                      <input
+                        type="text"
+                        name="title"
+                        placeholder="Title"
+                        defaultValue={Title}
+                        required
+                        className="w-full h-10 rounded-lg border border-white/40 bg-white/50 px-4 text-black"
+                      />
                     </div>
 
-                    <div className="flex flex-col items-center gap-4">
-                        <div>
-                            <Image src={Photo} width={500} height={500} className="w-[300px] h-[300px] object-cover " alt="image" />
-                        </div>
-                        <div className="flex flex-col lg:flex-row gap-4 ">
-                            <div className="flex flex-col">
-                                <label htmlFor="Title" className="block text-sm font-medium text-zinc-700">
-                                    Add A Title
-                                </label>
-                                <input
-                                    type="text"
-                                    name="title"
-                                    placeholder="Title"
-                                    defaultValue={Title}
-                                    required
-                                    className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4"
-                                />
-                            </div>
-
-                            <div className="flex flex-col">
-                                <label htmlFor="ShortDescription" className="block text-sm font-medium text-zinc-700">
-                                    Short Description
-                                </label>
-                                <input
-                                    type="text"
-                                    name="ShortDescription"
-                                    placeholder="Short Description"
-                                    defaultValue={ShortDescription}
-                                    required
-                                    className="w-[97%] xl:w-[350px] h-[40px] rounded-lg border px-4"
-                                />
-                            </div>
-                        </div>
+                    <div className="flex flex-col w-full">
+                      <label
+                        htmlFor="ShortDescription"
+                        className="block text-sm font-medium text-white"
+                      >
+                        Short Description
+                      </label>
+                      <input
+                        type="text"
+                        name="ShortDescription"
+                        placeholder="Short Description"
+                        defaultValue={ShortDescription}
+                        required
+                        className="w-full h-10 rounded-lg border border-white/40 bg-white/50 px-4 text-black"
+                      />
                     </div>
+                  </div>
+                </div>
 
-                    <div className="flex flex-col">
-                        <label htmlFor="LongDescription" className="block text-sm font-medium text-zinc-700">
-                            Long Description
-                        </label>
-                        <JoditEditor value={content} onChange={setContent} />
-                    </div>
+                <div className="flex flex-col w-full">
+                  <label
+                    htmlFor="LongDescription"
+                    className="block text-sm font-medium text-white"
+                  >
+                    Long Description
+                  </label>
+                  <div className="bg-white/70 rounded-lg overflow-hidden border border-white/40">
+                    <JoditEditor value={content} onChange={setContent} />
+                  </div>
+                </div>
 
-                    <div className="flex justify-center">
-                        <button
-                            type="submit"
-                            className="w-[97%] lg:w-[350px] h-[40px] text-white 
-                            bg-gradient-to-t from-[#E93B77] to-[#da6d93] rounded-[8px] mt-7 "
-                        >
-                            Update Notice
-                        </button>
-                    </div>
-                </form>
+                <div className="flex justify-center">
+                  <button
+                    type="submit"
+                    className="py-4 px-4 bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-lg font-semibold hover:from-green-500 hover:to-blue-600 transition-all"
+                  >
+                    Update Notice
+                  </button>
+                </div> 
+              </form>
             </div>
+                                
         </div>
     )
 }

@@ -30,12 +30,12 @@ export default function RootLayout({
             </div>
 
             {/* Main Content Area */}
-            <div className="flex flex-col min-h-screen overflow-x-auto ">
+            <div className="flex flex-col min-h-screen overflow-x-hidden ">
               {/* Navbar - Sticky */}
                 <Admin_nav />
 
               {/* Scrollable Content */}
-              <div className="flex-grow min-w-[900px] mt-4">
+              <div className="flex-grow mt-4">
                 {children}
               </div>
 

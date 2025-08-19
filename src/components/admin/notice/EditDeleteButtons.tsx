@@ -29,7 +29,14 @@ export default function EditDeleteButtons({ notice }: { notice: any }) {
     if (!confirmDelete) return;
 
     try {
-      const res = await axios.delete(`${process.env.NEXT_PUBLIC_SERVER_ADMIN}/delete-notice/${id}`);
+      // 🟢 এখানেই টোকেন পাঠাতে হবে
+      const token = localStorage.getItem("adminToken");
+
+      const res = await axios.delete(`${process.env.NEXT_PUBLIC_SERVER_ADMIN}/delete-notice/${id}`,{
+          headers: {
+            Authorization: `Bearer ${token}`  // 🔑 token পাঠানো হচ্ছে
+          }
+        });
       if (res.status === 200) {
         toast.success("Notice deleted successfully!");
         router.push("/admin/page/notice");
