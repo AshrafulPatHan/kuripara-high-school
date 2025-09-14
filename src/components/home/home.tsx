@@ -23,7 +23,9 @@ export default function Clint() {
       try {
         const data = await getVisitorData();
         let ApiUrl:any = " "
-        ApiUrl = process.env.NEXT_PUBLIC_API_URL;
+        // ApiUrl = process.env.NEXT_PUBLIC_API_URL;
+        ApiUrl = "none";
+
 
         await fetch(`${ApiUrl}/api/track-visitor`, {
           method: "POST",
