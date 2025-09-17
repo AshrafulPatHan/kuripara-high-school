@@ -184,7 +184,7 @@ export default function Intro(){
                                             <div>
                                                 <h3 className="text-lg font-bold text-rose-800 mb-3">পাঠদানের অনুমতি ও স্বীকৃতি</h3>
                                                 <p className="text-rose-700 text-base leading-relaxed">
-                                                    বিদ্যালয়টি ১৬৬৮ সালে মাধ্যমিক বিদ্যালয় হিসেবে পাঠদানের অনুমতি ও স্বীকৃতি লাভ করে।
+                                                    বিদ্যালয়টি ১৯৬৮ সালে মাধ্যমিক বিদ্যালয় হিসেবে পাঠদানের অনুমতি ও স্বীকৃতি লাভ করে।
                                                 </p>
                                             </div>
                                         </div>
