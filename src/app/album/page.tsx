@@ -52,10 +52,10 @@ export default function Album() {
                     <motion.div
                          whileHover={{ y: -7 }}
                         transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                        className="w-[98vw] sm:w-[350px] h-auto sm:h-[650px] bg-gradient-to-tr from-[#f1f1f1] to-[#dfd7d7] shadow-lg p-4  rounded-2xl
+                        className="w-[98vw] sm:w-[350px] h-auto sm:h-[750px] bg-gradient-to-tr from-[#f1f1f1] to-[#dfd7d7] shadow-lg p-4  rounded-2xl
                         flex flex-col items-center ">
                         <div className="">
-                            <Image src={even.Photo} width={500} height={500}  alt="events photo" className=" w-[90vw] md:w-[300px] sm:h-[300px] object-cover " />
+                            <Image src={even.Photo} width={500} height={500}  alt="events photo" className=" w-[90vw] md:w-[300px] sm:h-[300px] object-cover rounded-xl " />
                         </div>
                         <div className="flex flex-col justify-center w-[300px] ">
                             <h3 className="text-lg font-semibold text-center">{even.Title}</h3>

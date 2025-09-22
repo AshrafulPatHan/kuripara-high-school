@@ -74,7 +74,7 @@ const handleViewDetailsMap = (even:any) => {
                <div className="flex flex-col lg:flex-row gap-5">
                   {/* image card 1 */}
                   <div className="flex flex-col bg-[#f8f4f4] w-[97vw] lg:w-[28vw] xl:w-[400px] p-6 rounded-2xl items-center  ">
-                     <div className="w-[99%]  xl:w-[350px] rounded-lg  overflow-hidden group">
+                     <div className="w-[99%]  xl:w-[350px] h-[300px]  rounded-lg  overflow-hidden group">
                         <Image src={first.Photo} alt="events" width={850} height={750} className="object-cover rounded-lg w-full h-full transition-transform duration-300 group-hover:scale-105 " />
                      </div>
                      <div>
@@ -84,7 +84,7 @@ const handleViewDetailsMap = (even:any) => {
                   </div>
                   {/* image card2 */}
                   <div className="flex flex-col bg-[#f8f4f4] w-[97vw] lg:w-[28vw] xl:w-[400px] p-6 rounded-lg items-center  ">
-                     <div className="w-[99%]  xl:w-[350px] rounded-lg  overflow-hidden group">
+                     <div className="w-[99%]  xl:w-[350px] h-[300px] rounded-lg  overflow-hidden group">
                         <Image src={second.Photo} alt="events" width={850} height={750} className=" object-cover rounded-lg w-full h-full transition-transform duration-300 group-hover:scale-105  " />
                      </div>
                      <div>
