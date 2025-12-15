@@ -77,7 +77,7 @@ export default function AddEvents(){
                 });
 
                 if (res.status === 200 || res.status === 201) {
-                    toast.success("Notice is add successful!");
+                    toast.success("Events is add successful!");
                     form.reset(); 
                     setPhoto('');
                 } else {

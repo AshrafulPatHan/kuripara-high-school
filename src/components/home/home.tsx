@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Events from "@/components/home/Events";
 import Hero from "@/components/home/hero";
@@ -16,16 +16,14 @@ import Intro from "./official/intro";
 import StudentsData from "./official/Student";
 import NotesData from "./official/Notes";
 
-
 export default function Clint() {
-      useEffect(() => {
+  useEffect(() => {
     const trackVisitor = async () => {
       try {
         const data = await getVisitorData();
-        let ApiUrl:any = " "
-        // ApiUrl = process.env.NEXT_PUBLIC_API_URL;
-        ApiUrl = "none";
-
+        let ApiUrl: any = " ";
+        ApiUrl = process.env.NEXT_PUBLIC_API_URL;
+        // ApiUrl = "none";
 
         await fetch(`${ApiUrl}/api/track-visitor`, {
           method: "POST",
@@ -42,22 +40,22 @@ export default function Clint() {
     trackVisitor();
   }, []);
 
-    return(
-        <div>
-            <Navbar/>
-            <Hero/>
-            <About/>
-            {/* <History/> */}
-            {/* new section */}
-            <Intro/>
-            <StudentsData/>
-            <NotesData/>
-            <Number/>
-            <Teacher/>
-            {/* <News/> */}
-            <Notices/>
-            <Events/>
-            <Footer/>
-        </div>
-    )
+  return (
+    <div>
+      <Navbar />
+      <Hero />
+      <About />
+      {/* <History/> */}
+      {/* new section */}
+      <Intro />
+      <StudentsData />
+      <NotesData />
+      <Number />
+      <Teacher />
+      {/* <News/> */}
+      <Notices />
+      <Events />
+      <Footer />
+    </div>
+  );
 }

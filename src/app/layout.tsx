@@ -1,24 +1,27 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "@radix-ui/themes/styles.css";
-import { Theme } from '@radix-ui/themes';
+import { Theme } from "@radix-ui/themes";
 import Providers from "@/redux/Provider";
 import { Toaster } from "react-hot-toast";
-import { Inter } from 'next/font/google'
+import { Inter } from "next/font/google";
 
 // Font setup
 const inter = Inter({
-  subsets: ['latin'], 
-  variable: '--font-inter',
-  display: 'swap',
-})
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: "কুড়িপাড়া উচ্চ বিদ্যালয় | Kuripara High School, Madanpur, Narayanganj",
-  description: "কুড়িপাড়া উচ্চ বিদ্যালয়, নারায়ণগঞ্জ জেলার বন্দর উপজেলার মদনপুর এলাকায় অবস্থিত একটি ঐতিহ্যবাহী শিক্ষা প্রতিষ্ঠান। এটি ১৯৬৮ সালে প্রতিষ্ঠিত হয় এবং আজও গৌরবময়ভাবে শিক্ষা কার্যক্রম পরিচালনা করছে।",
+  title:
+    "কুড়িপাড়া উচ্চ বিদ্যালয় | Kuripara High School, Madanpur, Narayanganj",
+  description:
+    "কুড়িপাড়া উচ্চ বিদ্যালয়, নারায়ণগঞ্জ জেলার বন্দর উপজেলার মদনপুর এলাকায় অবস্থিত একটি ঐতিহ্যবাহী শিক্ষা প্রতিষ্ঠান। এটি ১৯৬৮ সালে প্রতিষ্ঠিত হয় এবং আজও গৌরবময়ভাবে শিক্ষা কার্যক্রম পরিচালনা করছে।",
   openGraph: {
     title: "কুড়িপাড়া উচ্চ বিদ্যালয় | Kuripara High School",
-    description: "শিক্ষার আলো ছড়ানো ঐতিহ্যবাহী প্রতিষ্ঠান – Kuripara High School, Madanpur, Narayanganj। অভিজ্ঞ শিক্ষক, চমৎকার ফলাফল ও মনোরম পরিবেশে শিক্ষা দিচ্ছে ৬ষ্ঠ থেকে ১০ম শ্রেণি পর্যন্ত।",
+    description:
+      "শিক্ষার আলো ছড়ানো ঐতিহ্যবাহী প্রতিষ্ঠান – Kuripara High School, Madanpur, Narayanganj। অভিজ্ঞ শিক্ষক, চমৎকার ফলাফল ও মনোরম পরিবেশে শিক্ষা দিচ্ছে ৬ষ্ঠ থেকে ১০ম শ্রেণি পর্যন্ত।",
     url: "https://kuripara-high-school.vercel.app",
     siteName: "Kuripara High School",
     images: [
@@ -35,14 +38,33 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://kuripara-high-school.vercel.app",
   },
-  keywords: ["কুড়িপাড়া উচ্চ বিদ্যালয়", "Kuripara High School", "Narayanganj School", "Madanpur School", 
-      "Bangladesh High School", "SSC School Narayanganj", "কুড়িপাড়া উচ্চ বিদ্যালয়ের ইতিহাস", "শিক্ষাপ্রতিষ্ঠান", "history of Kuripara High School",
-      "Kuripara High School teacher", "Kuripara High School photo", "কুড়িপাড়া উচ্চ বিদ্যালয়ের শিক্ষকবৃন্দ", "bast school in Narayanganj", 
-      "government school in narayanganj", "Kuripara", "Kuripara school", "Kuripara playground", "Kuripara student", "Kuripara event",
-      "কুড়িপাড়া উচ্চ বিদ্যালয় মদনপুর", "মদনপুর","শিক্ষার আলো","সাহান স্যার",
-    ],
+  keywords: [
+    "কুড়িপাড়া উচ্চ বিদ্যালয়",
+    "Kuripara High School",
+    "Narayanganj School",
+    "Madanpur School",
+    "Bangladesh High School",
+    "SSC School Narayanganj",
+    "কুড়িপাড়া উচ্চ বিদ্যালয়ের ইতিহাস",
+    "শিক্ষাপ্রতিষ্ঠান",
+    "history of Kuripara High School",
+    "Kuripara High School teacher",
+    "Kuripara High School photo",
+    "কুড়িপাড়া উচ্চ বিদ্যালয়ের শিক্ষকবৃন্দ",
+    "bast school in Narayanganj",
+    "government school in narayanganj",
+    "Kuripara",
+    "Kuripara school",
+    "Kuripara playground",
+    "Kuripara student",
+    "Kuripara event",
+    "কুড়িপাড়া উচ্চ বিদ্যালয় মদনপুর",
+    "মদনপুর",
+    "শিক্ষার আলো",
+    "সাহান স্যার",
+  ],
   authors: [{ name: "Kuripara High School Authority" }],
-  robots: "index, follow"
+  robots: "index, follow",
 };
 
 export default function RootLayout({
