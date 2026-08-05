@@ -78,7 +78,7 @@ export default function AllNoticeAdmin(){
                 <div className="flex flex-col items-center justify-center ml-2 md:ml-0 mx-auto ">
                     <h2 className="text-2xl font-semibold mb-7">All Notice </h2>
                     <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-7 ">
-                        {event.map((data)=>(
+                        {[...event].reverse().map((data)=>(
                             <div key={data._id}>
                                 <div className="flex flex-col gap-3 w-[300px]  ">
                                     <div>
