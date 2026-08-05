@@ -125,6 +125,7 @@ export default function AddEvents(){
                              focus:outline-none"
                 />
               </div>
+              
 
               <div className="flex flex-col">
                 <label htmlFor="Add Photo" className="block text-sm font-medium text-white">

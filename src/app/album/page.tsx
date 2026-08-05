@@ -46,18 +46,18 @@ export default function Album() {
       <div>
         <Navbar/>
         <div className="flex flex-col items-center max-w-screen overflow-hidden pb-20 ">
-            <div  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-center mt-10 md:mt-20">
-                {event.map((even)=>(
+            <div  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 items-center mt-10 md:mt-20">
+                {[...event].reverse().map((even)=>(
                 <div key={even._id} >
                     <motion.div
                          whileHover={{ y: -7 }}
                         transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                        className="w-[98vw] sm:w-[350px] h-auto sm:h-[750px] bg-gradient-to-tr from-[#f1f1f1] to-[#dfd7d7] shadow-lg p-4  rounded-2xl
+                        className="w-[98vw] sm:w-[350px] 2xl:w-[450px] h-auto sm:h-[750px] bg-gradient-to-tr from-[#f1f1f1] to-[#dfd7d7] shadow-lg p-4  rounded-2xl
                         flex flex-col items-center ">
                         <div className="">
-                            <Image src={even.Photo} width={500} height={500}  alt="events photo" className=" w-[90vw] md:w-[300px] sm:h-[300px] object-cover rounded-xl " />
+                            <Image src={even.Photo} width={500} height={500}  alt="events photo" className=" w-[90vw] md:w-[300px] 2xl:w-[400px] sm:h-[300px] 2xl:h-[350px] object-cover rounded-xl " />
                         </div>
-                        <div className="flex flex-col justify-center w-[300px] ">
+                        <div className="flex flex-col justify-center w-auto ">
                             <h3 className="text-lg font-semibold text-center">{even.Title}</h3>
                             <p className="mt-1 text-[#00000094] ">{even.Data}</p>
                             <p>{even.Description}</p>

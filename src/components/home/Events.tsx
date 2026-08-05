@@ -112,7 +112,7 @@ export default function Events() {
           {next.map((even) => (
             <div
               key={even._id}
-              className="flex flex-col items-center px-6 py-3 "
+              className="flex flex-col item-start px-6 py-3 "
             >
               <div className="flex gap-4 ">
                 <div className="w-[100px] h-[100px] rounded-full overflow-hidden group">

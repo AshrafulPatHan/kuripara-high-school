@@ -64,7 +64,7 @@ const handleViewDetailsMap = (not:any) => {
         <Navbar/>
         <div className="flex flex-col items-center mb-20">
             <div  className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-center mt-10 md:mt-20">
-                {event.map((even)=>(
+                {[...event].reverse().map((even)=>(
                 <div key={even._id} >
                     <motion.div 
                         whileHover={{ y: -7 }}
