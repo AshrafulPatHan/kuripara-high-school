@@ -61,7 +61,7 @@ export default function AddEvents(){
         // Api url
         const ApiUrl = process.env.NEXT_PUBLIC_SERVER_ADMIN;
 
-        // cake data
+        // cake data and post new album
         if (!Title || !Description || !Photo) {
             toast.error("All fields are required")
         }else{
