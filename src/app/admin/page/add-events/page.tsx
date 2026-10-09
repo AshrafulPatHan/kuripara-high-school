@@ -61,7 +61,7 @@ export default function AddEvents(){
         // Api url
         const ApiUrl = process.env.NEXT_PUBLIC_SERVER_ADMIN;
 
-        // cake data
+        // cake data and post new album
         if (!Title || !Description || !Photo) {
             toast.error("All fields are required")
         }else{
@@ -72,7 +72,7 @@ export default function AddEvents(){
 
                 const res = await axios.post(`${ApiUrl}/post-album`, AllFormData,{
                   headers: {
-                    Authorization: `Bearer ${token}`  // 🔑 token পাঠানো হচ্ছে
+                    Authorization: `Bearer ${token}`  // 🔑 token was sending
                   }
                 });
 

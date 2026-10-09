@@ -18,10 +18,10 @@ export default function AllEventsAdmin(){
         Data: string;
    };
 
-   const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
+   const ApiUrl = process.env.NEXT_PUBLIC_SERVER_ADMIN;
  // fetch data
     useEffect(() => {
-        fetch(`${ApiUrl}/all-photo`)
+        fetch(`${ApiUrl}/all-event`)
         .then((res) => res.json())
         .then((data) => {
             setEvent(data);
