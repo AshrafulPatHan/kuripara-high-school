@@ -72,7 +72,7 @@ export default function AddEvents(){
 
                 const res = await axios.post(`${ApiUrl}/post-album`, AllFormData,{
                   headers: {
-                    Authorization: `Bearer ${token}`  // 🔑 token পাঠানো হচ্ছে
+                    Authorization: `Bearer ${token}`  // 🔑 token was sending
                   }
                 });
 

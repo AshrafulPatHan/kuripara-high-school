@@ -19,10 +19,10 @@ export default function AllNoticeAdmin(){
         Data: string;
    };
 
-   const ApiUrl = process.env.NEXT_PUBLIC_API_URL;
+   const ApiUrl = process.env.NEXT_PUBLIC_SERVER_ADMIN;
  // fetch data
     useEffect(() => {
-        fetch(`${ApiUrl}/all-notice`)
+        fetch(`${ApiUrl}/get-all-notice`)
         .then((res) => res.json())
         .then((data) => {
             setEvent(data);
